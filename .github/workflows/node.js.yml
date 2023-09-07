@@ -23,5 +23,5 @@ jobs:
             if [ ! -f package-lock.json ]; then
               npx install
             fi
-      - run: npx ci
-      - run: npx deploy
+      - run: npm ci
+      - run: npm run deploy
