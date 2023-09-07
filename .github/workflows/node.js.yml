@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npx'
+          cache: 'npm'
       - run: |
             if [ ! -f package-lock.json ]; then
-              npx install
+              npm install
             fi
       - run: npm ci
       - run: npm run deploy
