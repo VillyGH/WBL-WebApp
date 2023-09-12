@@ -15,6 +15,5 @@ module.exports = withPlugins([
     {
         basePath: '/WBL-WebApp',
         assetPrefix: '/WBL-WebApp/',
-        env,
     },
 ]);
