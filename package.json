@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "deploy": "node deploy.mjs --dotfiles",
+    "build": "next build --dotfiles",
+    "deploy": "node deploy.mjs",
     "start": "next start",
     "lint": "next lint"
   },
