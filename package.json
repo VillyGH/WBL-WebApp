@@ -27,10 +27,11 @@
   "devDependencies": {
     "execa": "^8.0.1",
     "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2"
+    "next-optimized-images": "^2.6.2",
+    "glob-parent": "^6.0.1"
   },
-  "resolutions": {
-    "glob-parent": "6.0.2"
+  "overrides": {
+    "glob-parent": "$glob-parent"
   }
 
 }
