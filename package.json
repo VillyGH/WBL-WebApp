@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --dotfiles",
+    "build": "next build",
     "deploy": "node deploy.mjs",
     "start": "next start",
     "lint": "next lint"
@@ -25,13 +25,21 @@
   },
   "preinstall": "npx npm-force-resolutions",
   "devDependencies": {
+    "download": "^8.0.0",
     "execa": "^8.0.1",
+    "find-versions": "^5.1.0",
+    "glob-parent": "^6.0.1",
+    "got": "^13.0.0",
+    "http-cache-semantics": "^4.1.1",
+    "mozjpeg": "^8.0.0",
     "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
-    "glob-parent": "^6.0.1"
+    "next-optimized-images": "^2.6.2"
   },
   "overrides": {
-    "glob-parent": "$glob-parent"
+    "glob-parent": "$glob-parent",
+    "http-cache-semantics": "$http-cache-semantics",
+    "download": "$download",
+    "find-versions": "$find-versions",
+    "got": "$got"
   }
-
 }

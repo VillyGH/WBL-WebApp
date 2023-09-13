@@ -13,7 +13,6 @@ module.exports = withPlugins([
         imagesPublicPath: '/WBL-WebApp/_next/static/images/',
     }],
     {
-        basePath: '/WBL-WebApp',
-        assetPrefix: '/WBL-WebApp/',
+        assetPrefix: process.env.NODE_ENV === 'production' ? '/WBL-WebApp/' : undefined,
     },
 ]);
