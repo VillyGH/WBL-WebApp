@@ -23,7 +23,6 @@
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
-  "preinstall": "npx npm-force-resolutions",
   "devDependencies": {
     "download": "^8.0.0",
     "execa": "^8.0.1",
@@ -31,9 +30,10 @@
     "glob-parent": "^6.0.1",
     "got": "^13.0.0",
     "http-cache-semantics": "^4.1.1",
-    "mozjpeg": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2"
+    "next-optimized-images": "^2.6.2",
+    "pngquant": "^4.2.0"
   },
   "overrides": {
     "glob-parent": "$glob-parent",
