@@ -11,23 +11,6 @@ export class Application {
      * Start the application
      */
     public start(): void {
-        this.registerEvents();
-    }
-
-    /**
-     * Unmount the application
-     */
-    public unmount(): void {
-        if (this.root) {
-            this.root?.unmount();
-        }
-    }
-
-    /**
-     * Register the events of the application
-     * @private
-     */
-    private registerEvents() {
         this.renderCore();
     }
 
