@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {Engine} from "./Engine";
+import {loadFull} from "tsparticles";
+
 
 export class Application {
     private rootElem: HTMLElement | null = null;
@@ -12,6 +14,10 @@ export class Application {
     public start(): void {
         this.renderCore();
     }
+
+    public static readonly initParticles = async (engine) => {
+        await loadFull(engine);
+    };
 
     /**
      * Define the root element of the application

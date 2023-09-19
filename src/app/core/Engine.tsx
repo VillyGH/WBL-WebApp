@@ -11,9 +11,12 @@ import {RoutesPath} from "../RoutesPath";
 import {RouteNotFound} from "../pages/RouteNotFound";
 import {NavigationBar} from "../components/NavigationBar";
 import {ReactNotifications} from "react-notifications-component";
-import {About} from "../pages/About";
+import {Apropos} from "../pages/Apropos";
+import {Projets} from "../pages/Projets";
+import {References} from "../pages/References";
 
 export class Engine extends Component {
+
     public render(): ReactElement | null {
             return (
                 <Router>
@@ -21,9 +24,9 @@ export class Engine extends Component {
                     <ReactNotifications />
                     <Routes>
                         <Route path={RoutesPath.INDEX} element={<Index/>}/>
-                        <Route path={RoutesPath.PROJETS} element={<Index/>}/>
-                        <Route path={RoutesPath.REFERENCES} element={<Index/>}/>
-                        <Route path={RoutesPath.ABOUT} element={<About />}/>
+                        <Route path={RoutesPath.PROJETS} element={<Projets />}/>
+                        <Route path={RoutesPath.REFERENCES} element={<References />}/>
+                        <Route path={RoutesPath.APROPOS} element={<Apropos />}/>
                         <Route path="*" element={<RouteNotFound />}/>
                     </Routes>
                 </Router>
