@@ -1,8 +1,7 @@
 import {Component, ReactElement} from "react";
 import Particles from "react-particles";
 import {ParticlesOpts} from "../types/Particles";
-import { Container, Button, Row } from "react-bootstrap";
-// @ts-ignore
+import { Container, Row } from "react-bootstrap";
 import Logo from "../assets/images/logo.png";
 
 export class Index extends Component {
@@ -10,7 +9,7 @@ export class Index extends Component {
         document.title = "Accueil - WBL-WebApp";
     }
 
-    public render(): ReactElement {
+    public render(): ReactElement | null {
             return (
                 <Container>
                     <Row className={"justify-content-md-center"}>
@@ -18,7 +17,7 @@ export class Index extends Component {
                         <div className="mt-6 mb-4 mt-4 z-1">
                             <h1><img
                                 className="me-3"
-                                src={Logo.src}
+                                src={Logo}
                                 alt="Logo WBL-WebApp"
                                 width={150}
                                 height={190}

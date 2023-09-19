@@ -23,7 +23,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "noImplicitAny": false,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {

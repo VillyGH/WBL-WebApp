@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
+import {APP_NAME} from "../constants/Global";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faBuilding,
@@ -19,7 +20,7 @@ interface State {
 
 /**
  * This is the navigation bar component, it is displayed on every page. It shows the links to the different pages and the login button.
- * @returns {JSX.Element}
+ * @returns {ReactElement | null}
  * @constructor
  * @category Components
  * @subcategory Navigation
@@ -31,7 +32,7 @@ export class NavigationBar extends React.Component<unknown, State> {
         toggle: false
     };
 
-    public render(): JSX.Element {
+    public render(): ReactElement | null {
         return (
             <Navbar collapseOnSelect expand="lg" variant="dark" className={"navbar-element"}>
                 <Container fluid={true}>
@@ -39,12 +40,12 @@ export class NavigationBar extends React.Component<unknown, State> {
                         <Navbar.Brand>
                             <img
                                 className="me-3"
-                                src={Logo.src}
-                                alt="Logo TaskMaster"
-                                width={50}
+                                src={Logo}
+                                alt="Logo"
+                                width={75}
                                 height={60}
                             />
-                            TaskMaster
+                            {APP_NAME}
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
@@ -73,11 +74,11 @@ export class NavigationBar extends React.Component<unknown, State> {
         return (
             <Nav activeKey="">
                 <NavItem icon={<FontAwesomeIcon icon={faCalendarDays}/>} link={RoutesPath.PROJETS}
-                         label="Création d'horaire" description="Gérez les quarts de travail"/>
+                         label="Projets" description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur." />
                 <NavItem icon={<FontAwesomeIcon icon={faClipboard}/>} link={RoutesPath.REFERENCES}
-                         label="Gestion des disponibilités" description="Gérez les demandes de disponibilités"/>
+                         label="Références" description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
                 <NavItem icon={<FontAwesomeIcon icon={faBuilding}/>} link={RoutesPath.ABOUT} label="À propos"
-                         description="À propos de WBL-WebApp"/>
+                         description="Découvrez davantage d'informations sur cette application web et son créateur"/>
             </Nav>
         );
     }

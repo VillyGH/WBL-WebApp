@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import {Engine} from "./Engine";
 
 export class Application {

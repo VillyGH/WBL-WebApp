@@ -26,7 +26,7 @@ export class ComponentNavItem extends React.Component<ComponentNavItemProps, unk
         this.props = props;
     }
 
-    public render(): JSX.Element {
+    public render(): ReactElement {
         return (
             <LinkContainer to={this.props.link}>
                 <Nav.Link>

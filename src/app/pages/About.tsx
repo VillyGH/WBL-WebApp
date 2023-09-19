@@ -1,9 +1,9 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import {ParticlesOpts} from "../types/Particles";
 import Particles from "react-particles";
-import {APP_NAME} from "../Constants/Global"
+import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/images/logo.png";
 
 /**
  * Ceci est la page : à propos de nous
@@ -13,7 +13,7 @@ export class About extends React.Component {
         document.title = "À propos - " + APP_NAME;
     }
 
-    public render(): JSX.Element {
+    public render(): ReactElement | null {
         return <div>
             <Particles options={ParticlesOpts}/>
             <div className=" justify-content-left">

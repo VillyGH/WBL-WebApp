@@ -2,11 +2,11 @@ import {Component, ReactElement} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 //#region CSS
-import "../deps/css/index.css";
+import "../assets/css/index.css";
 import "react-notifications-component/dist/theme.css";
 import "animate.css/animate.compat.css";
 //#endregion
-import {Index} from "../pages";
+import {Index} from "../pages/Index";
 import {RoutesPath} from "../RoutesPath";
 import {RouteNotFound} from "../pages/RouteNotFound";
 import {NavigationBar} from "../components/NavigationBar";
@@ -14,7 +14,7 @@ import {ReactNotifications} from "react-notifications-component";
 import {About} from "../pages/About";
 
 export class Engine extends Component {
-    public render(): ReactElement {
+    public render(): ReactElement | null {
             return (
                 <Router>
                     <NavigationBar />
