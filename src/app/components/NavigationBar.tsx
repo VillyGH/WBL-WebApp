@@ -6,7 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
 import {APP_NAME} from "../constants/Global";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBook, faCode, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {faBook, faCode, faEnvelope, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 
@@ -73,6 +73,8 @@ export class NavigationBar extends React.Component<unknown, State> {
                          label="Projets" description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur." />
                 <NavItem icon={<FontAwesomeIcon icon={faBook}/>} link={RoutesPath.REFERENCES}
                          label="Références" description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
+                <NavItem icon={<FontAwesomeIcon icon={faEnvelope}/>} link={RoutesPath.CONTACT} label="Contact"
+                         description="Contactez-moi pour toute question ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
             </Nav>

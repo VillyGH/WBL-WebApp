@@ -3,4 +3,5 @@ export enum RoutesPath {
     PROJETS = "/projets",
     REFERENCES = "/references",
     APROPOS = "/apropos",
+    CONTACT = "/contact",
 }

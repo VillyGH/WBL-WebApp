@@ -61,13 +61,6 @@ code {
     align-items: center;
 }
 
-.adminActions {
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-    padding: 0 !important;
-}
-
 .transparentButton {
     border: none;
     padding: 0;
@@ -144,14 +137,6 @@ code {
 .dropdown-item.active, .dropdown-item:active {
     color: white !important;
     background-color: rgb(236, 235, 235) !important;
-}
-
-#changePassword {
-    background-color: white !important;
-}
-
-#logoutLink {
-    background-color: white !important;
 }
 
 .navbar-element {
@@ -236,11 +221,6 @@ body {
 
 a {
     color: #fff;
-}
-
-.departmentName {
-    color: #fff;
-    text-decoration: underline;
 }
 
 h1 {

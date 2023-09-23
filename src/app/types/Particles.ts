@@ -347,7 +347,7 @@ export const ParticlesOpts: any = {
             "consent": false,
             "distance": 150,
             "enable": false,
-            "frequency": 1,
+            "frequency": 2,
             "opacity": 0.4,
             "shadow": {
                 "blur": 5,
