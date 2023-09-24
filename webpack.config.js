@@ -1,7 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {fileURLToPath} from 'url';
-import {BASE_URL} from "./src/app/constants/Global.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +15,7 @@ export default {
     output: {
         path: path.join(__dirname, "build"),
         filename: "[name].bundle.js",
-        publicPath: BASE_URL ?? '/'
+        publicPath: process.env.NODE_ENV === 'production' ? '/WBL-WebApp/' : '/'
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
