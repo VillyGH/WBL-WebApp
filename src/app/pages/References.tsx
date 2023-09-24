@@ -16,17 +16,9 @@ export class References extends React.Component {
             <Particles options={ParticlesOpts} init={Application.initParticles}/>
             <div className=" justify-content-left">
                 <Container className="mt-4 mb-4 d-flex justify-content-center"><h1>{APP_NAME}</h1></Container>
-                <Container className="mt-6 mb-4 d-flex justify-content-center"><img
-                    className="me-3"
-                    src={Logo}
-                    v-bind:alt={"Logo" + APP_NAME}
-                    width={400}
-                    height={240}
-                /></Container>
                 <Container className="justify-content-left mt-4 mb-4">
-                    <div className="me-4 mt-6 d-block  mx-auto">
-                        <h2 className="text-left">Auteur</h2>
-                        <p className="text-left">William Blanchet Lafrenière</p>
+                    <div className="me-4 mt-6 d-block mx-auto text-left">
+                        <p>En développement</p>
                     </div>
                 </Container>
             </div>
