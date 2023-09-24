@@ -10,14 +10,6 @@ interface ComponentNavItemProps {
     link: string;
 }
 
-/**
- * This is the form to add an employee
- * @param props The props of the component
- * @constructor
- * @category Components
- * @subcategory Employee
- * @hideconstructor
- */
 export class ComponentNavItem extends React.Component<ComponentNavItemProps, unknown> {
     public props: ComponentNavItemProps;
 

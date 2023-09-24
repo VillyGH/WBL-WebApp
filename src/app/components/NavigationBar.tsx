@@ -6,7 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
 import {APP_NAME} from "../constants/Global";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBook, faCode, faEnvelope, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 
@@ -15,7 +15,7 @@ interface State {
 }
 
 /**
- * This is the navigation bar component, it is displayed on every page. It shows the links to the different pages and the login button.
+ * This is the navigation bar component, it is displayed on every page. It shows the links to the different pages.
  * @returns {ReactElement | null}
  * @constructor
  * @category Components
@@ -71,6 +71,8 @@ export class NavigationBar extends React.Component<unknown, State> {
             <Nav activeKey="">
                 <NavItem icon={<FontAwesomeIcon icon={faCode}/>} link={RoutesPath.PROJETS}
                          label="Projets" description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur." />
+                <NavItem icon={<FontAwesomeIcon icon={faBriefcase}/>} link={RoutesPath.EMPLOIS} label="Emplois"
+                         description="Découvrez les emplois que j'ai effectués au cours de ma carrière."/>
                 <NavItem icon={<FontAwesomeIcon icon={faBook}/>} link={RoutesPath.REFERENCES}
                          label="Références" description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
                 <NavItem icon={<FontAwesomeIcon icon={faEnvelope}/>} link={RoutesPath.CONTACT} label="Contact"

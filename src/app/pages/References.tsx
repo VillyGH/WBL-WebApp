@@ -6,9 +6,6 @@ import Container from "react-bootstrap/Container";
 import Logo from "../assets/images/logo.png";
 import {Application} from "../core/Application";
 
-/**
- * Ceci est la page : à propos de nous
- */
 export class References extends React.Component {
     public componentDidMount() {
         document.title = "Références - " + APP_NAME;

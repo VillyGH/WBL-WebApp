@@ -6,9 +6,6 @@ import Container from "react-bootstrap/Container";
 import Logo from "../assets/images/logo.png";
 import {Application} from "../core/Application";
 
-/**
- * Ceci est la page : à propos de nous
- */
 export class Apropos extends React.Component {
     public componentDidMount() {
         document.title = "À propos - " + APP_NAME;
@@ -27,9 +24,10 @@ export class Apropos extends React.Component {
                     height={240}
                 /></Container>
                 <Container className="justify-content-left mt-4 mb-4">
-                    <div className="me-4 mt-6 d-block  mx-auto">
-                        <h2 className="text-left">Auteur</h2>
-                        <p className="text-left">William Blanchet Lafrenière</p>
+                    <div className="me-4 mt-6 d-block mx-auto text-left">
+                        <h2>Auteur</h2>
+                        <p>William Blanchet Lafrenière</p>
+                        <p>En développement</p>
                     </div>
                 </Container>
             </div>
