@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+        env: # Define environment variables here
+          ENV_TYPE: "production"
       - run: |
             if [ ! -f package-lock.json ]; then
               npm install
