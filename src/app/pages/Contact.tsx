@@ -42,7 +42,7 @@ export class Contact extends React.Component {
                                     <Form.Control as="textarea" rows={4} placeholder="Votre message" />
                                 </Form.Group>
 
-                                <Button variant="primary" type="submit">
+                                <Button className="mb-4" variant="primary" type="submit">
                                     Envoyer
                                 </Button>
                             </Form>
