@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
-import {APP_NAME} from "../constants/Global";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
@@ -41,7 +40,6 @@ export class NavigationBar extends React.Component<unknown, State> {
                                 width={100}
                                 height={60}
                             />
-                            {APP_NAME}
                         </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

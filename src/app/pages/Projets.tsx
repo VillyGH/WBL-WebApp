@@ -4,6 +4,8 @@ import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
+import {ProjectCard} from "../components/ProjectCard";
+import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
 
 export class Projets extends React.Component {
     public componentDidMount() {
@@ -15,11 +17,13 @@ export class Projets extends React.Component {
             <Particles options={ParticlesOpts} init={Application.initParticles}/>
             <div className=" justify-content-left">
                 <Container className="mt-4 mb-4 d-flex justify-content-center"><h1>{APP_NAME}</h1></Container>
-                
-                <Container className="justify-content-left mt-4 mb-4">
-                    En développement
-                </Container>
             </div>
+
+            <section className="mt-4 mb-4">
+                <Container>
+                    <ProjectCard image={TMAcceuil} title="Project TaskMaster" description="Description of Project 1" />
+                </Container>
+            </section>
         </div>;
     }
 }
