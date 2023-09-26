@@ -8,16 +8,16 @@ export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
+    public static readonly initParticles = async (engine) => {
+        await loadFull(engine);
+    };
+
     /**
      * Start the application
      */
     public start(): void {
         this.renderCore();
     }
-
-    public static readonly initParticles = async (engine) => {
-        await loadFull(engine);
-    };
 
     /**
      * Define the root element of the application

@@ -25,6 +25,8 @@ code {
 
 :root {
     --side_bar_width: 300px;
+    --bs-card-spacer-x: 0rem;
+    --bs-card-spacer-y: 0rem;
 }
 
 .navbar-brand {
@@ -231,22 +233,4 @@ h1 {
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
-}
-
-.text-home-page-description {
-    width: 40em;
-}
-
-.modal-header {
-    background-color: #1d1920;
-    color: #fff;
-}
-
-.modal-content form {
-    background: #353038;
-}
-
-.modal-body, .modal-footer {
-    background: #353038;
-    color: #fff;
 }

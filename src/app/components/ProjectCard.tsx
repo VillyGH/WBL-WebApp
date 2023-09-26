@@ -7,14 +7,18 @@ interface ProjectCardProps {
     description: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ image, title, description }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({image, title, description}) => {
     return (
-        <Card border="primary" bg="dark">
-                <Card.Img src={image} alt={"Card" + title} />
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>
-                    {description}
-                </Card.Text>
+        <Card className="square border border-primary rounded-0">
+            <Card.Body className="p-0">
+                <div className="image-container">
+                    <img src={image} alt={title} className="img-fluid"/>
+                    <div className="image-overlay">
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+                </div>
+            </Card.Body>
         </Card>
     );
 };

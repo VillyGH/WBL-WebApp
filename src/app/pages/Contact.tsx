@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react";
-import { ParticlesOpts } from "../types/Particles";
+import React, {ReactElement} from "react";
+import {ParticlesOpts} from "../types/Particles";
 import Particles from "react-particles";
-import { APP_NAME } from "../constants/Global";
+import {APP_NAME} from "../constants/Global";
 import Container from "react-bootstrap/Container";
-import { Application } from "../core/Application";
+import {Application} from "../core/Application";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faReddit } from "@fortawesome/free-brands-svg-icons";
+import {faFacebook, faGithub, faReddit} from "@fortawesome/free-brands-svg-icons";
 
 export class Contact extends React.Component {
     public componentDidMount() {
@@ -17,7 +17,7 @@ export class Contact extends React.Component {
     public render(): ReactElement | null {
         return (
             <div>
-                <Particles options={ParticlesOpts} init={Application.initParticles} />
+                <Particles options={ParticlesOpts} init={Application.initParticles}/>
                 <div className=" justify-content-left">
                     <Container className="mt-4 mb-4 d-flex justify-content-center">
                         <h1>{APP_NAME}</h1>
@@ -29,17 +29,17 @@ export class Contact extends React.Component {
                             <Form>
                                 <Form.Group className="mt-4 mb-3" controlId="formName">
                                     <Form.Label>Nom</Form.Label>
-                                    <Form.Control type="text" placeholder="Votre nom" />
+                                    <Form.Control type="text" placeholder="Votre nom"/>
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formEmail">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Votre email" />
+                                    <Form.Control type="email" placeholder="Votre email"/>
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formMessage">
                                     <Form.Label>Message</Form.Label>
-                                    <Form.Control as="textarea" rows={4} placeholder="Votre message" />
+                                    <Form.Control as="textarea" rows={4} placeholder="Votre message"/>
                                 </Form.Group>
 
                                 <Button className="mb-4" variant="primary" type="submit">
@@ -49,13 +49,13 @@ export class Contact extends React.Component {
 
                             <div className="mt-4">
                                 <a href="#" className="me-3">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                    <FontAwesomeIcon icon={faFacebook} size="2x"/>
                                 </a>
                                 <a href="https://github.com/VillyGH" className="me-3">
-                                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                                    <FontAwesomeIcon icon={faGithub} size="2x"/>
                                 </a>
                                 <a href="#">
-                                    <FontAwesomeIcon icon={faReddit} size="2x" />
+                                    <FontAwesomeIcon icon={faReddit} size="2x"/>
                                 </a>
                             </div>
                         </div>
