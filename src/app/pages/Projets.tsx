@@ -21,7 +21,8 @@ export class Projets extends React.Component {
 
             <section className="mt-4 mb-4">
                 <Container>
-                    <ProjectCard image={TMAcceuil} title="Project TaskMaster" description="Description of Project 1"/>
+                    <ProjectCard image={TMAcceuil} title="Project TaskMaster" description="TaskMaster est un gestionnaire d'horaire pour entreprise.
+                    En tant qu'application web, TaskMaster est accessible partout et permet à une entreprise de mieux gérer ses effectifs."/>
                 </Container>
             </section>
         </div>;

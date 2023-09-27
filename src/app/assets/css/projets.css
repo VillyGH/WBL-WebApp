@@ -1,9 +1,5 @@
 .project-card {
-    border: 2px solid #0A1F8C;
-}
-
-.image-container {
-    transition: opacity 0.3s;
+    border: 2px solid #0e0e7c;
 }
 
 .image-overlay {
@@ -11,7 +7,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Fond légèrement transparent */
     color: #fff;
     padding: 10px;
     opacity: 0;
@@ -21,7 +17,3 @@
 .image-container:hover .image-overlay {
     opacity: 1;
 }
-
-
-
-
