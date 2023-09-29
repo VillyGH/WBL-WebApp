@@ -1,16 +1,16 @@
 import React, {ReactElement} from "react";
-import Container from "react-bootstrap/Container";
+import {Button, Container} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 
 interface State {
-    toggle: boolean;
+    isDarkMode: boolean;
 }
 
 /**
@@ -24,12 +24,29 @@ interface State {
  */
 export class NavigationBar extends React.Component<unknown, State> {
     public state: State = {
-        toggle: false
+        isDarkMode: false
     };
+
+    /**
+     * React lifecycle method that runs after the component has been mounted.
+     * It initializes the component's state based on the user's theme preference stored in localStorage
+     * or the system-wide prefers-color-scheme setting.
+     * @memberof NavigationBar
+     */
+    componentDidMount() {
+        const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const userPreference = localStorage.getItem("theme");
+
+        if (userPreference) {
+            this.setState({ isDarkMode: userPreference === "dark" });
+        } else {
+            this.setState({ isDarkMode: darkModeQuery.matches });
+        }
+    }
 
     public render(): ReactElement | null {
         return (
-            <Navbar collapseOnSelect expand="lg" variant="dark" className={"navbar-element"}>
+            <Navbar collapseOnSelect expand="lg">
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -51,8 +68,19 @@ export class NavigationBar extends React.Component<unknown, State> {
         );
     }
 
-    private async toggle(): Promise<void> {
-        this.setState({toggle: !this.state.toggle});
+    /**
+     * Toggles between dark and light modes in the application, and stores the user's preference in localStorage.
+     * @returns {Promise<void>} A Promise that resolves when the mode is toggled.
+     * @memberof NavigationBar
+     * @private
+     */
+    private toggleDarkMode = async (): Promise<void> => {
+        const { isDarkMode } = this.state;
+
+        localStorage.setItem("theme", !isDarkMode ? "dark" : "light");
+        document.documentElement.setAttribute("data-bs-theme", !isDarkMode ? "dark" : "light");
+
+        this.setState({ isDarkMode: !isDarkMode });
     }
 
     /**
@@ -77,6 +105,11 @@ export class NavigationBar extends React.Component<unknown, State> {
                          description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
+                <Button onClick={this.toggleDarkMode}>
+                    <div className="navIcon">
+                        <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon} />
+                    </div>
+                </Button>
             </Nav>
         );
     }

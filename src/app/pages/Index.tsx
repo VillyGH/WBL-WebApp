@@ -1,6 +1,6 @@
 import {Component, ReactElement} from "react";
 import Particles from "react-particles";
-import {ParticlesOpts} from "../types/Particles";
+import {ParticleOptsMenu, ParticlesOpts} from "../types/Particles";
 import {Container, Row} from "react-bootstrap";
 import {APP_NAME} from "../constants/Global";
 import Logo from "../assets/images/logo.png";
@@ -15,7 +15,7 @@ export class Index extends Component {
         return (
             <Container>
                 <Row className={"justify-content-md-center"}>
-                    <Particles options={ParticlesOpts} init={Application.initParticles}/>
+                    <Particles options={ParticleOptsMenu} init={Application.initParticles}/>
                     <div className="mt-5 mb-4 d-flex justify-content-center">
                         <img
                             className="me-3"

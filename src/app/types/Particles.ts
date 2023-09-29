@@ -378,7 +378,7 @@ export const ParticlesOpts: any = {
     },
 };
 
-export const ParticlesOptLogin: any = {
+export const ParticleOptsMenu: any = {
     fpsLimit: 120,
     detectRetina: true,
     autoPlay: true,
