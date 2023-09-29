@@ -1,5 +1,4 @@
 import React, {ReactElement} from "react";
-import {ParticlesOpts} from "../types/Particles";
 import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
@@ -8,6 +7,7 @@ import OVGAccueil from "../assets/images/OVGAccueil.png"
 import BureauRAMQ from "../assets/images/BureauRAMQ.jpg"
 import BureauRQ from "../assets/images/BureauRQ.jpg"
 import "../assets/css/emplois.css"
+import {ParticlesOpts} from "../types/ParticlesDark";
 
 export class Emplois extends React.Component {
     public componentDidMount() {

@@ -1,21 +1,28 @@
 import {Component, ReactElement} from "react";
 import Particles from "react-particles";
-import {ParticleOptsMenu, ParticlesOpts} from "../types/Particles";
 import {Container, Row} from "react-bootstrap";
 import {APP_NAME} from "../constants/Global";
 import Logo from "../assets/images/logo.png";
 import {Application} from "../core/Application"
+import {ParticleOptsMenuDark} from "../types/ParticlesDark";
+import {ParticleOptsMenu} from "../types/Particles";
 
 export class Index extends Component {
     public componentDidMount() {
         document.title = "Accueil - " + APP_NAME;
     }
 
+    private isDarkMode = (): boolean => {
+        const themeAttribute = document.documentElement.getAttribute("data-bs-theme");
+        console.log(themeAttribute);
+        return themeAttribute != null ? themeAttribute == "dark" : false;
+    }
+
     public render(): ReactElement | null {
         return (
             <Container>
                 <Row className={"justify-content-md-center"}>
-                    <Particles options={ParticleOptsMenu} init={Application.initParticles}/>
+                    <Particles options={this.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu} init={Application.initParticles}/>
                     <div className="mt-5 mb-4 d-flex justify-content-center">
                         <img
                             className="me-3"

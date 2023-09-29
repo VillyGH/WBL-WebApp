@@ -1,5 +1,4 @@
 import React, {ReactElement} from "react";
-import {ParticlesOpts} from "../types/Particles";
 import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global";
 import Container from "react-bootstrap/Container";
@@ -8,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebook, faGithub, faReddit} from "@fortawesome/free-brands-svg-icons";
+import {ParticlesOpts} from "../types/ParticlesDark";
 
 export class Contact extends React.Component {
     public componentDidMount() {

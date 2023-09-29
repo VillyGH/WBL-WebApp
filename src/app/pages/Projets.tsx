@@ -1,11 +1,11 @@
 import React, {ReactElement} from "react";
-import {ParticlesOpts} from "../types/Particles";
 import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
+import {ParticlesOpts} from "../types/ParticlesDark";
 
 export class Projets extends React.Component {
     public componentDidMount() {

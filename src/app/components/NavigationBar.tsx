@@ -8,7 +8,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
-
 interface State {
     theme: string;
 }
@@ -81,7 +80,7 @@ export class NavigationBar extends React.Component<unknown, State> {
      * @memberof NavigationBar
      * @private
      */
-    private toggleDarkMode = async (): Promise<void> => {
+    private changeTheme = async (): Promise<void> => {
         const theme : "dark" | "light" = this.state.theme == "dark" ? "light" : "dark"
         this.setState({ theme: theme }, () => {
             document.documentElement.setAttribute("data-bs-theme", theme);
@@ -111,7 +110,7 @@ export class NavigationBar extends React.Component<unknown, State> {
                          description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
-                <Button onClick={this.toggleDarkMode}>
+                <Button onClick={this.changeTheme}>
                     <div className="navIcon">
                         <FontAwesomeIcon icon={this.state.theme == "dark" ? faSun : faMoon} />
                     </div>

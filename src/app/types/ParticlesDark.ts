@@ -377,7 +377,7 @@ export const ParticlesOpts: any = {
         }
     },
 };
-export const ParticleOptsMenu: any = {
+export const ParticleOptsMenuDark: any = {
     fpsLimit: 120,
     detectRetina: true,
     autoPlay: true,
@@ -444,7 +444,7 @@ export const ParticleOptsMenu: any = {
             }
         },
         "color": {
-            "value": "#000",
+            "value": "#ffffff",
             "animation": {
                 "h": {
                     "count": 0,
@@ -745,7 +745,7 @@ export const ParticleOptsMenu: any = {
         "links": {
             "blink": false,
             "color": {
-                "value": "#000"
+                "value": "#ffffff"
             },
             "consent": false,
             "distance": 150,
