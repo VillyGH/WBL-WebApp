@@ -21,8 +21,7 @@ code {
     --side_bar_width: 300px;
     --bs-card-spacer-x: 0rem;
     --bs-card-spacer-y: 0rem;
-    --background-color: #fff;
-    --nav-bg-color: #f8f9fa;
+    --nav-bg-color: #125294;
     --nav-text-color: black;
     --nav-border-color: #353038;
     --nav-label-color: rgba(255, 255, 255, 0.7);
@@ -128,7 +127,6 @@ nav {
 
 body {
     background: radial-gradient(circle at 52.1% -29.6%, rgb(29, 25, 32) 0%, rgb(53, 48, 56) 100.2%);
-    color: var(--background-color);
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
 }

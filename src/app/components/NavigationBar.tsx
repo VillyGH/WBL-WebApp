@@ -10,7 +10,7 @@ import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 
 interface State {
-    isDarkMode: boolean;
+    theme: string;
 }
 
 /**
@@ -24,7 +24,7 @@ interface State {
  */
 export class NavigationBar extends React.Component<unknown, State> {
     public state: State = {
-        isDarkMode: false
+        theme: "light"
     };
 
     /**
@@ -34,14 +34,21 @@ export class NavigationBar extends React.Component<unknown, State> {
      * @memberof NavigationBar
      */
     componentDidMount() {
-        const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
         const userPreference = localStorage.getItem("theme");
+        let theme : string = "light";
 
         if (userPreference) {
-            this.setState({ isDarkMode: userPreference === "dark" });
+            theme = userPreference;
         } else {
-            this.setState({ isDarkMode: darkModeQuery.matches });
+            const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+            if(darkModeQuery !== undefined) {
+                theme = darkModeQuery.matches ? "dark" : "light";
+            }
         }
+        this.setState({ theme: theme }, () => {
+            document.documentElement.setAttribute("data-bs-theme", theme);
+            localStorage.setItem("theme", theme);
+        });
     }
 
     public render(): ReactElement | null {
@@ -75,12 +82,11 @@ export class NavigationBar extends React.Component<unknown, State> {
      * @private
      */
     private toggleDarkMode = async (): Promise<void> => {
-        const { isDarkMode } = this.state;
-
-        localStorage.setItem("theme", !isDarkMode ? "dark" : "light");
-        document.documentElement.setAttribute("data-bs-theme", !isDarkMode ? "dark" : "light");
-
-        this.setState({ isDarkMode: !isDarkMode });
+        const theme : "dark" | "light" = this.state.theme == "dark" ? "light" : "dark"
+        this.setState({ theme: theme }, () => {
+            document.documentElement.setAttribute("data-bs-theme", theme);
+            localStorage.setItem("theme", theme);
+        });
     }
 
     /**
@@ -107,7 +113,7 @@ export class NavigationBar extends React.Component<unknown, State> {
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
                 <Button onClick={this.toggleDarkMode}>
                     <div className="navIcon">
-                        <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon} />
+                        <FontAwesomeIcon icon={this.state.theme == "dark" ? faSun : faMoon} />
                     </div>
                 </Button>
             </Nav>
