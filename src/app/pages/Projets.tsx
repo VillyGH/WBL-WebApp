@@ -5,7 +5,8 @@ import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
-import {ParticlesOpts} from "../types/ParticlesDark";
+import {ParticlesOptsDark} from "../types/ParticlesDark";
+import {ParticlesOpts} from "../types/Particles";
 
 export class Projets extends React.Component {
     public componentDidMount() {
@@ -14,7 +15,7 @@ export class Projets extends React.Component {
 
     public render(): ReactElement | null {
         return <div>
-            <Particles options={ParticlesOpts} init={Application.initParticles}/>
+            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
             <div className=" justify-content-left">
                 <Container className="mt-4 mb-4 d-flex justify-content-center"><h1>{APP_NAME}</h1></Container>
             </div>

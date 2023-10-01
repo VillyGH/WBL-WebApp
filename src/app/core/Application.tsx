@@ -12,6 +12,11 @@ export class Application {
         await loadFull(engine);
     };
 
+    public static readonly isDarkMode = (): boolean => {
+        const themeAttribute = document.documentElement.getAttribute("data-bs-theme");
+        return themeAttribute != null ? themeAttribute == "dark" : false;
+    }
+    
     /**
      * Start the application
      */

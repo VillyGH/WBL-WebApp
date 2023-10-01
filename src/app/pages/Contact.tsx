@@ -7,7 +7,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebook, faGithub, faReddit} from "@fortawesome/free-brands-svg-icons";
-import {ParticlesOpts} from "../types/ParticlesDark";
+import {ParticlesOptsDark} from "../types/ParticlesDark";
+import {ParticlesOpts} from "../types/Particles";
 
 export class Contact extends React.Component {
     public componentDidMount() {
@@ -17,7 +18,7 @@ export class Contact extends React.Component {
     public render(): ReactElement | null {
         return (
             <div>
-                <Particles options={ParticlesOpts} init={Application.initParticles}/>
+                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
                 <div className=" justify-content-left">
                     <Container className="mt-4 mb-4 d-flex justify-content-center">
                         <h1>{APP_NAME}</h1>

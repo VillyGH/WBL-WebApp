@@ -47,7 +47,7 @@ export const ParticlesOpts: any = {
             }
         },
         "color": {
-            "value": "#ffffff",
+            "value": "#000",
             "animation": {
                 "h": {
                     "count": 0,

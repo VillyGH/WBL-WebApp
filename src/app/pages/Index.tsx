@@ -12,17 +12,13 @@ export class Index extends Component {
         document.title = "Accueil - " + APP_NAME;
     }
 
-    private isDarkMode = (): boolean => {
-        const themeAttribute = document.documentElement.getAttribute("data-bs-theme");
-        console.log(themeAttribute);
-        return themeAttribute != null ? themeAttribute == "dark" : false;
-    }
+
 
     public render(): ReactElement | null {
         return (
             <Container>
                 <Row className={"justify-content-md-center"}>
-                    <Particles options={this.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu} init={Application.initParticles}/>
+                    <Particles  options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu} init={Application.initParticles}/>
                     <div className="mt-5 mb-4 d-flex justify-content-center">
                         <img
                             className="me-3"

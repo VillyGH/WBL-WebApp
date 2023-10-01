@@ -3,11 +3,11 @@ import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
-import OVGAccueil from "../assets/images/OVGAccueil.png"
 import BureauRAMQ from "../assets/images/BureauRAMQ.jpg"
 import BureauRQ from "../assets/images/BureauRQ.jpg"
 import "../assets/css/emplois.css"
-import {ParticlesOpts} from "../types/ParticlesDark";
+import {ParticlesOptsDark} from "../types/ParticlesDark";
+import {ParticlesOpts} from "../types/Particles";
 
 export class Emplois extends React.Component {
     public componentDidMount() {
@@ -16,7 +16,7 @@ export class Emplois extends React.Component {
 
     public render(): ReactElement | null {
         return <div>
-            <Particles options={ParticlesOpts} init={Application.initParticles}/>
+            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
             <div className="justify-content-left">
                 <Container className="mt-4 mb-4 d-flex justify-content-center"><h2>Emplois</h2></Container>
             </div>

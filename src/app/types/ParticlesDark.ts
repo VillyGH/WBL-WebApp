@@ -1,4 +1,4 @@
-export const ParticlesOpts: any = {
+export const ParticlesOptsDark: any = {
     fpsLimit: 120,
     detectRetina: true,
     autoPlay: true,

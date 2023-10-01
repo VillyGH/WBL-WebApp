@@ -4,10 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
+import LogoDark from "../assets/images/logoDark.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
+import {Application} from "../core/Application";
 interface State {
     theme: string;
 }
@@ -58,7 +60,7 @@ export class NavigationBar extends React.Component<unknown, State> {
                         <Navbar.Brand>
                             <img
                                 className="me-3"
-                                src={Logo}
+                                src={Application.isDarkMode() ? LogoDark : Logo}
                                 alt="Logo"
                                 width={100}
                                 height={60}
@@ -82,6 +84,7 @@ export class NavigationBar extends React.Component<unknown, State> {
      */
     private changeTheme = async (): Promise<void> => {
         const theme : "dark" | "light" = this.state.theme == "dark" ? "light" : "dark"
+
         this.setState({ theme: theme }, () => {
             document.documentElement.setAttribute("data-bs-theme", theme);
             localStorage.setItem("theme", theme);
