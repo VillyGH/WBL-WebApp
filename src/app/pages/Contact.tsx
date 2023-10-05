@@ -19,7 +19,7 @@ export class Contact extends React.Component {
         return (
             <div>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
-                <div className=" justify-content-left">
+                <div className="justify-content-left">
                     <Container className="mt-4 mb-4 d-flex justify-content-center">
                         <h1>{APP_NAME}</h1>
                     </Container>
