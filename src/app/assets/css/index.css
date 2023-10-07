@@ -10,6 +10,9 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-size: 18px;
+    background: var(--background);
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 code {
@@ -24,7 +27,7 @@ code {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(240, 240, 240) 0%, rgb(220, 220, 220) 100.2%);
     --title-color: rgba(59, 133, 222, 0.7);
     --particles-color: black;
-    --nav-bg-color: #4096d7;
+    --nav-footer-bg-color: #4096d7;
     --nav-text-color: black;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(65, 65, 65, 0.5);
@@ -37,7 +40,7 @@ code {
 [data-bs-theme="dark"] {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(29, 25, 32) 0%, rgb(53, 48, 56) 100.2%);
     --title-color: #fff;
-    --nav-bg-color: #1d1920;
+    --nav-footer-bg-color: #1d1920;
     --nav-text-color: white;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(255, 255, 255, 0.1);
@@ -47,18 +50,20 @@ code {
     --btn-grey-color: rgba(231, 228, 235, 0.22);
 }
 
+#root {
+    overflow-x: hidden;
+}
+
+/*#region Navbar*/
+
 .navbar-brand {
     font-size: 25px;
 }
 
 nav {
     font-size: 15px;
-    background-color: var(--nav-bg-color) !important;
+    background-color: var(--nav-footer-bg-color) !important;
     border: 1px solid var(--nav-border-color) !important;
-}
-
-#root {
-    overflow-x: hidden;
 }
 
 .navbar-nav {
@@ -102,14 +107,16 @@ nav {
     color: var(--nav-description-color);
 }
 
-.z-1 {
-    z-index: 1;
-}
-
 @media only screen and (max-width: 990px) {
     .navbar-nav .nav-link {
         width: 100%;
     }
+}
+
+/*#endregion*/
+
+.z-1 {
+    z-index: 1;
 }
 
 .particles {
@@ -126,17 +133,6 @@ button:hover, button:active, button:visited {
     border-color: var(--btn-grey-color) !important;
 }
 
-
-/**
-    * ANIMATION HOME PAGE
- */
-
-body {
-    background: var(--background);
-    overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
-}
-
 a {
     color: #fff;
 }
@@ -149,4 +145,8 @@ h1 {
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
+}
+
+footer {
+    background-color: var(--nav-footer-bg-color) !important;
 }

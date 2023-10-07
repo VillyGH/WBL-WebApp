@@ -8,7 +8,7 @@ export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
-    public static readonly initParticles = async (engine) => {
+    public static readonly initParticles = async (engine: any) => {
         await loadFull(engine);
     };
 
