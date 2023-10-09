@@ -1,34 +1,128 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WBL Web App
 
-## Getting Started
+## Description
 
-First, run the development server:
+The WBL Web App is a personal web application by William Blanchet Lafrenière. It showcases his computer projects and provides information about his professional journey and references.
+
+## Features
+
+- Explore William Blanchet Lafrenière's computer projects.
+- Discover his professional experiences.
+- Review the references used for his projects.
+- Contact William for any questions or inquiries.
+
+## Screenshots
+
+Add screenshots of your application here (if applicable).
+
+## Installation
+
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/your-user/wbl-webapp.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd wbl-webapp
+```
+
+3. Install project dependencies:
+
+```bash
+npm install
+```
+
+4. Run the application in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open your browser and access the application at the following URL: [http://localhost:8080](http://localhost:8080)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [React Router](https://reactrouter.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Animated Particles](https://github.com/matteobruni/tsparticles)
+- [FontAwesome](https://fontawesome.com/)
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+William Blanchet Lafrenière
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Description
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+La WBL Web App est une application web personnelle de William Blanchet Lafrenière. Elle regroupe ses projets informatiques et offre des informations sur son parcours professionnel et ses références.
+
+## Fonctionnalités
+
+- Explorez les projets informatiques de William Blanchet Lafrenière.
+- Découvrez son expérience professionnelle.
+- Consultez les références utilisées pour ses projets.
+- Contactez-moi pour toute question, commentaire ou demande de renseignements.
+
+## Captures d'écran
+
+Ajoutez ici des captures d'écran de votre application (le cas échéant).
+
+## Installation
+
+1. Clonez ce dépôt sur votre machine locale :
+
+```bash
+git clone https://github.com/votre-utilisateur/wbl-webapp.git
+```
+
+2. Accédez au répertoire du projet :
+
+```bash
+cd wbl-webapp
+```
+
+3. Installez les dépendances du projet :
+
+```bash
+npm install
+```
+
+4. Exécutez l'application en mode développement :
+
+```bash
+npm run dev
+```
+
+5. Ouvrez votre navigateur et accédez à l'application à l'adresse suivante : [http://localhost:8080](http://localhost:8080)
+
+## Technologies utilisées
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [React Router](https://reactrouter.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Particules animées](https://github.com/matteobruni/tsparticles)
+- [FontAwesome](https://fontawesome.com/)
+
+## Auteur
+
+William Blanchet Lafrenière
+
+## Licence
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
