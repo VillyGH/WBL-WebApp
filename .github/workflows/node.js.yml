@@ -30,6 +30,6 @@ jobs:
       - run: |
           echo "Deploying to GitHub Pages..."
           npm install -g gh-pages
-          git config --global user.email willclash@outlook.com
-          git config --global user.name William Blanchet Lafrenière
+          git config --global user.email "willclash@outlook.com"
+          git config --global user.name "William Blanchet Lafrenière"
           gh-pages -d build -b gh-pages -u "GitHub Actions <your-email@example.com>"
