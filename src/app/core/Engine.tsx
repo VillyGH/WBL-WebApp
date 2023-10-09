@@ -16,7 +16,6 @@ import {Emplois} from "../pages/Emplois";
 import {References} from "../pages/References";
 import {Contact} from "../pages/Contact";
 import {Apropos} from "../pages/Apropos";
-import {BASE_URL} from "../constants/Global";
 import {Footer} from "../components/Footer";
 
 interface State {
@@ -33,7 +32,7 @@ export class Engine extends Component<unknown, State> {
 
     public render(): ReactElement | null {
         return (
-            <Router basename={BASE_URL}>
+            <Router basename="/">
                 <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
                 <ReactNotifications/>
                 <Routes>
