@@ -30,4 +30,4 @@ jobs:
       - run: |
           echo "Deploying to GitHub Pages..."
           npm install -g gh-pages
-          gh-pages -d build -b gh-pages -u "GitHub Actions <your-email@example.com>"
+          gh-pages -d build -b gh-pages -u "GitHub Actions <willclash@outlook.com>"
