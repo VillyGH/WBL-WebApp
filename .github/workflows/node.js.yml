@@ -26,8 +26,9 @@ jobs:
             npm install
           fi
       - name: Configure Git with GitHub token
-        run: git config --global user.email "willclash@outlook.com"
-      - run: git config --global user.name "William Blanchet Lafrenière"
+        run: |
+          git config --global user.email "willclash@outlook.com"
+          git config --global user.name "William Blanchet Lafrenière"
       - name: Install dependencies
         run: npm ci
       - name: Building for production
