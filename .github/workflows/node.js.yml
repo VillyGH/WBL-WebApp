@@ -31,9 +31,5 @@ jobs:
           git config --global user.name "William Blanchet Lafrenière"
       - name: Install dependencies
         run: npm ci
-      - name: Building for production
-        run: npm run build
-      - name: Deploying to github pages
-        run: |
-          npm install -g gh-pages
-          gh-pages -d build -b gh-pages -u "GitHub Actions <willclash@outlook.com>"
+      - name: Deploy application
+        run: npm run deploy
