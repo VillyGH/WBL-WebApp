@@ -15,7 +15,7 @@ export default {
     output: {
         path: path.join(__dirname, "build"),
         filename: "[name].bundle.js",
-        publicPath: process.env.BASE_URL
+        publicPath: process.env.NODE_ENV === 'development' ? '/' : '/WBL-WebApp/'
     },
     mode: process.env.NODE_ENV || "development",
     resolve: {
