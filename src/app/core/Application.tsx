@@ -13,7 +13,7 @@ export class Application {
     };
 
     public static readonly isDarkMode = (): boolean => {
-        const themeAttribute = document.documentElement.getAttribute("data-bs-theme");
+        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
         return themeAttribute != null ? themeAttribute == "dark" : false;
     }
     

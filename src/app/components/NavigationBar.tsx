@@ -43,7 +43,7 @@ export class NavigationBar extends React.Component<Props, State> {
      * or the system-wide prefers-color-scheme setting.
      * @memberof NavigationBar
      */
-    public componentDidMount(): void {
+    public async componentDidMount(): Promise<void> {
         const userPreference: string | null = localStorage.getItem("theme");
         let isDarkMode: boolean = false;
 
@@ -55,10 +55,7 @@ export class NavigationBar extends React.Component<Props, State> {
                 isDarkMode = darkModeQuery.matches;
             }
         }
-        this.setState({isDarkMode: isDarkMode}, () => {
-            document.documentElement.setAttribute("data-bs-theme", isDarkMode ? "dark" : "light");
-            localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-        });
+        await this.changeTheme(isDarkMode);
     }
 
     public render(): ReactElement | null {
@@ -69,7 +66,7 @@ export class NavigationBar extends React.Component<Props, State> {
                         <Navbar.Brand>
                             <img
                                 className="me-3"
-                                src={Application.isDarkMode() ? LogoDark : Logo}
+                                src={Application.isDarkMode() ? Logo : LogoDark}
                                 alt="Logo"
                                 width={100}
                                 height={60}
@@ -91,8 +88,8 @@ export class NavigationBar extends React.Component<Props, State> {
      * @memberof NavigationBar
      * @private
      */
-    private changeTheme = async (): Promise<void> => {
-        this.setState({isDarkMode: !this.state.isDarkMode}, () => {
+    private changeTheme = async (currentMode: boolean): Promise<void> => {
+        this.setState({isDarkMode: currentMode}, () => {
             document.documentElement.setAttribute("data-bs-theme", this.state.isDarkMode ? "dark" : "light");
             localStorage.setItem("theme", this.state.isDarkMode ? "dark" : "light");
             this.props.toggleDarkMode(this.state.isDarkMode);
@@ -123,7 +120,7 @@ export class NavigationBar extends React.Component<Props, State> {
                          description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
-                <Button onClick={this.changeTheme}>
+                <Button onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
                     <div className="navIcon">
                         <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                     </div>
