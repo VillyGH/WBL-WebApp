@@ -10,8 +10,13 @@ import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle, faMoon, faSun} fr
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 import {Application} from "../core/Application";
+
+interface Props {
+    toggleDarkMode: (value: boolean) => void;
+}
+
 interface State {
-    theme: string;
+    isDarkMode: boolean;
 }
 
 /**
@@ -23,10 +28,14 @@ interface State {
  * @hideconstructor
  * @see NavigationBarState
  */
-export class NavigationBar extends React.Component<unknown, State> {
+export class NavigationBar extends React.Component<Props, State> {
     public state: State = {
-        theme: "light"
+        isDarkMode: false
     };
+
+    constructor(props: Props) {
+        super(props);
+    }
 
     /**
      * React lifecycle method that runs after the component has been mounted.
@@ -34,21 +43,21 @@ export class NavigationBar extends React.Component<unknown, State> {
      * or the system-wide prefers-color-scheme setting.
      * @memberof NavigationBar
      */
-    componentDidMount() {
-        const userPreference = localStorage.getItem("theme");
-        let theme : string = "light";
+    public componentDidMount(): void {
+        const userPreference: string | null = localStorage.getItem("theme");
+        let isDarkMode: boolean = false;
 
         if (userPreference) {
-            theme = userPreference;
+            isDarkMode = userPreference == "dark";
         } else {
             const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-            if(darkModeQuery !== undefined) {
-                theme = darkModeQuery.matches ? "dark" : "light";
+            if (darkModeQuery !== undefined) {
+                isDarkMode = darkModeQuery.matches;
             }
         }
-        this.setState({ theme: theme }, () => {
-            document.documentElement.setAttribute("data-bs-theme", theme);
-            localStorage.setItem("theme", theme);
+        this.setState({isDarkMode: isDarkMode}, () => {
+            document.documentElement.setAttribute("data-bs-theme", isDarkMode ? "dark" : "light");
+            localStorage.setItem("theme", isDarkMode ? "dark" : "light");
         });
     }
 
@@ -83,11 +92,10 @@ export class NavigationBar extends React.Component<unknown, State> {
      * @private
      */
     private changeTheme = async (): Promise<void> => {
-        const theme : "dark" | "light" = this.state.theme == "dark" ? "light" : "dark"
-
-        this.setState({ theme: theme }, () => {
-            document.documentElement.setAttribute("data-bs-theme", theme);
-            localStorage.setItem("theme", theme);
+        this.setState({isDarkMode: !this.state.isDarkMode}, () => {
+            document.documentElement.setAttribute("data-bs-theme", this.state.isDarkMode ? "dark" : "light");
+            localStorage.setItem("theme", this.state.isDarkMode ? "dark" : "light");
+            this.props.toggleDarkMode(this.state.isDarkMode);
         });
     }
 
@@ -104,21 +112,25 @@ export class NavigationBar extends React.Component<unknown, State> {
         return (
             <Nav activeKey="">
                 <NavItem icon={<FontAwesomeIcon icon={faCode}/>} link={RoutesPath.PROJETS}
-                         label="Projets" description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur." />
+                         label="Projets"
+                         description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur."/>
                 <NavItem icon={<FontAwesomeIcon icon={faBriefcase}/>} link={RoutesPath.EMPLOIS} label="Emplois"
                          description="Découvrez les emplois que j'ai effectués au cours de ma carrière."/>
                 <NavItem icon={<FontAwesomeIcon icon={faBook}/>} link={RoutesPath.REFERENCES}
-                         label="Références" description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
+                         label="Références"
+                         description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
                 <NavItem icon={<FontAwesomeIcon icon={faEnvelope}/>} link={RoutesPath.CONTACT} label="Contact"
                          description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
                 <Button onClick={this.changeTheme}>
                     <div className="navIcon">
-                        <FontAwesomeIcon icon={this.state.theme == "dark" ? faSun : faMoon} />
+                        <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                     </div>
                 </Button>
             </Nav>
         );
     }
+
+
 }
