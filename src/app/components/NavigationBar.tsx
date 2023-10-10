@@ -6,7 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../assets/images/logo.png";
 import LogoDark from "../assets/images/logoDark.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBook, faBriefcase, faCode, faEnvelope, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
+import {faBook, faBriefcase, faCode, faEnvelope, faGraduationCap, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 import {Application} from "../core/Application";
@@ -111,8 +111,10 @@ export class NavigationBar extends React.Component<Props, State> {
                 <NavItem icon={<FontAwesomeIcon icon={faCode}/>} link={RoutesPath.PROJETS}
                          label="Projets"
                          description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur."/>
-                <NavItem icon={<FontAwesomeIcon icon={faBriefcase}/>} link={RoutesPath.EMPLOIS} label="Emplois"
+                <NavItem icon={<FontAwesomeIcon icon={faBriefcase}/>} link={RoutesPath.EXPERIENCE} label="Expérience"
                          description="Découvrez les emplois que j'ai effectués au cours de ma carrière."/>
+                <NavItem icon={<FontAwesomeIcon icon={faGraduationCap}/>} link={RoutesPath.ETUDES} label="Études"
+                         description="Découvrez mes parcours éducatifs et mes diplômes obtenus."/>
                 <NavItem icon={<FontAwesomeIcon icon={faBook}/>} link={RoutesPath.REFERENCES}
                          label="Références"
                          description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>

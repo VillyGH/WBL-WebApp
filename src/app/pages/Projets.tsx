@@ -16,10 +16,7 @@ export class Projets extends React.Component {
     public render(): ReactElement | null {
         return <div>
             <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
-            <div className=" justify-content-left">
-                <Container className="mt-4 mb-4 d-flex justify-content-center"><h1>{APP_NAME}</h1></Container>
-            </div>
-
+            <h2 className="mt-4 mb-4">Mes projets</h2>
             <section className="mt-4 mb-4">
                 <Container>
                     <ProjectCard image={TMAcceuil} title="Project TaskMaster" description="TaskMaster est un gestionnaire d'horaire pour entreprise.

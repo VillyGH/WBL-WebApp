@@ -3,6 +3,7 @@ import Particles from "react-particles";
 import {Container, Row} from "react-bootstrap";
 import {APP_NAME} from "../constants/Global";
 import Logo from "../assets/images/logo.png";
+import LogoDark from "../assets/images/logoDark.png";
 import {Application} from "../core/Application"
 import {ParticleOptsMenuDark} from "../types/ParticlesDark";
 import {ParticleOptsMenu} from "../types/Particles";
@@ -22,7 +23,7 @@ export class Index extends Component {
                     <div className="mt-5 mb-4 d-flex justify-content-center">
                         <img
                             className="me-3"
-                            src={Logo}
+                            src={Application.isDarkMode() ? Logo : LogoDark}
                             v-bind:alt={"Logo" + APP_NAME}
                             width={300}
                             height={200}

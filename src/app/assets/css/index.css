@@ -25,14 +25,14 @@ code {
     --bs-card-spacer-x: 0rem;
     --bs-card-spacer-y: 0rem;
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(240, 240, 240) 0%, rgb(220, 220, 220) 100.2%);
-    --title-color: rgba(59, 133, 222, 0.7);
+    --title-color: #4173d9;
     --particles-color: black;
-    --nav-footer-bg-color: #4096d7;
+    --nav-footer-bg-color: #4b7ade;
     --nav-text-color: black;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(65, 65, 65, 0.5);
-    --nav-label-color: rgba(89, 89, 89, 0.7);
-    --nav-description-color: rgba(107, 107, 107, 0.7);
+    --nav-label-color: rgba(42, 42, 42, 0.7);
+    --nav-description-color: rgba(49, 49, 49, 0.75);
     --btn-light-color: rgba(28, 28, 28, 1);
     --btn-grey-color: rgba(124, 123, 123, 0.22);
 }
@@ -142,6 +142,16 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 4em;
+    letter-spacing: -2px;
+    text-align: center;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
+}
+
+h2 {
+    color: var(--title-color);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);

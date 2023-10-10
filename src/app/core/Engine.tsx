@@ -12,12 +12,13 @@ import {NavigationBar} from "../components/NavigationBar";
 import {ReactNotifications} from "react-notifications-component";
 import {Index} from "../pages/Index";
 import {Projets} from "../pages/Projets";
-import {Emplois} from "../pages/Emplois";
+import {Experience} from "../pages/Experience";
 import {References} from "../pages/References";
 import {Contact} from "../pages/Contact";
 import {Apropos} from "../pages/Apropos";
 import {Footer} from "../components/Footer";
 import {BASE_URL} from "../constants/Global";
+import { Etudes } from "../pages/Etudes";
 
 interface State {
     isDarkMode: boolean
@@ -39,7 +40,8 @@ export class Engine extends Component<unknown, State> {
                 <Routes>
                     <Route path={RoutesPath.INDEX} element={<Index/>}/>
                     <Route path={RoutesPath.PROJETS} element={<Projets/>}/>
-                    <Route path={RoutesPath.EMPLOIS} element={<Emplois/>}/>
+                    <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>
+                    <Route path={RoutesPath.EXPERIENCE} element={<Experience/>}/>
                     <Route path={RoutesPath.CONTACT} element={<Contact/>}/>
                     <Route path={RoutesPath.REFERENCES} element={<References/>}/>
                     <Route path={RoutesPath.APROPOS} element={<Apropos/>}/>
