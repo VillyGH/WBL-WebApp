@@ -17,7 +17,7 @@ import {References} from "../pages/References";
 import {Contact} from "../pages/Contact";
 import {Apropos} from "../pages/Apropos";
 import {Footer} from "../components/Footer";
-import { BASE_URL } from "../constants/Global";
+import {BASE_URL} from "../constants/Global";
 
 interface State {
     isDarkMode: boolean
