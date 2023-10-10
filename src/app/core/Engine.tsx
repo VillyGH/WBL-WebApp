@@ -17,6 +17,7 @@ import {References} from "../pages/References";
 import {Contact} from "../pages/Contact";
 import {Apropos} from "../pages/Apropos";
 import {Footer} from "../components/Footer";
+import { BASE_URL } from "../constants/Global";
 
 interface State {
     isDarkMode: boolean
@@ -32,7 +33,7 @@ export class Engine extends Component<unknown, State> {
 
     public render(): ReactElement | null {
         return (
-            <Router basename="/">
+            <Router basename={BASE_URL}>
                 <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
                 <ReactNotifications/>
                 <Routes>
