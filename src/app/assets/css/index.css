@@ -5,12 +5,13 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-size: 18px;
     background: var(--background);
+    line-height: normal;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
 }
@@ -26,28 +27,29 @@ code {
     --bs-card-spacer-y: 0rem;
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(240, 240, 240) 0%, rgb(220, 220, 220) 100.2%);
     --title-color: #4173d9;
-    --particles-color: black;
+    --text-color: black;
     --nav-footer-bg-color: #4b7ade;
-    --nav-text-color: black;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(65, 65, 65, 0.5);
     --nav-label-color: rgba(42, 42, 42, 0.7);
     --nav-description-color: rgba(49, 49, 49, 0.75);
     --btn-light-color: rgba(28, 28, 28, 1);
-    --btn-grey-color: rgba(124, 123, 123, 0.22);
+    --btn-grey-color: rgba(96, 96, 96, 0.22);
+    --btn-hover-color: rgba(33, 33, 33, 0.45);
 }
 
 [data-bs-theme="dark"] {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(29, 25, 32) 0%, rgb(53, 48, 56) 100.2%);
-    --title-color: #fff;
+    --title-color: white;
+    --text-color: white;
     --nav-footer-bg-color: #1d1920;
-    --nav-text-color: white;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(255, 255, 255, 0.1);
     --nav-label-color: rgba(255, 255, 255, 0.7);
     --nav-description-color: rgba(255, 255, 255, 0.5);
     --btn-light-color: rgba(231, 228, 235, 1);
     --btn-grey-color: rgba(231, 228, 235, 0.22);
+    --btn-hover-color: rgba(255, 255, 255, 0.7);
 }
 
 #root {
@@ -98,16 +100,12 @@ nav {
     color: var(--nav-description-color);
 }
 
-.nav-link.active > .navItem > .navLabel {
-    color: var(--nav-text-color);
-}
-
 .nav-link.active > .navItem > .navDescription {
     font-size: 11px;
     color: var(--nav-description-color);
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1000px) {
     .navbar-nav .nav-link {
         width: 100%;
     }
@@ -126,15 +124,15 @@ nav {
 .btn.btn-primary {
     background: var(--btn-grey-color) !important;
     border-color: var(--btn-light-color) !important;
+    color: var(--text-color) !important;
 }
 
-button:hover, button:active, button:visited {
-    background: var(--btn-light-color) !important;
-    border-color: var(--btn-grey-color) !important;
+.btn.btn-primary:hover {
+    background-color: var(--btn-hover-color) !important;
 }
 
 a {
-    color: #fff;
+    color: var(--text-color);
 }
 
 h1 {

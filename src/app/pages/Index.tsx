@@ -31,8 +31,8 @@ export class Index extends Component {
                     </div>
                     <h1 className="mt-6 mb-4">WBL-WebApp</h1>
                     <div className="text-center mt-4 mb-4 text-home-page-description z-1">
-                        Bienvenue sur mon application web personnelle ! Ce site est dédié à regrouper les projets
-                        que j’ai effectués tout au long de mon parcours en informatique.
+                        Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets
+                        qu'il a effectué tout au long de son parcours en informatique.
                     </div>
                 </Row>
             </Container>
