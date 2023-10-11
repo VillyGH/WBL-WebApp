@@ -1,6 +1,6 @@
-.event-image img {
-    max-width: 450px;
-    max-height: 500px;
+.img-responsive {
+    width: 500px;
+    max-height: 300px;
     object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 5px;

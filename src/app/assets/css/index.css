@@ -107,18 +107,6 @@ nav {
     color: var(--nav-description-color);
 }
 
-@media only screen and (max-width: 1200px) {
-    .navbar-nav .nav-link {
-        width: 100%;
-    }
-    .btn-theme {
-        display: none !important;
-    }
-    .btn-sm-theme {
-        display: inline-block !important;
-    }
-}
-
 /*#endregion*/
 
 .z-1 {

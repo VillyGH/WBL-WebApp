@@ -22,12 +22,12 @@ export class Projets extends React.Component {
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
                     <Row>
-                        <Col>
+                        <Col sm="12" lg="6">
                             <ProjectCard image={TMAcceuil} link="https://github.com/TaskMaster873/DRFWClient" title="Project TaskMaster"
                                          description="TaskMaster est un gestionnaire d'horaire pour entreprise. En tant qu'application web,
                                          TaskMaster est accessible partout et permet à une entreprise de mieux gérer ses effectifs." />
                         </Col>
-                        <Col>
+                        <Col sm="12" lg="6">
                             <ProjectCard image={TP3AppWeb} link="https://github.com/VillyGH/tp3-depart"  title="TP3 Application Web"
                                          description="Troisième Travail pratique dans le cadre du cours d'application web. Ce projet avait pour but de permettre l'exploration
                                          des tronçons appartenant à de nombreux tragets présents dans une bases de données à partir d'une simple application web." />

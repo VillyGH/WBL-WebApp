@@ -4,7 +4,7 @@ import {APP_NAME} from "../constants/Global"
 import {Application} from "../core/Application";
 import Camaradiere from "../assets/images/Camaradiere.png"
 import CegepSainteFoy from "../assets/images/CegepSainteFoy.png"
-import "../assets/css/emplois.css"
+import "../assets/css/experience.css"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 
@@ -20,7 +20,7 @@ export class Etudes extends React.Component {
 
             <div className="d-flex mb-4">
                 <div className="ml-4 mx-4">
-                    <img className="img-fluid" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
+                    <img className="img-responsive" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
                 </div>
                 <div>
                     <h3>Cégep de Sainte-Foy</h3>
@@ -31,7 +31,7 @@ export class Etudes extends React.Component {
 
             <div className="d-flex mb-4">
                 <div className="ml-4 mx-4">
-                    <img className="img-fluid max-w-2xl" src={Camaradiere} alt="École secondaire La Camaradière"/>
+                    <img className="img-responsive" src={Camaradiere} alt="École secondaire La Camaradière"/>
                 </div>
                 <div>
                     <h3>École Secondaire La Camaradière</h3>
