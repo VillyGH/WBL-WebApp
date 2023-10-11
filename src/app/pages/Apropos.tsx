@@ -19,7 +19,7 @@ export class Apropos extends React.Component {
             <div className=" justify-content-left">
                 <Container className="justify-content-left mt-4 mb-4">
                     <div className="me-4 mt-6 d-block mx-auto text-justify">
-                        <h2>À propos du créateur</h2>
+                        <h2 className="my-5">À propos du créateur</h2>
                         <p> William, un passionné de l'informatique, a fait ses premiers pas dans le monde de la technologie en 2015
                             lorsqu'il a intégré une concentration en arts et technologies de l'information et de la communication.
                             Son voyage dans le domaine de l'informatique a débuté humblement avec la création de simples sites web en HTML, CSS et JavaScript.

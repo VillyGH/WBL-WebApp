@@ -1,5 +1,4 @@
 import {Component, ReactElement} from "react";
-import {Col, Container, Row} from "react-bootstrap";
 
 export class Footer extends Component {
 
@@ -9,12 +8,8 @@ export class Footer extends Component {
     }
     public render(): ReactElement | null {
         return (
-            <footer className="py-3 fixed-bottom">
-                <Container fluid>
-                    <Row className="d-flex justify-content-center align-items-center">
-                        <span className="text-center">&copy; {this.getCurrentYear()} William Blanchet Lafrenière. Tous droits réservés.</span>
-                    </Row>
-                </Container>
+            <footer className="text-center py-3 px-4 mx-auto mt-auto">
+                <span className="text-center">&copy; {this.getCurrentYear()} William Blanchet Lafrenière. Tous droits réservés.</span>
             </footer>
         );
     }

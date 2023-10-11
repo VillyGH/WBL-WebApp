@@ -34,7 +34,6 @@ export class Application {
             this.rootElem.style.width = "100%";
             this.rootElem.style.height = "100vh";
             this.rootElem.id = "root";
-
             document.body.appendChild(this.rootElem);
         }
     }

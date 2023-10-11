@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -54,6 +53,9 @@ code {
 
 #root {
     overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /*#region Navbar*/
@@ -157,4 +159,5 @@ h2 {
 
 footer {
     background-color: var(--nav-footer-bg-color) !important;
+    width: 100%;
 }
