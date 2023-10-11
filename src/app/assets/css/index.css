@@ -107,9 +107,15 @@ nav {
     color: var(--nav-description-color);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
     .navbar-nav .nav-link {
         width: 100%;
+    }
+    .btn-theme {
+        display: none !important;
+    }
+    .btn-sm-theme {
+        display: inline-block !important;
     }
 }
 
@@ -131,6 +137,14 @@ nav {
 
 .btn.btn-primary:hover {
     background-color: var(--btn-hover-color) !important;
+}
+
+.btn-theme {
+    display: inline-block;
+}
+
+.btn-sm-theme {
+    display: none;
 }
 
 a {
@@ -160,4 +174,5 @@ h2 {
 footer {
     background-color: var(--nav-footer-bg-color) !important;
     width: 100%;
+    font-size: 14px;
 }

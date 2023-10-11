@@ -60,7 +60,7 @@ export class NavigationBar extends React.Component<Props, State> {
 
     public render(): ReactElement | null {
         return (
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="xl">
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -73,8 +73,14 @@ export class NavigationBar extends React.Component<Props, State> {
                             />
                         </Navbar.Brand>
                     </LinkContainer>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <div>
+                        <Button className="btn-sm-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
+                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
+                        </Button>
+                        <Navbar.Toggle />
+                    </div>
+
+                    <Navbar.Collapse>
                         {this.generalLinks()}
                     </Navbar.Collapse>
                 </Container>
@@ -122,10 +128,8 @@ export class NavigationBar extends React.Component<Props, State> {
                          description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
                 <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
                          description="Découvrez davantage d'informations sur cette application web et son créateur"/>
-                <Button onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                    <div className="navIcon">
-                        <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
-                    </div>
+                <Button className="btn-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
+                    <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                 </Button>
             </Nav>
         );

@@ -19,8 +19,8 @@ export class Etudes extends React.Component {
             <h2 className="mt-4 mb-4">Études</h2>
 
             <div className="d-flex mb-4">
-                <div className="event-image ml-4 mx-4">
-                    <img src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
+                <div className="ml-4 mx-4">
+                    <img className="img-fluid" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
                 </div>
                 <div>
                     <h3>Cégep de Sainte-Foy</h3>
@@ -30,8 +30,8 @@ export class Etudes extends React.Component {
             </div>
 
             <div className="d-flex mb-4">
-                <div className="event-image ml-4 mx-4">
-                    <img src={Camaradiere} alt="École secondaire La Camaradière"/>
+                <div className="ml-4 mx-4">
+                    <img className="img-fluid max-w-2xl" src={Camaradiere} alt="École secondaire La Camaradière"/>
                 </div>
                 <div>
                     <h3>École Secondaire La Camaradière</h3>
