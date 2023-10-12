@@ -2,7 +2,6 @@ import React, {ReactElement} from "react";
 import Particles from "react-particles";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
-import Logo from "../assets/images/logo.png";
 import {Application} from "../core/Application";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
