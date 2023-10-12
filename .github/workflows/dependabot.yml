@@ -1,4 +1,11 @@
-version: 2
+name: Dependabot CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
 updates:
   - package-ecosystem: "npm"
     directory: "/"
