@@ -6,6 +6,7 @@ import fs from "fs";
     try {
         await execa("git", ["config", "--global", "user.email", "willclash@outlook.com"]);
         await execa("git", ["config", "--global", "user.name", "William Blanchet Lafrenière"]);
+        await execa("git", ["config", "--global", "credential.helper", "store --file ~/.git-credentials"]);
         
         // eslint-disable-next-line no-console
         console.log("Building started...");
