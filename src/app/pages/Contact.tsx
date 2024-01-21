@@ -6,21 +6,15 @@ import {Application} from "../core/Application";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebook, faGithub, faReddit} from "@fortawesome/free-brands-svg-icons";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 
-interface State {
-    name: string,
-    email: string,
-    message: string
-}
-
-export class Contact extends React.Component<unknown, State> {
+export class Contact extends React.Component<unknown, Email> {
     constructor(props) {
         super(props);
 
         this.state = {
+            subject: "",
             name: "",
             email: "",
             message: ""
@@ -54,29 +48,6 @@ export class Contact extends React.Component<unknown, State> {
         event.stopPropagation();
 
         if (isValid) {
-            const data = {
-                name: this.state.name,
-                email: this.state.email,
-                message: this.state.message
-            };
-
-            try {
-                const response = await fetch("/send-email", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.status === 200) {
-                    alert("Courriel envoyé avec succès !");
-                } else {
-                    alert("Erreur lors de l'envoi du courriel.");
-                }
-            } catch (error) {
-                console.error("Erreur lors de la requête d'envoi de courriel :", error);
-            }
         }
     };
 
@@ -128,13 +99,13 @@ export class Contact extends React.Component<unknown, State> {
 
                             <div className="mt-4">
                                 <a href="#" className="me-3">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                                    <FontAwesomeIcon icon="facebook" size="2x"/>
                                 </a>
                                 <a href="https://github.com/VillyGH" className="me-3">
-                                    <FontAwesomeIcon icon={faGithub} size="2x"/>
+                                    <FontAwesomeIcon icon="github" size="2x"/>
                                 </a>
                                 <a href="#">
-                                    <FontAwesomeIcon icon={faReddit} size="2x"/>
+                                    <FontAwesomeIcon icon="reddit" size="2x"/>
                                 </a>
                             </div>
                         </div>
