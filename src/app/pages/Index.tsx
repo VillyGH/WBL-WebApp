@@ -1,5 +1,5 @@
 import {Component} from "react";
-import Particles from "react-particles";
+import Particles from "@tsparticles/react";
 import {Container, Row} from "react-bootstrap";
 import {APP_NAME} from "../constants/Global";
 import Logo from "../assets/images/logo.png";
@@ -18,8 +18,7 @@ export class Index extends Component {
         return (
             <Container>
                 <Row className={"justify-content-md-center"}>
-                    <Particles options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu}
-                               init={Application.initParticles}/>
+                    <Particles options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu} />
                     <div className="mt-5 mb-4 d-flex justify-content-center">
                         <img
                             className="me-3"

@@ -1,0 +1,12 @@
+.img-responsive {
+    width: 400px;
+    max-height: 125px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.img-cama {
+    width: 500px;
+    max-height: 500px !important;
+}

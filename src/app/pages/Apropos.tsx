@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import Particles from "react-particles";
+import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
@@ -14,7 +14,7 @@ export class Apropos extends React.Component {
 
     public render(): ReactElement | null {
         return <div>
-            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
+            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
             <div className=" justify-content-left">
                 <Container className="justify-content-left mt-4 mb-4">
                     <div className="me-4 mt-6 d-block mx-auto text-justify">

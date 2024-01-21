@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import type { Engine } from "tsparticles-engine";
 import {Core} from "./Core";
-
+import {loadFull} from "tsparticles";
+import {initParticlesEngine} from "@tsparticles/react";
 
 export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
-    
-    public static readonly initParticles = async (engine: Engine): Promise<void> => {
-        engine.init();
+    public readonly initParticles = (): void => {
+        initParticlesEngine(async (engine) => {
+            await loadFull(engine);
+        }).then();
     };
 
     public static readonly isDarkMode = (): boolean => {
@@ -21,8 +22,9 @@ export class Application {
     /**
      * Start the application
      */
-    public readonly start = (): void => {
+    public readonly start = async() : Promise<void> => {
         this.renderCore();
+        this.initParticles();
     }
 
     /**
