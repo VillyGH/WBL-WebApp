@@ -7,6 +7,7 @@ import CegepSainteFoy from "../assets/images/CegepSainteFoy.png"
 import "../assets/css/experience.css"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
+import {Container, Row} from "react-bootstrap";
 
 export class Etudes extends React.Component {
     public componentDidMount() {
@@ -18,27 +19,28 @@ export class Etudes extends React.Component {
             <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
             <h2 className="mt-4 mb-4">Études</h2>
 
-            <div className="d-flex mb-4">
-                <div className="ml-4 mx-4">
-                    <img className="img-responsive" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
-                </div>
-                <div>
-                    <h3>Cégep de Sainte-Foy</h3>
-                    <p>Technique de l'informatique: programmation web, mobile et jeux vidéo</p>
-                    <p>2020 - 2023</p>
-                </div>
-            </div>
-
-            <div className="d-flex mb-4">
-                <div className="ml-4 mx-4">
-                    <img className="img-responsive" src={Camaradiere} alt="École secondaire La Camaradière"/>
-                </div>
-                <div>
-                    <h3>École Secondaire La Camaradière</h3>
-                    <p>Concentration arts et technologies de l'information et communication (Arts et TIC)</p>
-                    <p>2015 - 2020</p>
-                </div>
-            </div>
+            <Container fluid="sm">
+                <Row className="mb-4">
+                    <div className="ml-4 mx-4">
+                        <img className="img-responsive" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
+                    </div>
+                    <div>
+                        <h3>Cégep de Sainte-Foy</h3>
+                        <p>Technique de l'informatique: programmation web, mobile et jeux vidéo</p>
+                        <p>2020 - 2023</p>
+                    </div>
+                </Row>
+                <Row className="mb-4">
+                    <div className="ml-4 mx-4">
+                        <img className="img-responsive" src={Camaradiere} alt="École secondaire La Camaradière"/>
+                    </div>
+                    <div>
+                        <h3>École Secondaire La Camaradière</h3>
+                        <p>Concentration arts et technologies de l'information et communication (Arts et TIC)</p>
+                        <p>2015 - 2020</p>
+                    </div>
+                </Row>
+            </Container>
         </div>;
     }
 }
