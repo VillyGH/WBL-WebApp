@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {Engine} from "./Engine";
-import {loadFull} from "tsparticles";
+import type { Engine } from "tsparticles-engine";
+import {Core} from "./Core";
 
 
 export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
-    public static readonly initParticles = async (engine: any) => {
-        await loadFull(engine);
+    
+    public static readonly initParticles = async (engine: Engine): Promise<void> => {
+        engine.init();
     };
 
     public static readonly isDarkMode = (): boolean => {
@@ -20,7 +21,7 @@ export class Application {
     /**
      * Start the application
      */
-    public start(): void {
+    public readonly start = (): void => {
         this.renderCore();
     }
 
@@ -28,7 +29,7 @@ export class Application {
      * Define the root element of the application
      * @private
      */
-    private defineRoot(): void {
+    private readonly defineRoot = (): void => {
         if (this.rootElem === null || !this.rootElem) {
             this.rootElem = document.createElement("div");
             this.rootElem.style.width = "100%";
@@ -42,14 +43,14 @@ export class Application {
      * Render the core of the application
      * @private
      */
-    private renderCore(): void {
+    private readonly renderCore = (): void => {
         this.defineRoot();
 
         if (this.rootElem !== null && this.rootElem) {
             this.root = ReactDOM.createRoot(this.rootElem);
 
             this.root.render(
-                <Engine/>
+                <Core/>
             );
         } else {
             console.error("Root element is null or undefined!");
