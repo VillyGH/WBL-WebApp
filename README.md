@@ -34,13 +34,6 @@ cd wbl-webapp
 ```bash
 npm install
 ```
-
-4. Create an .env file in the root directory and include the essential variables for the email system as follows:
-
-```bash
-EMAIL_USER=Your Username
-EMAIL_PASS=Your Password
-```
    
 
 4. Run the application in development mode:
