@@ -81,6 +81,16 @@ export class Contact extends React.Component<unknown, Email> {
                                     />
                                 </Form.Group>
 
+                                <Form.Group className="mt-4 mb-3" controlId="formSubject">
+                                    <Form.Label>Sujet</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="subject"
+                                        value={this.state.subject}
+                                        placeholder="Votre sujet"
+                                    />
+                                </Form.Group>
+
                                 <Form.Group className="mb-3" controlId="formMessage">
                                     <Form.Label>Message</Form.Label>
                                     <Form.Control
