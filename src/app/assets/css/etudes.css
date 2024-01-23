@@ -1,6 +1,6 @@
 .img-responsive {
     width: 400px;
-    max-height: 125px;
+    max-height: 225px;
     object-fit: cover;
     border: 2px solid #ccc;
     border-radius: 5px;
