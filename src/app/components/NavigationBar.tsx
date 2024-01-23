@@ -74,7 +74,7 @@ export class NavigationBar extends React.Component<Props, State> {
                         </Navbar.Brand>
                     </LinkContainer>
                     <div>
-                        <Button className="btn-sm-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
+                        <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
                             <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                         </Button>
                         <Navbar.Toggle />

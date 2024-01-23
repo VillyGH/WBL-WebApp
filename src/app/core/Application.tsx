@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {Engine} from "./Engine";
+import {Core} from "./Core";
 import {loadFull} from "tsparticles";
-
+import {initParticlesEngine} from "@tsparticles/react";
 
 export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
-    public static readonly initParticles = async (engine: any) => {
-        await loadFull(engine);
+    public readonly initParticles = (): void => {
+        initParticlesEngine(async (engine) => {
+            await loadFull(engine);
+        }).then();
     };
 
     public static readonly isDarkMode = (): boolean => {
@@ -20,15 +22,16 @@ export class Application {
     /**
      * Start the application
      */
-    public start(): void {
+    public readonly start = async() : Promise<void> => {
         this.renderCore();
+        this.initParticles();
     }
 
     /**
      * Define the root element of the application
      * @private
      */
-    private defineRoot(): void {
+    private readonly defineRoot = (): void => {
         if (this.rootElem === null || !this.rootElem) {
             this.rootElem = document.createElement("div");
             this.rootElem.style.width = "100%";
@@ -42,14 +45,14 @@ export class Application {
      * Render the core of the application
      * @private
      */
-    private renderCore(): void {
+    private readonly renderCore = (): void => {
         this.defineRoot();
 
         if (this.rootElem !== null && this.rootElem) {
             this.root = ReactDOM.createRoot(this.rootElem);
 
             this.root.render(
-                <Engine/>
+                <Core/>
             );
         } else {
             console.error("Root element is null or undefined!");

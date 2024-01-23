@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 //#region CSS
 import "../assets/css/index.css";
+import "../assets/css/bootstrap.min.css";
 import "../assets/css/mediaqueries.css";
 import "react-notifications-component/dist/theme.css";
 import "animate.css/animate.compat.css";
@@ -11,7 +12,6 @@ import {RoutesPath} from "../RoutesPath";
 import {RouteNotFound} from "../pages/RouteNotFound";
 import {NavigationBar} from "../components/NavigationBar";
 import {ReactNotifications} from "react-notifications-component";
-import {Index} from "../pages/Index";
 import {Projets} from "../pages/Projets";
 import {Experience} from "../pages/Experience";
 import {References} from "../pages/References";
@@ -20,12 +20,13 @@ import {Apropos} from "../pages/Apropos";
 import {Footer} from "../components/Footer";
 import {BASE_URL} from "../constants/Global";
 import { Etudes } from "../pages/Etudes";
+import {Index} from "../pages/Index";
 
 interface State {
     isDarkMode: boolean
 }
 
-export class Engine extends Component<unknown, State> {
+export class Core extends Component<unknown, State> {
 
     toggleDarkMode = (value: boolean): void => {
         this.setState({

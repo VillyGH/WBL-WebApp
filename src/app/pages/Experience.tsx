@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import Particles from "react-particles";
+import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
 import {Application} from "../core/Application";
 import BureauRQ from "../assets/images/BureauRQ.jpg"
@@ -17,8 +17,7 @@ export class Experience extends React.Component {
 
     public render(): ReactElement | null {
         return <div>
-            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}
-                       init={Application.initParticles}/>
+            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
             <h2 className="mt-4 mb-4">Expérience de travail</h2>
 
             <Container fluid="sm">

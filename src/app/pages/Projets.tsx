@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import Particles from "react-particles";
+import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
@@ -17,7 +17,7 @@ export class Projets extends React.Component {
 
     public render(): ReactElement | null {
         return <div>
-            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} init={Application.initParticles}/>
+            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
             <h2 className="mt-4 mb-4">Mes projets</h2>
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
