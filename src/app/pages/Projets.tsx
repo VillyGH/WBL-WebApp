@@ -40,7 +40,7 @@ export class Projets extends React.Component {
                                           utile pour la mise en œuvre d'intelligence artificielle dans les jeux vidéo."/>
                         </Col>
                         <Col sm="12" lg="6">
-                            <ProjectCard image={GardienLegend} link="https://github.com/VillyGH/JeuxVideo2TP1"
+                            <ProjectCard image={GardienLegend} link="https://github.com/VillyGH/TP2-Gardien-Legend"
                                          title="Gardien Legend"
                                          description="Projet pratique final dans le cadre du cours de Jeux vidéo. Ce jeu de tir vertical en 2D,
                                          créé en collaboration avec un partenaire, s'inspire du style arcade. Il propose une expérience immersive
