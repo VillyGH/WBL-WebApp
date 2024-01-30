@@ -48,6 +48,10 @@ export class Contact extends React.Component<unknown, Email> {
         event.stopPropagation();
 
         if (isValid) {
+            const mailtoLink : string = `mailto:wblwebappcontact@gmail.com?subject=
+            ${encodeURIComponent(this.state.subject)}&body=${encodeURIComponent(`Nom: ${this.state.name}\nEmail: ${this.state.email}\n\n${this.state.message}`)}`;
+
+            window.location.href = mailtoLink;
         }
     };
 
