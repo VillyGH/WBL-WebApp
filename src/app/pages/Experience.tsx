@@ -28,7 +28,7 @@ export class Experience extends React.Component {
                     <Col xl={6} xxl={7}>
                         <div>
                             <h3>Revenu Québec</h3>
-                            <p>Printemps à été 2023</p>
+                            <p>Mars à Août 2023</p>
                             <p>Tâches effectuées:</p>
                             <ul>
                                 <li>Planification d’un projet complet de développement d’un logiciel de comparaison de
@@ -51,7 +51,7 @@ export class Experience extends React.Component {
                     <Col xl={6} xxl={7}>
                         <div>
                             <h3>Régie de l'assurance maladie du Québec (RAMQ)</h3>
-                            <p>Été 2022</p>
+                            <p>Juin à Août 2022</p>
                             <p>Tâches effectuées:</p>
                             <ul>
                                 <li>Réalisation d'activités de programmation sur différentes plateformes et mise en place de
@@ -72,7 +72,7 @@ export class Experience extends React.Component {
                     <Col xl={6} xxl={7}>
                         <div>
                             <h3>Commission sur les normes, l'équité, la santé et la sécurité au travail (CNESST)</h3>
-                            <p>Été 2021</p>
+                            <p>Juin à Août 2022</p>
                             <p>Tâches effectuées:</p>
                             <ul>
                                 <li>Mise à jour et développement de la structure de gestion documentaire électronique du service de l'aménagement et des projets immobiliers</li>
