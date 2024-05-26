@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack --mode production --progress",
-    "deploy": "node deploy.mjs",
     "lint": "next lint"
   },
   "dependencies": {
