@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
+import {faFacebook, faReddit} from "@fortawesome/free-brands-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export class Contact extends React.Component<unknown, Email> {
     constructor(props) {
@@ -20,14 +22,14 @@ export class Contact extends React.Component<unknown, Email> {
             message: ""
         };
     }
-    public componentDidMount() {
+    public componentDidMount() : void {
         document.title = "Me contacter - " + APP_NAME;
     }
 
     readonly #handleChange = (event: React.ChangeEvent<HTMLFormElement>): void => {
-        const target = event.target;
+        const target : EventTarget & HTMLFormElement = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
-        const name = target.name;
+        const name: string = target.name;
 
         if (!name) {
             throw new Error("Name is undefined for element in form.");
@@ -41,8 +43,8 @@ export class Contact extends React.Component<unknown, Email> {
     };
 
     readonly #handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
-        const form = event.currentTarget;
-        let isValid = form.checkValidity();
+        const form : EventTarget & HTMLFormElement = event.currentTarget;
+        let isValid : boolean = form.checkValidity();
 
         event.preventDefault();
         event.stopPropagation();
@@ -72,6 +74,7 @@ export class Contact extends React.Component<unknown, Email> {
                                         name="name"
                                         value={this.state.name}
                                         placeholder="Votre nom"
+                                        readOnly
                                     />
                                 </Form.Group>
 
@@ -82,6 +85,7 @@ export class Contact extends React.Component<unknown, Email> {
                                         name="email"
                                         value={this.state.email}
                                         placeholder="Votre email"
+                                        readOnly
                                     />
                                 </Form.Group>
 
@@ -92,6 +96,7 @@ export class Contact extends React.Component<unknown, Email> {
                                         name="subject"
                                         value={this.state.subject}
                                         placeholder="Votre sujet"
+                                        readOnly
                                     />
                                 </Form.Group>
 
@@ -103,6 +108,7 @@ export class Contact extends React.Component<unknown, Email> {
                                         name="message"
                                         value={this.state.message}
                                         placeholder="Votre message"
+                                        readOnly
                                     />
                                 </Form.Group>
 
@@ -112,14 +118,11 @@ export class Contact extends React.Component<unknown, Email> {
                             </Form>
 
                             <div className="mt-4">
-                                <a href="#" className="me-3">
-                                    <FontAwesomeIcon icon="facebook" size="2x"/>
+                                <a href="https://www.facebook.com/william.blanchetlafreniere/" className="me-3">
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" color="#dee2e6" />
                                 </a>
                                 <a href="https://github.com/VillyGH" className="me-3">
-                                    <FontAwesomeIcon icon="github" size="2x"/>
-                                </a>
-                                <a href="#">
-                                    <FontAwesomeIcon icon="reddit" size="2x"/>
+                                    <FontAwesomeIcon icon={faReddit} size="2x" color="#dee2e6" />
                                 </a>
                             </div>
                         </div>

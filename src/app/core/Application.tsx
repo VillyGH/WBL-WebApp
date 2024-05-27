@@ -8,12 +8,18 @@ export class Application {
     private rootElem: HTMLElement | null = null;
     private root: ReactDOM.Root | null = null;
 
+    /**
+     * Initialize the React particles engine
+     */
     public readonly initParticles = (): void => {
-        initParticlesEngine(async (engine) => {
+        initParticlesEngine(async (engine) : Promise<void> => {
             await loadFull(engine);
         }).then();
     };
 
+    /**
+     * Determine if the user is in dark mode
+     */
     public static readonly isDarkMode = (): boolean => {
         const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
         return themeAttribute != null ? themeAttribute == "dark" : false;
@@ -50,10 +56,7 @@ export class Application {
 
         if (this.rootElem !== null && this.rootElem) {
             this.root = ReactDOM.createRoot(this.rootElem);
-
-            this.root.render(
-                <Core/>
-            );
+            this.root.render(<Core/>);
         } else {
             console.error("Root element is null or undefined!");
         }

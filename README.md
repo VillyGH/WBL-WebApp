@@ -1,5 +1,7 @@
 # WBL Web App
 
+![img.png](img.png)
+
 ## Description
 
 The WBL Web App is a personal web application by William Blanchet Lafrenière. It showcases his computer projects and provides information about his professional journey and references.
@@ -10,10 +12,6 @@ The WBL Web App is a personal web application by William Blanchet Lafrenière. I
 - Discover his professional experiences.
 - Review the references used for his projects.
 - Contact William for any questions or inquiries.
-
-## Screenshots
-
-Add screenshots of your application here (if applicable).
 
 ## Installation
 
