@@ -124,9 +124,6 @@ export class Contact extends React.Component<unknown, Email> {
                                 <a href="https://github.com/VillyGH" className="me-3">
                                     <FontAwesomeIcon icon={faReddit} size="2x" color="#dee2e6" />
                                 </a>
-                                <a href="#">
-                                    <FontAwesomeIcon icon={faEnvelope} size="2x" color="#dee2e6" />
-                                </a>
                             </div>
                         </div>
                     </Container>
