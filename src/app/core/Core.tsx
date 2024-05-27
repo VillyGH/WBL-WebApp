@@ -1,6 +1,5 @@
 import {Component, ReactElement} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
 //#region CSS
 import "../assets/css/index.css";
 import "../assets/css/bootstrap.min.css";
@@ -8,6 +7,7 @@ import "../assets/css/mediaqueries.css";
 import "react-notifications-component/dist/theme.css";
 import "animate.css/animate.compat.css";
 //#endregion
+//#region Pages
 import {RoutesPath} from "../RoutesPath";
 import {RouteNotFound} from "../pages/RouteNotFound";
 import {NavigationBar} from "../components/NavigationBar";
@@ -19,14 +19,15 @@ import {Contact} from "../pages/Contact";
 import {Apropos} from "../pages/Apropos";
 import {Footer} from "../components/Footer";
 import {BASE_URL} from "../constants/Global";
-import { Etudes } from "../pages/Etudes";
+import {Etudes} from "../pages/Etudes";
 import {Index} from "../pages/Index";
+//#endregion
 
-interface State {
+interface CoreState {
     isDarkMode: boolean
 }
 
-export class Core extends Component<unknown, State> {
+export class Core extends Component<unknown, CoreState> {
 
     toggleDarkMode = (value: boolean): void => {
         this.setState({
