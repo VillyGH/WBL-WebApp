@@ -52,12 +52,6 @@ export class Projets extends React.Component {
                                              description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
                                              Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
                         </Col>
-                        <Col sm="12" lg="6">
-                            <ProjectCard image={InfiniteCraft} link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
-                                         title="InfiniteCraft Bot"
-                                         description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
-                                             Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
-                        </Col>
                     </Row>
                 </Container>
             </section>
