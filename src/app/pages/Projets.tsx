@@ -6,7 +6,7 @@ import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
 import SimulationGame from "../assets/images/SimulationGame.png";
-import InfiniteCraft from "../assets/images/InfiniteCraft.svg";
+import InfiniteCraft from "../assets/images/InfiniteCraft.png";
 import GardienLegend from "../assets/images/GardienLegend.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
