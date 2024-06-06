@@ -10,3 +10,8 @@ declare module "*.jpeg" {
     const value: never;
     export default value;
 }
+
+declare module "*.svg" {
+    const value: never;
+    export default value;
+}

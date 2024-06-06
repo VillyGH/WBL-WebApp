@@ -6,7 +6,7 @@ import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
 import SimulationGame from "../assets/images/SimulationGame.png";
-import TP3AppWeb from "../assets/images/TP3AppWeb.png";
+import InfiniteCraft from "../assets/images/InfiniteCraft.svg";
 import GardienLegend from "../assets/images/GardienLegend.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
@@ -47,10 +47,16 @@ export class Projets extends React.Component {
                                          comprenant la collecte de bonus et deux phases de jeu, culminant avec un combat de boss intense lors de la seconde phase."/>
                         </Col>
                         <Col sm="12" lg="6">
-                                <ProjectCard image={TP3AppWeb} link="https://github.com/VillyGH/tp3-depart"
-                                             title="TP3 Application Web"
-                                             description="Troisième Travail pratique dans le cadre du cours d'application web. Ce projet avait pour but de permettre l'exploration
-                                         des tronçons appartenant à de nombreux tragets présents dans une bases de données à partir d'une simple application web."/>
+                                <ProjectCard image={InfiniteCraft} link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
+                                             title="InfiniteCraft Bot"
+                                             description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
+                                             Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
+                        </Col>
+                        <Col sm="12" lg="6">
+                            <ProjectCard image={InfiniteCraft} link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
+                                         title="InfiniteCraft Bot"
+                                         description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
+                                             Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
                         </Col>
                     </Row>
                 </Container>
