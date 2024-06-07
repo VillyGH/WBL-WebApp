@@ -4,10 +4,10 @@ import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
-import TMAcceuil from "../assets/images/TaskMasterAccueil.png";
-import SimulationGame from "../assets/images/SimulationGame.png";
-import InfiniteCraft from "../assets/images/InfiniteCraft.png";
-import GardienLegend from "../assets/images/GardienLegend.png";
+import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
+import SimulationGame from "../deps/images/SimulationGame.png";
+import InfiniteCraft from "../deps/images/InfiniteCraft.png";
+import GardienLegend from "../deps/images/GardienLegend.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Row} from "react-bootstrap";

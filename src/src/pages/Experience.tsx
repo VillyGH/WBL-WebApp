@@ -2,10 +2,10 @@ import React, {ReactElement} from "react";
 import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
 import {Application} from "../core/Application";
-import BureauRQ from "../assets/images/BureauRQ.jpg"
-import BureauRAMQ from "../assets/images/BureauRAMQ.jpg"
-import BureauCNESST from "../assets/images/BureauCNESST.png"
-import "../assets/css/experience.css"
+import BureauRQ from "../deps/images/BureauRQ.jpg"
+import BureauRAMQ from "../deps/images/BureauRAMQ.jpg"
+import BureauCNESST from "../deps/images/BureauCNESST.png"
+import "../deps/css/experience.css"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";

@@ -1,9 +1,9 @@
 import {Component, ReactElement} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 //#region CSS
-import "../assets/css/index.css";
-import "../assets/css/bootstrap.min.css";
-import "../assets/css/mediaqueries.css";
+import "../deps/css/index.css";
+import "../deps/css/bootstrap.min.css";
+import "../deps/css/mediaqueries.css";
 import "react-notifications-component/dist/theme.css";
 import "animate.css/animate.compat.css";
 //#endregion
