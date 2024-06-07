@@ -1,7 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import {fileURLToPath} from 'url';
-import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -70,7 +69,6 @@ export default {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src/html", "index.html"),
             favicon: "./src/html/favicon.ico",
-        }),
-        new NodePolyfillPlugin()
+        })
     ]
 };
