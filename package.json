@@ -36,6 +36,11 @@
     "tsparticles": "^3.1.0",
     "typescript": "5.3.3"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
