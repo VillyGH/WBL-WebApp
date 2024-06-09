@@ -9,6 +9,7 @@ import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.png";
 import SimulationGame from "../deps/images/SimulationGame.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
+import WIP from "../deps/images/WIP.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Row} from "react-bootstrap";
@@ -64,9 +65,11 @@ export class Projets extends React.Component {
                         </Col>
 
                         <Col sm="12" lg="6">
-                            <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
+                            <ProjectCard image={WIP} link="https://github.com/VillyGH/PepsReservationBot"
                                          title="Revolvair"
-                                         description="Projet effectué dans le cadre du cours de développement mobile et objets connectés"/>
+                                         description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
+                                         puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
+                                         une interface utilisateur simple produite sur la base du framework électron."/>
                         </Col>
                     </Row>
                 </Container>
