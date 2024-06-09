@@ -2,8 +2,8 @@ import {Component} from "react";
 import Particles from "@tsparticles/react";
 import {Container, Row} from "react-bootstrap";
 import {APP_NAME} from "../constants/Global";
-import Logo from "../assets/images/logo.png";
-import LogoDark from "../assets/images/logoDark.png";
+import Logo from "../deps/images/logo.png";
+import LogoDark from "../deps/images/logoDark.png";
 import {Application} from "../core/Application"
 import {ParticleOptsMenuDark} from "../types/ParticlesDark";
 import {ParticleOptsMenu} from "../types/Particles";

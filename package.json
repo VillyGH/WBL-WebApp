@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
-    "@babel/eslint-parser": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -22,6 +21,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.17",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.3",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "core-js": "^3.35.1",
@@ -35,6 +35,11 @@
     "react-router-dom": "^6.21.3",
     "tsparticles": "^3.1.0",
     "typescript": "5.3.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [

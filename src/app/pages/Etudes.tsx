@@ -2,10 +2,10 @@ import React, {ReactElement} from "react";
 import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
 import {Application} from "../core/Application";
-import Camaradiere from "../assets/images/Camaradiere.png"
-import CegepSainteFoy from "../assets/images/CegepSainteFoy.png"
-import ULaval from "../assets/images/ULaval.png"
-import "../assets/css/etudes.css"
+import Camaradiere from "../deps/images/Camaradiere.png"
+import CegepSainteFoy from "../deps/images/CegepSainteFoy.png"
+import ULaval from "../deps/images/ULaval.png"
+import "../deps/css/etudes.css"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";
