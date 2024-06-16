@@ -6,7 +6,7 @@ import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
-import Revolvair from "../deps/images/Revolvair.png";
+import Revolvair from "../deps/images/Revolvair.jpg";
 import SimulationGame from "../deps/images/SimulationGame.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import WIP from "../deps/images/WIP.png";
@@ -22,7 +22,9 @@ export class Projets extends React.Component {
     public render(): ReactElement | null {
         return <div>
             <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
-            <h2 className="mt-4 mb-4">Mes projets</h2>
+            <h1 className="mt-4 mb-4">Principaux projets</h1>
+            <h3 className="mt-4 mb-4">Voici une liste des principaux projets effectués par William Blanchet Lafrenière au cours de ses années d'études au cégep et à l'université.
+                Cette liste inclus à la fois des travaux </h3>
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
                     <Row>
@@ -34,7 +36,8 @@ export class Projets extends React.Component {
                                          équipe de quatre avec Felix-Antoine Belleau, David Lawton et Romin Martignat"/>
                         </Col>
                         <Col sm="12" lg="6">
-                            <ProjectCard image={InfiniteCraft} link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
+                            <ProjectCard image={InfiniteCraft}
+                                         link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
                                          title="InfiniteCraft Bot"
                                          description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
                                              Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
@@ -66,7 +69,7 @@ export class Projets extends React.Component {
 
                         <Col sm="12" lg="6">
                             <ProjectCard image={WIP} link="https://github.com/VillyGH/PepsReservationBot"
-                                         title="Revolvair"
+                                         title="PepsReservationBot"
                                          description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
                                          puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
                                          une interface utilisateur simple produite sur la base du framework électron."/>
