@@ -48,3 +48,9 @@
         font-size: 2.5em !important;
     }
 }
+
+@media (pointer:coarse) {
+    .project-card .image-overlay {
+        opacity: 1;
+    }
+}

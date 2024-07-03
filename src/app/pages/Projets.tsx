@@ -23,8 +23,6 @@ export class Projets extends React.Component {
         return <div>
             <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
             <h1 className="mt-4 mb-4">Principaux projets</h1>
-            <h3 className="mt-4 mb-4">Voici une liste des principaux projets effectués par William Blanchet Lafrenière au cours de ses années d'études au cégep et à l'université.
-                Cette liste inclus à la fois des travaux </h3>
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
                     <Row>
