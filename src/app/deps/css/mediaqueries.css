@@ -2,9 +2,11 @@
     .navbar-nav .nav-link {
         width: 100%;
     }
+
     .btn-theme {
         display: none !important;
     }
+
     .btn-sm-theme {
         display: inline-block !important;
     }
@@ -16,6 +18,10 @@
     h2 {
         font-size: 2.5em !important;
     }
+
+    .project-img {
+        height: 300px !important;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -24,9 +30,12 @@
         padding: 5px !important;
     }
 
-    .img-responsive {
-        max-width: 350px !important;
-        max-height: 400px !important;
+    .project-img {
+        height: 250px !important;
+    }
+
+    .row {
+        display: block;
     }
 }
 
@@ -35,11 +44,17 @@
         max-width: 250px !important;
         max-height: 300px !important;
     }
+
     h2 {
         font-size: 2em !important;
     }
+
     h3 {
         font-size: 1.2em !important;
+    }
+
+    .project-img {
+        height: 200px !important;
     }
 }
 
@@ -50,7 +65,11 @@
 }
 
 @media (pointer:coarse) {
-    .project-card .image-overlay {
-        opacity: 1;
+    .mobile {
+        display: block !important;
+    }
+
+    .image-overlay {
+        display: none !important;
     }
 }

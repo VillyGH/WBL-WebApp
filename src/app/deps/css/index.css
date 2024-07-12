@@ -58,7 +58,7 @@ code {
     flex-direction: column;
 }
 
-/*#region Navbar*/
+/*region Navbar*/
 
 .navbar-brand {
     font-size: 25px;
@@ -107,15 +107,9 @@ nav {
     color: var(--nav-description-color);
 }
 
-/*#endregion*/
+/*endregion*/
 
-.z-1 {
-    z-index: 1;
-}
-
-.particles {
-    z-index: 0;
-}
+/*region buttons */
 
 .btn.btn-primary {
     background: var(--btn-grey-color) !important;
@@ -132,6 +126,20 @@ nav {
 }
 
 .btn-sm-theme {
+    display: none;
+}
+
+/*endregion*/
+
+.z-1 {
+    z-index: 1;
+}
+
+.particles {
+    z-index: 0;
+}
+
+.mobile {
     display: none;
 }
 

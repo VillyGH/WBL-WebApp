@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import "../deps/css/projets.css"
-import {Image} from "react-bootstrap";
+import {Col, Image} from "react-bootstrap";
 
 interface ProjectCardProps {
     image: string;
@@ -12,18 +12,24 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({image, link, title, description}) => {
     return (
-        <Card className="project-card mb-5 mx-auto">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <Card.Body className="p-0">
-                    <div className="image-container">
-                        <Image fluid src={image} alt={title} className="project-img"/>
-                        <div className="image-overlay">
-                            <h4>{title}</h4>
-                            <p>{description}</p>
+        <Col sm="12" md="12" lg="6" className="mb-5">
+            <Card className="project-card">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <Card.Body className="p-0">
+                        <div className="image-container">
+                            <Image src={image} alt={title} className="project-img"/>
+                            <div className="image-overlay">
+                                <h4>{title}</h4>
+                                <p>{description}</p>
+                            </div>
                         </div>
-                    </div>
-                </Card.Body>
-            </a>
-        </Card>
+                    </Card.Body>
+                </a>
+            </Card>
+            <div className="mt-4 mobile">
+                <h4 className="mb-2">{title}</h4>
+                <p>{description}</p>
+            </div>
+        </Col>
     );
 };
