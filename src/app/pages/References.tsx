@@ -26,12 +26,13 @@ export class References extends React.Component {
                     <p><a href="https://webpack.js.org">Webpack (Regroupement des ressources de l'application en un ensemble de fichier)</a></p>
                     <p><a href="https://typescript-eslint.io/getting-started/">Eslint (Règles sur les meilleures pratiques de programmation)</a></p>
                     <h4 className="my-4">Style de la page :</h4>
-                    <p><a href="https://react-bootstrap.github.io">React Bootstrap (formatage, thème et composants principaux des pages)</a></p>
+                    <p><a href="https://react-bootstrap.github.io">React Bootstrap (formatage, thèmes et styles des pages)</a></p>
                     <p><a href="https://vincentgarreau.com/particles.js/">Particles.js (Animation de fond d'écran)</a></p>
                     <p><a href="https://fontawesome.com/icons">fortawesome/free-brands-svg-icons (Icônes)</a></p>
+                    <p><a href="https://codepen.io/leandrosimoes/pen/VqZxaG">Animation brillante multicolore (Auteur: Leandro Simões)</a></p>
                     <h4 className="my-4">Déploiement de l'application:</h4>
-                    <p><a href="https://docs.github.com/pages">Github Pages (moyen facile et gratuit de déployer une application web)</a></p>
-                    <p><a href="https://dev.to/the_one/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg">Tutoriel comprenant les scripts de déploiement de Github Pages</a></p>
+                    <p><a href="https://pages.cloudflare.com">Cloudflare Pages (moyen facile et gratuit de déployer une application web)</a></p>
+                    <p><a href="https://blog.logrocket.com/deploying-react-app-full-stack-cloudflare-pages/">Tutoriel comprenant les scripts de déploiement de Cloudflare Pages</a></p>
                     <p><a href="https://freedns.afraid.org/subdomain/">FreeDNS (Gestionnaire DNS permettant l'attribution et l'utilisation de domaines gratuits et premiums)</a></p>
                     <p><a href="https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates">Dependabot (Mise à jour automatique des dépendances du projet)</a></p>
                 </Container>

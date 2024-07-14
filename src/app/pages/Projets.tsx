@@ -14,6 +14,7 @@ import WIP from "../deps/images/WIP.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Row} from "react-bootstrap";
+import "../deps/css/projets.css";
 
 export class Projets extends React.Component {
     public componentDidMount() {
