@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
-import {faFacebook, faReddit} from "@fortawesome/free-brands-svg-icons";
+import {faFacebook, faInstagram, faGithub} from "@fortawesome/free-brands-svg-icons";
 
 export class Contact extends React.Component<unknown, Email> {
     constructor(props) {
@@ -118,10 +118,13 @@ export class Contact extends React.Component<unknown, Email> {
 
                             <div className="mt-4">
                                 <a href="https://www.facebook.com/william.blanchetlafreniere/" className="me-3">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" color="#dee2e6" />
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" color="#dee2e6"/>
                                 </a>
                                 <a href="https://github.com/VillyGH" className="me-3">
-                                    <FontAwesomeIcon icon={faReddit} size="2x" color="#dee2e6" />
+                                    <FontAwesomeIcon icon={faGithub} size="2x" color="#dee2e6"/>
+                                </a>
+                                <a href="https://www.instagram.com/william_blanchet_lafreniere/" className="me-3">
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" color="#dee2e6"/>
                                 </a>
                             </div>
                         </div>

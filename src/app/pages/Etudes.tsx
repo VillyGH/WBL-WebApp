@@ -8,6 +8,7 @@ import ULaval from "../deps/images/ULaval.png"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Container, Image, Row} from "react-bootstrap";
+import "../deps/css/etudes.css"
 
 export class Etudes extends React.Component {
     public componentDidMount() {
@@ -19,7 +20,7 @@ export class Etudes extends React.Component {
             <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
             <h2 className="mt-4 mb-4">Études</h2>
 
-            <Container fluid="sm" className="mb-4">
+            <Container fluid="sm" className="mb-5">
                     <Row className="mb-4">
                         <Image className="img-responsive" src={ULaval} alt="Université Laval"/>
                         <div className="mt-2">
@@ -29,7 +30,7 @@ export class Etudes extends React.Component {
                             <p>2024 - </p>
                         </div>
                     </Row>
-                    <Row className="mb-4">
+                    <Row className="mb-5">
                         <Image className="img-responsive" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
                         <div className="mt-2">
                             <h3>Cégep de Sainte-Foy</h3>

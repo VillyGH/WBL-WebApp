@@ -1,13 +1,7 @@
 import {Component, ReactElement} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 //region CSS
-//region Pages CSS
 import "../deps/css/index.css";
-import "../deps/css/etudes.css";
-import "../deps/css/experience.css";
-import "../deps/css/projets.css";
-
-//endregion
 import "../deps/css/bootstrap.min.css";
 import "../deps/css/mediaqueries.css";
 import "../deps/css/animations.css";

@@ -5,10 +5,10 @@ import {Application} from "../core/Application";
 import BureauRQ from "../deps/images/BureauRQ.jpg"
 import BureauRAMQ from "../deps/images/BureauRAMQ.jpg"
 import BureauCNESST from "../deps/images/BureauCNESST.png"
-
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";
+import "../deps/css/experience.css"
 
 export class Experience extends React.Component {
     public componentDidMount() {
