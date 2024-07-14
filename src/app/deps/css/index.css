@@ -115,10 +115,12 @@ nav {
     background: var(--btn-grey-color) !important;
     border-color: var(--btn-light-color) !important;
     color: var(--text-color) !important;
+    transition: padding 0.3s;
 }
 
 .btn.btn-primary:hover {
     background-color: var(--btn-hover-color) !important;
+    padding: 0.575em 0.85em 0.575em 0.85em;
 }
 
 .btn-theme {

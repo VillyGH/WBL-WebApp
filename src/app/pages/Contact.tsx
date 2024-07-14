@@ -9,7 +9,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {faFacebook, faReddit} from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export class Contact extends React.Component<unknown, Email> {
     constructor(props) {

@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export const ProjectCard: React.FC<ProjectCardProps> = ({image, link, title, description}) => {
     return (
         <Col sm="12" md="12" lg="6" className="mb-5">
-            <Card className="project-card">
+            <Card className="project-card glow-on-hover">
                 <a href={link} target="_blank" rel="noopener noreferrer">
                     <Card.Body className="p-0">
                         <div className="image-container">

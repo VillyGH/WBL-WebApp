@@ -5,7 +5,7 @@ import {Application} from "../core/Application";
 import BureauRQ from "../deps/images/BureauRQ.jpg"
 import BureauRAMQ from "../deps/images/BureauRAMQ.jpg"
 import BureauCNESST from "../deps/images/BureauCNESST.png"
-import "../deps/css/experience.css"
+
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";

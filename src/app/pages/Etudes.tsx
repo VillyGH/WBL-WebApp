@@ -5,10 +5,9 @@ import {Application} from "../core/Application";
 import Camaradiere from "../deps/images/Camaradiere.png"
 import CegepSainteFoy from "../deps/images/CegepSainteFoy.png"
 import ULaval from "../deps/images/ULaval.png"
-import "../deps/css/etudes.css"
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
-import {Col, Container, Image, Row} from "react-bootstrap";
+import {Container, Image, Row} from "react-bootstrap";
 
 export class Etudes extends React.Component {
     public componentDidMount() {
