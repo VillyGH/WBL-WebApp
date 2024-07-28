@@ -32,7 +32,7 @@ export class References extends React.Component {
                     <p><a href="https://codepen.io/leandrosimoes/pen/VqZxaG">Animation brillante multicolore (Auteur: Leandro Simões)</a></p>
                     <h4 className="my-4">Déploiement de l'application:</h4>
                     <p><a href="https://pages.cloudflare.com">Cloudflare Pages (moyen facile et gratuit de déployer une application web)</a></p>
-                    <p><a href="https://blog.logrocket.com/deploying-react-app-full-stack-cloudflare-pages/">Tutoriel comprenant les scripts de déploiement de Cloudflare Pages</a></p>
+                    <p><a href="https://blog.logrocket.com/deploying-react-app-full-stack-cloudflare-pages/">Tutoriel sur le déploiement de Cloudflare Pages avec React.JS</a></p>
                     <p><a href="https://freedns.afraid.org/subdomain/">FreeDNS (Gestionnaire DNS permettant l'attribution et l'utilisation de domaines gratuits et premiums)</a></p>
                     <p><a href="https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates">Dependabot (Mise à jour automatique des dépendances du projet)</a></p>
                 </Container>
