@@ -10,6 +10,7 @@ import Revolvair from "../deps/images/Revolvair.jpg";
 import SimulationGame from "../deps/images/SimulationGame.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/Faction_War.png";
+import FaceFlow from "../deps/images/FaceFlow.png";
 import WIP from "../deps/images/WIP.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
@@ -61,11 +62,12 @@ export class Projets extends React.Component {
                                          description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
                                          puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
                                          une interface utilisateur simple produite sur la base du framework électron."/>
-                        <ProjectCard image={WIP} link="https://github.com/VillyGH/AutoDisnatApp"
-                                         title="PepsReservationBot"
-                                         description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
-                                         puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
-                                         une interface utilisateur simple produite sur la base du framework électron."/>
+                        <ProjectCard image={FaceFlow} link="https://github.com/VillyGH/FaceFlow"
+                                         title="FaceFlow"
+                                         description="Projet en équipe de 5 de recherche sur la reconnaissance faciale avec Tensor Flow pour le cours de veille technologique automne 2022.
+                                         Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage et déceler ses caractéristiques qui le rend unique:
+                                         les yeux, les cheveux, la couleur de la peau et s'il possède une barbe ou non, puis de les classer les catégories correspondantes.
+                                          L'intelligence artificielle a une précision de plus de 78% avec 2 jours d'entrainement"/>
                         <ProjectCard image={WIP} link="https://github.com/VillyGH/PepsReservationBot"
                                          title="PepsReservationBot"
                                          description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
