@@ -4,12 +4,12 @@ import {APP_NAME} from "../constants/Global"
 import Container from "react-bootstrap/Container";
 import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
-import FactionWar from "../deps/images/FactionWar.png";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.jpg";
 import SimulationGame from "../deps/images/SimulationGame.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
+import FactionWar from "../deps/images/Faction_War.png";
 import WIP from "../deps/images/WIP.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
