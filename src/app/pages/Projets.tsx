@@ -38,41 +38,35 @@ export class Projets extends React.Component {
                                          link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
                                          title="InfiniteCraft Bot"
                                          description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
-                                             Ce programme permet de jouer à InfiniteCraft automatiquement et ce à l'infini !"/>
+                                             Ce programme permet de jouer à InfiniteCraft automatiquement et indéfiniment."/>
                         <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
                                          title="Revolvair"
                                          description="Projet développé par William Blanchet Lafrenière et Félix Larrivée (https://gitlab.com/FelixLarrivee1)
                                          dans le cadre du cours de développement mobile et objets connectés. Revolvair est un projet qui consiste à analyser l'air du Québec
-                                         par les données récoltées de différentes stations d'analyse de qualité de l'air. Cette application développé en dart avec flutter
-                                         comprends une foule de fonctionnalité comme la liste des stations, ses stations favorites, des alertes configurables,
-                                         des informations sur les différentes stations et une section de commentaires pour chaque station"/>
+                                         par les données récoltées de différentes stations d'analyse de qualité de l'air."/>
                         <ProjectCard image={SimulationGame} link="https://github.com/VillyGH/Simulation-Game"
                                          title="Simulation Game"
                                          description="Deuxième Travail pratique dans le cadre du cours de Jeux vidéo 2.
                                           Ce projet présente un jeu de simulation de tir en 2D entièrement automatique,
-                                          dans lequel deux camps s'affrontent. Ce projet avait pour but de s'initier à l'usage de la machine à état,
-                                          une fonctionnalité utile pour la mise en œuvre d'intelligence artificielle dans les jeux vidéo."/>
+                                          dans lequel deux camps s'affrontent."/>
                         <ProjectCard image={GardienLegend} link="https://github.com/VillyGH/TP2-Gardien-Legend"
                                          title="Gardien Legend"
                                          description="Projet pratique final dans le cadre du premier cours de Jeux vidéo. Ce jeu de tir vertical en 2D,
                                          créé en collaboration avec Samuel René (https://github.com/SamuelQidigo), s'inspire du style arcade. Il propose une expérience immersive
                                          comprenant la collecte de bonus et deux phases de jeu, culminant avec un combat de boss intense lors de la seconde phase."/>
                         <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
-                                         title="PepsReservationBot"
-                                         description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
-                                         puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
-                                         une interface utilisateur simple produite sur la base du framework électron."/>
+                                         title="FactionWar"
+                                         description="Projet pratique effectué dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007).
+                                         Le jeu programmé en Java est une simulation automatique de deux armées qui se combattent sur le champ de bataille."/>
                         <ProjectCard image={FaceFlow} link="https://github.com/VillyGH/FaceFlow"
                                          title="FaceFlow"
-                                         description="Projet en équipe de 5 de recherche sur la reconnaissance faciale avec Tensor Flow pour le cours de veille technologique automne 2022.
-                                         Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage et déceler ses caractéristiques qui le rend unique:
-                                         les yeux, les cheveux, la couleur de la peau et s'il possède une barbe ou non, puis de les classer les catégories correspondantes.
-                                          L'intelligence artificielle a une précision de plus de 78% avec 2 jours d'entrainement"/>
+                                         description="Projet en équipe de 5 de recherche sur la reconnaissance faciale avec Tensor Flow pour le cours de veille technologique à l'automne 2022.
+                                         Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage, déceler ses caractéristiques et les classer dans
+                                         les catégories correspondantes. L'intelligence artificielle a une précision de plus de 78% avec 2 jours d'entrainement"/>
                         <ProjectCard image={WIP} link="https://github.com/VillyGH/PepsReservationBot"
                                          title="PepsReservationBot"
                                          description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
-                                         puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance. Ce projet toujours en développement comportera
-                                         une interface utilisateur simple produite sur la base du framework électron."/>
+                                         puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance."/>
                     </Row>
                 </Container>
             </section>
