@@ -29,30 +29,42 @@ export class Projets extends React.Component {
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
                     <Row>
+                        <ProjectCard image={Peps} link="https://github.com/VillyGH/PepsReservationBot"
+                                     title="PepsReservationBot"
+                                     description="Projet personnel de réservation automatisé de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package
+                                         puppeteer il comporte un script powershell permettant de planifier précisement le moment pour réserver un terrain à un horaire prédéfini"/>
+                        <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
+                                     title="Revolvair"
+                                     description="Projet développé par William Blanchet Lafrenière et Félix Larrivée dans le cadre du cours de développement mobile et objets connectés.
+                                         Revolvair est un projet qui consiste à analyser l'air du Québec par les données récoltées de différentes stations d'analyse de qualité de l'air.
+                                         Cette application a gagné le premier prix du concours meilleure application mobile Revolvair"/>
                         <ProjectCard image={TMAcceuil} link="https://github.com/TaskMaster873/DRFWClient"
                                          title="TaskMaster"
-                                         description="TaskMaster est un gestionnaire d'horaire pour entreprise. En tant qu'application web,
-                                         TaskMaster est accessible partout et permet à une entreprise de mieux gérer ses effectifs. Projet développé avec React, Typescript puis Firebase en
+                                         description="TaskMaster est un gestionnaire d'horaire pour entreprise. En tant que solution web complète,
+                                         TaskMaster permet à une entreprise de mieux gérer ses effectifs. Projet développé avec React, Typescript et Firebase en
                                          équipe de quatre avec Felix-Antoine Belleau, David Lawton et Romin Martignat"/>
+                        <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
+                                     title="FactionWar"
+                                     description="Projet pratique effectué en équipe de quatre dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007).
+                                         Le jeu programmé en Java est une simulation automatique de deux armées qui se combattent sur un champ de bataille."/>
+                        <ProjectCard image={FaceFlow} link="https://github.com/VillyGH/FaceFlow"
+                                     title="FaceFlow"
+                                     description="Projet en équipe de 5 de recherche sur la reconnaissance faciale effectué dans le cours de Veille Technologique.
+                                         Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage, déceler ses caractéristiques et les classer dans
+                                         les catégories correspondantes. L'intelligence artificielle a une précision de plus de 78% après 2 jours d'entrainement"/>
+                        <ProjectCard image={SimulationGame} link="https://github.com/VillyGH/Simulation-Game"
+                                     title="Simulation Game"
+                                     description="Deuxième Travail pratique dans le cadre du cours de Jeux vidéo 2. Ce projet présente un jeu de simulation de tir en 2D entièrement automatique,
+                                          dans lequel deux camps s'affrontent pour déterminer le vainqueur."/>
                         <ProjectCard image={InfiniteCraft}
                                          link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
                                          title="InfiniteCraft Bot"
                                          description="Projet simple créé à l'aide de l'extension de navigateur automa qui permet de créer des tâches automatisé depuis un navigateur.
                                              Ce programme permet de jouer à InfiniteCraft automatiquement et indéfiniment."/>
-                        <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
-                                         title="Revolvair"
-                                         description="Projet développé par William Blanchet Lafrenière et Félix Larrivée (https://gitlab.com/FelixLarrivee1)
-                                         dans le cadre du cours de développement mobile et objets connectés. Revolvair est un projet qui consiste à analyser l'air du Québec
-                                         par les données récoltées de différentes stations d'analyse de qualité de l'air."/>
-                        <ProjectCard image={SimulationGame} link="https://github.com/VillyGH/Simulation-Game"
-                                         title="Simulation Game"
-                                         description="Deuxième Travail pratique dans le cadre du cours de Jeux vidéo 2.
-                                          Ce projet présente un jeu de simulation de tir en 2D entièrement automatique,
-                                          dans lequel deux camps s'affrontent."/>
                         <ProjectCard image={GardienLegend} link="https://github.com/VillyGH/TP2-Gardien-Legend"
                                          title="Gardien Legend"
                                          description="Projet pratique final dans le cadre du premier cours de Jeux vidéo. Ce jeu de tir vertical en 2D,
-                                         créé en collaboration avec Samuel René (https://github.com/SamuelQidigo), s'inspire du style arcade. Il propose une expérience immersive
+                                         créé en collaboration avec Samuel René, s'inspire du style arcade. Il propose une expérience immersive
                                          comprenant la collecte de bonus et deux phases de jeu, culminant avec un combat de boss intense lors de la seconde phase."/>
                         <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
                                          title="FactionWar"
