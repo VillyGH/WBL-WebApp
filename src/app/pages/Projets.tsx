@@ -43,15 +43,6 @@ export class Projets extends React.Component {
                                          description="TaskMaster est un gestionnaire d'horaire pour entreprise. En tant que solution web complète,
                                          TaskMaster permet à une entreprise de mieux gérer ses effectifs. Projet développé avec React, Typescript et Firebase en
                                          équipe de quatre avec Felix-Antoine Belleau, David Lawton et Romin Martignat"/>
-                        <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
-                                     title="FactionWar"
-                                     description="Projet pratique effectué en équipe de quatre dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007).
-                                         Le jeu programmé en Java est une simulation automatique de deux armées qui se combattent sur un champ de bataille."/>
-                        <ProjectCard image={FaceFlow} link="https://github.com/VillyGH/FaceFlow"
-                                     title="FaceFlow"
-                                     description="Projet en équipe de 5 de recherche sur la reconnaissance faciale effectué dans le cours de Veille Technologique.
-                                         Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage, déceler ses caractéristiques et les classer dans
-                                         les catégories correspondantes. L'intelligence artificielle a une précision de plus de 78% après 2 jours d'entrainement"/>
                         <ProjectCard image={SimulationGame} link="https://github.com/VillyGH/Simulation-Game"
                                      title="Simulation Game"
                                      description="Deuxième Travail pratique dans le cadre du cours de Jeux vidéo 2. Ce projet présente un jeu de simulation de tir en 2D entièrement automatique,
