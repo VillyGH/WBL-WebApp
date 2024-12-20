@@ -11,7 +11,7 @@ import SimulationGame from "../deps/images/SimulationGame.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/Faction_War.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
-import WIP from "../deps/images/WIP.png";
+import Peps from "../deps/images/Peps.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Row} from "react-bootstrap";
@@ -75,7 +75,7 @@ export class Projets extends React.Component {
                                          description="Projet en équipe de 5 de recherche sur la reconnaissance faciale avec Tensor Flow pour le cours de veille technologique à l'automne 2022.
                                          Programmé en python avec l'outil tensorflow, cette IA permet de reconnaitre un visage, déceler ses caractéristiques et les classer dans
                                          les catégories correspondantes. L'intelligence artificielle a une précision de plus de 78% avec 2 jours d'entrainement"/>
-                        <ProjectCard image={WIP} link="https://github.com/VillyGH/PepsReservationBot"
+                        <ProjectCard image={Peps} link="https://github.com/VillyGH/PepsReservationBot"
                                          title="PepsReservationBot"
                                          description="Projet personnel de réservation automatisé de terrain du PEPS de l'université Laval. Programmé en typescript à l'aide du package
                                          puppeteer il comporte un script powershell permettant d'automatiser son exécution à l'avance."/>
