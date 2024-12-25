@@ -29,3 +29,31 @@
     height: 350px !important;
     object-fit: cover !important;
 }
+
+.download-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    margin-left: .5rem !important;
+    padding: 20px 30px !important;
+    background: linear-gradient(to right, rgba(22, 48, 56, 0.1), rgba(79, 72, 84, 0.2)) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+    margin: 1.5rem 0 1.5rem .5rem !important;
+}
+
+.download-button:hover {
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.22), rgba(128, 128, 128, 0.22)) !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.download-icon {
+    margin-left: .5rem !important;
+}
+
+.download-button .download-icon {
+    font-size: 2.5rem;
+    color: grey;
+}

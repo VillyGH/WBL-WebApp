@@ -8,13 +8,14 @@ interface ProjectCardProps {
     link: string,
     title: string;
     description: string;
+    targetBlank?: boolean;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({image, link, title, description}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({image, link, title, description, targetBlank = true}) => {
     return (
         <Col sm="12" md="12" lg="6" className="mb-5">
             <Card className="project-card glow-on-hover">
-                <a href={link} target="_blank" rel="noopener noreferrer">
+                <a href={link} target={targetBlank ? "_blank" : "_self"} rel="noopener noreferrer">
                     <Card.Body className="p-0">
                         <div className="image-container">
                             <Image src={image} alt={title} className="project-img"/>
