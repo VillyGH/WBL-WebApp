@@ -16,6 +16,7 @@ import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Row} from "react-bootstrap";
 import "../deps/css/projets.css";
+import {RoutesPath} from "../RoutesPath";
 
 export class Projets extends React.Component {
     public componentDidMount() {
@@ -29,10 +30,11 @@ export class Projets extends React.Component {
             <section className="mt-4 mb-5">
                 <Container className="mb-5">
                     <Row>
-                        <ProjectCard image={Peps} link="https://github.com/VillyGH/PepsReservationBot"
+                        <ProjectCard image={Peps} link={RoutesPath.PEPSRESERVATIONBOT}
                                      title="PepsReservationBot"
                                      description="Projet personnel de réservation automatisé de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package
-                                         puppeteer il comporte un script powershell permettant de planifier précisement le moment pour réserver un terrain à un horaire prédéfini"/>
+                                         puppeteer il comporte un script powershell permettant de planifier précisement le moment pour réserver un terrain à un horaire prédéfini"
+                                     targetBlank={false}/>
                         <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
                                      title="Revolvair"
                                      description="Projet développé par William Blanchet Lafrenière et Félix Larrivée dans le cadre du cours de développement mobile et objets connectés.

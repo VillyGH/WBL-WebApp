@@ -55,7 +55,19 @@ export default {
                 options: {
                     name: 'images/[name].[ext]'
                 }
+            },
+            {
+                test: /\.zip$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'files/[name].[ext]'
+                        },
+                    },
+                ]
             }
+            
         ],
     },
     devServer: {
