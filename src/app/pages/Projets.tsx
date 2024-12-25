@@ -1,22 +1,22 @@
 import React, {ReactElement} from "react";
 import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
-import Container from "react-bootstrap/Container";
+import {Row, Container} from "react-bootstrap";
 import {Application} from "../core/Application";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.jpg";
-import SimulationGame from "../deps/images/SimulationGame.png";
+import CIAUL from "../deps/images/CIAUL.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/Faction_War.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
 import Peps from "../deps/images/Peps.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
-import {Row} from "react-bootstrap";
-import "../deps/css/projets.css";
+import {faDownload, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
+import "../deps/css/projets.css";
 
 export class Projets extends React.Component {
     public componentDidMount() {
@@ -34,21 +34,22 @@ export class Projets extends React.Component {
                                      title="PepsReservationBot"
                                      description="Projet personnel de réservation automatisé de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package
                                          puppeteer il comporte un script powershell permettant de planifier précisement le moment pour réserver un terrain à un horaire prédéfini"
+                                     icon={faDownload}
                                      targetBlank={false}/>
                         <ProjectCard image={Revolvair} link="https://gitlab.com/VillyGH/tp3-wbl-fl"
                                      title="Revolvair"
                                      description="Projet développé par William Blanchet Lafrenière et Félix Larrivée dans le cadre du cours de développement mobile et objets connectés.
                                          Revolvair est un projet qui consiste à analyser l'air du Québec par les données récoltées de différentes stations d'analyse de qualité de l'air.
-                                         Cette application a gagné le premier prix du concours meilleure application mobile Revolvair"/>
+                                         Cette application a gagné le premier prix du concours meilleure application mobile Revolvair"
+                                     icon={faTrophy}/>
                         <ProjectCard image={TMAcceuil} link="https://github.com/TaskMaster873/DRFWClient"
                                          title="TaskMaster"
                                          description="TaskMaster est un gestionnaire d'horaire pour entreprise. En tant que solution web complète,
                                          TaskMaster permet à une entreprise de mieux gérer ses effectifs. Projet développé avec React, Typescript et Firebase en
                                          équipe de quatre avec Felix-Antoine Belleau, David Lawton et Romin Martignat"/>
-                        <ProjectCard image={SimulationGame} link="https://github.com/VillyGH/Simulation-Game"
-                                     title="Simulation Game"
-                                     description="Deuxième Travail pratique dans le cadre du cours de Jeux vidéo 2. Ce projet présente un jeu de simulation de tir en 2D entièrement automatique,
-                                          dans lequel deux camps s'affrontent pour déterminer le vainqueur."/>
+                        <ProjectCard image={CIAUL} link="https://github.com/cia-ulaval/EEG_flappy_bird"
+                                     title="EEG_flappy_bird"
+                                     description="Jeu Flappy bird controllable depuis un electroencephalogramme (EEG) réalisé avec l'équipe jeu du club d'intelligence artificielle de l'Université Laval."/>
                         <ProjectCard image={InfiniteCraft}
                                          link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
                                          title="InfiniteCraft Bot"
