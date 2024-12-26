@@ -38,7 +38,7 @@ code {
 }
 
 [data-bs-theme="dark"] {
-    --background: radial-gradient(circle at 52.1% -29.6%, rgb(29, 25, 32) 0%, rgb(53, 48, 56) 100.2%);
+    --background: radial-gradient(circle at 52.1% -29.6%, rgb(6, 38, 52) 0%, rgb(3, 19, 26) 100.2%);
     --title-color: white;
     --text-color: white;
     --footer-bg-color: #1d1920;
