@@ -6,7 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import Logo from "../deps/images/logo.png";
 import LogoDark from "../deps/images/logoDark.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBook, faBriefcase, faCode, faEnvelope, faGraduationCap, faInfoCircle, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
+import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
 import {Application} from "../core/Application";
@@ -79,9 +79,11 @@ export class NavigationBar extends React.Component<Props, State> {
                         </Button>
                         <Navbar.Toggle />
                     </div>
-
                     <Navbar.Collapse>
                         {this.generalLinks()}
+                        <Button className="btn-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
+                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
+                        </Button>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
@@ -113,25 +115,17 @@ export class NavigationBar extends React.Component<Props, State> {
      */
     private generalLinks(): ReactElement {
         return (
-            <Nav activeKey="">
-                <NavItem icon={<FontAwesomeIcon icon={faCode}/>} link={RoutesPath.PROJETS}
-                         label="Projets"
-                         description="Explorez les projets que j'ai réalisés au cours de mon parcours en tant que développeur."/>
-                <NavItem icon={<FontAwesomeIcon icon={faBriefcase}/>} link={RoutesPath.EXPERIENCE} label="Expérience"
-                         description="Découvrez les emplois que j'ai effectués au cours de ma carrière."/>
-                <NavItem icon={<FontAwesomeIcon icon={faGraduationCap}/>} link={RoutesPath.ETUDES} label="Études"
-                         description="Découvrez mes parcours éducatifs et mes diplômes obtenus."/>
-                <NavItem icon={<FontAwesomeIcon icon={faBook}/>} link={RoutesPath.REFERENCES}
-                         label="Références"
-                         description="Consultez les références qui ont été utilisées comme sources pour la création de mes projets."/>
-                <NavItem icon={<FontAwesomeIcon icon={faEnvelope}/>} link={RoutesPath.CONTACT} label="Contact"
-                         description="Contactez-moi pour toute question, commentaire ou demande de renseignements."/>
-                <NavItem icon={<FontAwesomeIcon icon={faInfoCircle}/>} link={RoutesPath.APROPOS} label="À propos"
-                         description="Découvrez davantage d'informations sur cette application web et son créateur"/>
-                <Button className="btn-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                    <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
-                </Button>
+            <Nav className="mx-auto" variant="underline" activeKey="">
+                <NavItem link={RoutesPath.PROJETS}
+                         label="Projets"/>
+                <NavItem link={RoutesPath.EXPERIENCE} label="Expérience"/>
+                <NavItem link={RoutesPath.ETUDES} label="Études"/>
+                <NavItem link={RoutesPath.REFERENCES} label="Références"/>
+                <NavItem link={RoutesPath.CONTACT} label="Contact"/>
+                <NavItem link={RoutesPath.APROPOS} label="À propos"/>
+
             </Nav>
+
         );
     }
 
