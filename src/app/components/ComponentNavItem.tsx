@@ -4,9 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import {LinkContainer} from "react-router-bootstrap";
 
 interface ComponentNavItemProps {
-    icon?: ReactElement;
     label: string;
-    description?: string;
     link: string;
 }
 
@@ -22,16 +20,8 @@ export class ComponentNavItem extends React.Component<ComponentNavItemProps, unk
         return (
             <LinkContainer to={this.props.link}>
                 <Nav.Link>
-                    <div className="navIcon">
-                        {this.props.icon}
-                    </div>
                     <div className="navItem">
-                        <div className="navLabel">
-                            {this.props.label}
-                        </div>
-                        <div className="navDescription">
-                            {this.props && this.props.description && true ? this.props.description : ""}
-                        </div>
+                        {this.props.label}
                     </div>
                 </Nav.Link>
             </LinkContainer>
