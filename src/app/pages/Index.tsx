@@ -28,7 +28,7 @@ export class Index extends Component {
                             height={200}
                         />
                     </div>
-                    <h1 className="mt-6 mb-4">WBL-WebApp</h1>
+                    <h1 className="mt-6 mb-4">William Blanchet Lafrenière</h1>
                     <div className="text-center mt-4 mb-4 text-home-page-description z-1">
                         Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets
                         qu'il a effectué tout au long de son parcours en informatique.
