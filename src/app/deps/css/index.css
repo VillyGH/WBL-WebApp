@@ -27,7 +27,6 @@ code {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(240, 240, 240) 0%, rgb(220, 220, 220) 100.2%);
     --title-color: #4173d9;
     --text-color: black;
-    --footer-bg-color: #4b7ade;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(65, 65, 65, 0.5);
     --nav-label-color: rgba(42, 42, 42, 0.7);
@@ -66,7 +65,6 @@ code {
 
 nav {
     font-size: 15px;
-    background-color: var(--background) !important;
 }
 
 .navbar-nav {
@@ -149,7 +147,6 @@ h2 {
 }
 
 footer {
-    background-color: var(--footer-bg-color) !important;
     width: 100%;
     font-size: 14px;
 }
