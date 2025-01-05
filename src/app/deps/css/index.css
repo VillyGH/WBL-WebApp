@@ -1,3 +1,5 @@
+
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -13,6 +15,7 @@ body {
     line-height: normal;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    color: var(--text-color) !important;
 }
 
 code {
@@ -26,8 +29,9 @@ code {
     --bs-card-spacer-y: 0rem;
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(250, 250, 250) 0%, rgb(220, 220, 220) 100.2%);
     --title-color: #4173d9;
-    --text-color: black;
-    --nav-bg-color: #74889c;
+    --important-text-color: black;
+    --text-color: #333333;
+    --nav-bg-color: #5a7184;
     --footer-bg-color: #a6b8c7;
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(65, 65, 65, 0.5);
@@ -42,6 +46,7 @@ code {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(6, 38, 52) 0%, rgb(3, 19, 26) 100.2%);
     --title-color: white;
     --text-color: white;
+    --important-text-color: --text-color;
     --footer-bg-color: --background;
     --nav-bg-color: --background;
     --nav-border-color: #353038;
@@ -69,6 +74,7 @@ code {
 nav {
     font-size: 15px;
     background-color: var(--nav-bg-color) !important;
+    color: var(--important-text-color);
 }
 
 .navbar-nav {
@@ -127,11 +133,12 @@ nav {
 }
 
 a {
-    color: var(--text-color);
+    color: var(--important-text-color);
 }
 
 h1 {
     color: var(--title-color);
+    text-color: --important-text-color;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 4em;
@@ -142,6 +149,7 @@ h1 {
 
 h2 {
     color: var(--title-color);
+    text-color: --important-text-color;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 3em;
@@ -151,6 +159,7 @@ h2 {
 }
 
 footer {
+    text-color: --important-text-color;
     width: 100%;
     font-size: 14px;
     background-color: var(--footer-bg-color) !important;
