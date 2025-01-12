@@ -24,6 +24,7 @@ import {BASE_URL} from "../constants/Global";
 import {Etudes} from "../pages/Etudes";
 import {Index} from "../pages/Index";
 import {PepsReservationBot} from "../pages/Projets/PepsReservationBot";
+import {FactionWar} from "../pages/Projets/FactionWar";
 //endregion
 
 interface CoreState {
@@ -47,6 +48,7 @@ export class Core extends Component<unknown, CoreState> {
                     <Route path={RoutesPath.INDEX} element={<Index/>}/>
                     <Route path={RoutesPath.PROJETS} element={<Projets/>}/>
                     <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PepsReservationBot/>}/>
+                    <Route path={RoutesPath.FACTIONWAR} element={<FactionWar/>}/>
                     <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>
                     <Route path={RoutesPath.EXPERIENCE} element={<Experience/>}/>
                     <Route path={RoutesPath.CONTACT} element={<Contact/>}/>

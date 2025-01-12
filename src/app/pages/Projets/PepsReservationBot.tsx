@@ -12,7 +12,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export class PepsReservationBot extends React.Component {
     public componentDidMount() {
-        document.title = "Projet downloads - " + APP_NAME;
+        document.title = "Projet PepsReservationBot - " + APP_NAME;
     }
 
     public render(): ReactElement | null {
