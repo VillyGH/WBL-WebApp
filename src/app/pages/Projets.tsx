@@ -50,6 +50,10 @@ export class Projets extends React.Component {
                         <ProjectCard image={CIAUL} link="https://github.com/cia-ulaval/EEG_flappy_bird"
                                      title="EEG_flappy_bird"
                                      description="Jeu Flappy bird controllable depuis un electroencephalogramme (EEG) réalisé avec l'équipe jeu du club d'intelligence artificielle de l'Université Laval."/>
+                        <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
+                                     title="FactionWar"
+                                     description="Projet pratique effectué dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007).
+                                         Le jeu programmé en Java est une simulation automatique de deux armées qui se combattent sur le champ de bataille."/>
                         <ProjectCard image={InfiniteCraft}
                                          link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
                                          title="InfiniteCraft Bot"
@@ -60,10 +64,6 @@ export class Projets extends React.Component {
                                          description="Projet pratique final dans le cadre du premier cours de Jeux vidéo. Ce jeu de tir vertical en 2D,
                                          créé en collaboration avec Samuel René, s'inspire du style arcade. Il propose une expérience immersive
                                          comprenant la collecte de bonus et deux phases de jeu, culminant avec un combat de boss intense lors de la seconde phase."/>
-                        <ProjectCard image={FactionWar} link="https://github.com/VillyGH/PepsReservationBot"
-                                         title="FactionWar"
-                                         description="Projet pratique effectué dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007).
-                                         Le jeu programmé en Java est une simulation automatique de deux armées qui se combattent sur le champ de bataille."/>
                         <ProjectCard image={FaceFlow} link="https://github.com/VillyGH/FaceFlow"
                                          title="FaceFlow"
                                          description="Projet en équipe de 5 de recherche sur la reconnaissance faciale avec Tensor Flow pour le cours de veille technologique à l'automne 2022.
