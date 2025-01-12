@@ -30,6 +30,11 @@
     object-fit: cover !important;
 }
 
+.project-img-xl {
+    width: 100% !important;
+    height: 700px !important;
+}
+
 .download-button {
     margin-top: 10px;
     display: flex;
