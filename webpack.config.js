@@ -1,5 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import {fileURLToPath} from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -81,6 +82,11 @@ export default {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src/html", "index.html"),
             favicon: "./src/html/favicon.ico",
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.join(__dirname, "src/html/googlee063acc64186947c.html"), to: "" }
+            ]
         })
     ]
 };
