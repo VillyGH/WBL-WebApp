@@ -1,6 +1,7 @@
 import {Component, ReactElement, Suspense} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {ReactNotifications} from "react-notifications-component";
+import {BASE_URL} from "../constants/Global";
 //region CSS
 import "../deps/css/index.css";
 import "../deps/css/bootstrap.min.css";
@@ -12,19 +13,18 @@ import 'animate.css';
 //endregion CSS
 //region Pages
 import NavigationBar from "../components/NavigationBar";
+import Index from "../pages/Index";
 import Projets from "../pages/Projets";
 import Experience from "../pages/Experience";
-import {References} from "../pages/References";
-import {Contact} from "../pages/Contact";
-import {Apropos} from "../pages/Apropos";
-import {Footer} from "../components/Footer";
-import {BASE_URL} from "../constants/Global";
-import {Etudes} from "../pages/Etudes";
-import Index from "../pages/Index";
-import {PepsReservationBot} from "../pages/Projets/PepsReservationBot";
-import {FactionWar} from "../pages/Projets/FactionWar";
+import References from "../pages/References";
+import Contact from "../pages/Contact";
+import Apropos from "../pages/Apropos";
+import Etudes from "../pages/Etudes";
+import PepsReservationBot from "../pages/Projets/PepsReservationBot";
+import FactionWar from "../pages/Projets/FactionWar";
+import Footer from "../components/Footer";
+import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
-import {RouteNotFound} from "../pages/RouteNotFound";
 //endregion
 
 interface CoreState {

@@ -1,42 +1,49 @@
-import React, {ReactElement} from "react";
+import React, { ReactElement } from "react";
 import Particles from "@tsparticles/react";
-import {APP_NAME} from "../constants/Global"
+import { APP_NAME } from "../constants/Global";
+import { Application } from "../core/Application";
+import { ParticlesOptsDark } from "../types/ParticlesDark";
+import { ParticlesOpts } from "../types/Particles";
+import { withTranslation, WithTranslation } from "react-i18next";
 import Container from "react-bootstrap/Container";
-import {Application} from "../core/Application";
-import {ParticlesOptsDark} from "../types/ParticlesDark";
-import {ParticlesOpts} from "../types/Particles";
 
-export class References extends React.Component {
-    public componentDidMount() {
-        document.title = "Références - " + APP_NAME;
-    }
-
+class References extends React.Component<WithTranslation> {
     public render(): ReactElement | null {
-        return <div>
-            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-            <div className="justify-content-left">
-                <h2 className="my-4">Références</h2>
-                <Container className="justify-content-left my-5">
-                    <h3>{APP_NAME}</h3>
-                    <h4 className="my-4">Configuration de l'application:</h4>
-                    <p><a href="https://www.typescriptlang.org/tsconfig">TypeScript (Javascript mais avec les types)</a></p>
-                    <p><a href="https://nodejs.org/en">Node JS (version 20.8.0 utilisée dans le projet) </a></p>
-                    <p><a href="https://docs.npmjs.com">NPM (gestionnaire de dépendances du projet) </a></p>
-                    <p><a href="https://babeljs.io/docs/">Babel (compatibilité avec les anciens navigateurs)</a></p>
-                    <p><a href="https://webpack.js.org">Webpack (Regroupement des ressources de l'application en un ensemble de fichier)</a></p>
-                    <p><a href="https://typescript-eslint.io/getting-started/">Eslint (Règles sur les meilleures pratiques de programmation)</a></p>
-                    <h4 className="my-4">Style de la page :</h4>
-                    <p><a href="https://react-bootstrap.github.io">React Bootstrap (formatage, thèmes et styles des pages)</a></p>
-                    <p><a href="https://vincentgarreau.com/particles.js/">Particles.js (Animation de fond d'écran)</a></p>
-                    <p><a href="https://fontawesome.com/icons">fortawesome/free-brands-svg-icons (Icônes)</a></p>
-                    <p><a href="https://codepen.io/leandrosimoes/pen/VqZxaG">Animation brillante multicolore (Auteur: Leandro Simões)</a></p>
-                    <h4 className="my-4">Déploiement de l'application:</h4>
-                    <p><a href="https://pages.cloudflare.com">Cloudflare Pages (moyen facile et gratuit de déployer une application web)</a></p>
-                    <p><a href="https://blog.logrocket.com/deploying-react-app-full-stack-cloudflare-pages/">Tutoriel sur le déploiement de Cloudflare Pages avec React.JS</a></p>
-                    <p><a href="https://freedns.afraid.org/subdomain/">FreeDNS (Gestionnaire DNS permettant l'attribution et l'utilisation de domaines gratuits et premiums)</a></p>
-                    <p><a href="https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates">Dependabot (Mise à jour automatique des dépendances du projet)</a></p>
-                </Container>
+        const { t } = this.props;
+        document.title = t("references") + " - " + APP_NAME;
+
+        return (
+            <div>
+                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
+                <div className="justify-content-left">
+                    <h2 className="my-4">{t("references")}</h2>
+                    <Container className="justify-content-left my-5">
+                        <h4 className="my-4">{t("references_configuration_title")}</h4>
+                        <p><a href="https://www.typescriptlang.org/tsconfig">{t("references_typescript")}</a></p>
+                        <p><a href="https://nodejs.org/en">{t("references_nodejs")}</a></p>
+                        <p><a href="https://docs.npmjs.com">{t("references_npm")}</a></p>
+                        <p><a href="https://babeljs.io/docs/">{t("references_babel")}</a></p>
+                        <p><a href="https://webpack.js.org">{t("references_webpack")}</a></p>
+                        <p><a href="https://typescript-eslint.io/getting-started/">{t("references_eslint")}</a></p>
+                        <h4 className="my-4">{t("references_style_title")}</h4>
+                        <p><a href="https://react-bootstrap.github.io">{t("references_react_bootstrap")}</a></p>
+                        <p><a href="https://vincentgarreau.com/particles.js/">{t("references_particlesjs")}</a></p>
+                        <p><a href="https://fontawesome.com/icons">{t("references_fontawesome")}</a></p>
+                        <p><a href="https://codepen.io/leandrosimoes/pen/VqZxaG">{t("references_multicolor_animation")}</a></p>
+                        <h4 className="my-4">{t("references_deployment_title")}</h4>
+                        <p><a href="https://pages.cloudflare.com">{t("references_cloudflare")}</a></p>
+                        <p><a href="https://blog.logrocket.com/deploying-react-app-full-stack-cloudflare-pages/">
+                                {t("references_cloudflare_tutorial")}
+                        </a></p>
+                        <p><a href="https://freedns.afraid.org/subdomain/">{t("references_freedns")}</a></p>
+                        <p><a href="https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates">
+                                {t("references_dependabot")}
+                        </a></p>
+                    </Container>
+                </div>
             </div>
-        </div>;
+        );
     }
 }
+
+export default withTranslation()(References);
