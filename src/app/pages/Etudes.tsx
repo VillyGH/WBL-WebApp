@@ -1,55 +1,59 @@
-import React, {ReactElement} from "react";
+import React, { ReactElement } from "react";
 import Particles from "@tsparticles/react";
-import {APP_NAME} from "../constants/Global"
-import {Application} from "../core/Application";
-import Camaradiere from "../deps/images/Camaradiere.png"
-import CegepSainteFoy from "../deps/images/CegepSainteFoy.png"
-import ULaval from "../deps/images/ULaval.png"
-import {ParticlesOptsDark} from "../types/ParticlesDark";
-import {ParticlesOpts} from "../types/Particles";
-import {Container, Image, Row} from "react-bootstrap";
-import "../deps/css/etudes.css"
+import { APP_NAME } from "../constants/Global";
+import { Application } from "../core/Application";
+import Camaradiere from "../deps/images/Camaradiere.png";
+import CegepSainteFoy from "../deps/images/CegepSainteFoy.png";
+import ULaval from "../deps/images/ULaval.png";
+import { ParticlesOptsDark } from "../types/ParticlesDark";
+import { ParticlesOpts } from "../types/Particles";
+import { Container, Image, Row } from "react-bootstrap";
+import "../deps/css/etudes.css";
+import { withTranslation, WithTranslation } from "react-i18next";
 
-export class Etudes extends React.Component {
-    public componentDidMount() {
-        document.title = "Études - " + APP_NAME;
-    }
+class Etudes extends React.Component<WithTranslation> {
 
     public render(): ReactElement | null {
-        return <div>
-            <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
-            <h2 className="mt-4 mb-4">Études</h2>
+        const { t } = this.props;
+        document.title = t("etudes") + " - " + APP_NAME;
 
-            <Container fluid="sm" className="mb-5">
+        return (
+            <div>
+                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
+                <h2 className="mt-4 mb-4">{t("etudes")}</h2>
+
+                <Container fluid="sm" className="mb-5">
                     <Row className="mb-4">
-                        <Image className="img-responsive" src={ULaval} alt="Université Laval"/>
+                        <Image className="img-responsive" src={ULaval} alt={t("etudes_ulaval_alt")} />
                         <div className="mt-2">
-                            <h3>Université Laval</h3>
-                            <p>Études universitaires en cours</p>
-                            <p>Baccalauréat en informatique</p>
-                            <p>2024 - </p>
+                            <h3>{t("etudes_ulaval_title")}</h3>
+                            <p>{t("etudes_ulaval_degree")}</p>
+                            <p>{t("etudes_ulaval_program")}</p>
+                            <p>{t("etudes_ulaval_period")}</p>
                         </div>
                     </Row>
                     <Row className="mb-5">
-                        <Image className="img-responsive" src={CegepSainteFoy} alt="Cégep de Sainte-Foy"/>
+                        <Image className="img-responsive" src={CegepSainteFoy} alt={t("etudes_saintefoy_alt")} />
                         <div className="mt-2">
-                            <h3>Cégep de Sainte-Foy</h3>
-                            <p>Diplôme d'études collégiales</p>
-                            <p>Technique de l'informatique: programmation web, mobile et jeux vidéo</p>
-                            <p>2020 - 2023</p>
+                            <h3>{t("etudes_saintefoy_title")}</h3>
+                            <p>{t("etudes_saintefoy_degree")}</p>
+                            <p>{t("etudes_saintefoy_program")}</p>
+                            <p>{t("etudes_saintefoy_period")}</p>
                         </div>
                     </Row>
                     <Row className="mb-4">
-                        <Image className="img-responsive img-cama" src={Camaradiere}
-                               alt="École secondaire La Camaradière"/>
+                        <Image className="img-responsive img-cama" src={Camaradiere} alt={t("etudes_camaradiere_alt")} />
                         <div className="mt-2">
-                            <h3>École Secondaire La Camaradière</h3>
-                            <p>Diplôme d'études secondaires</p>
-                            <p>Concentration arts et technologies de l'information et communication (Arts et TIC)</p>
-                            <p>2015 - 2020</p>
+                            <h3>{t("etudes_camaradiere_title")}</h3>
+                            <p>{t("etudes_camaradiere_degree")}</p>
+                            <p>{t("etudes_camaradiere_program")}</p>
+                            <p>{t("etudes_camaradiere_period")}</p>
                         </div>
                     </Row>
-            </Container>
-        </div>;
+                </Container>
+            </div>
+        );
     }
 }
+
+export default withTranslation()(Etudes);

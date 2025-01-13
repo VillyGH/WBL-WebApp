@@ -48,7 +48,7 @@ class NavigationBar extends React.Component<Props, State> {
      */
     public async componentDidMount(): Promise<void> {
         const userTheme: string | null = localStorage.getItem("theme");
-        const userLangage: string | null = localStorage.getItem("language");
+        const userLangage: string | null = navigator.language;
         let isDarkMode: boolean = false;
 
         if (userTheme) {
@@ -105,7 +105,6 @@ class NavigationBar extends React.Component<Props, State> {
         this.setState(()=> ({
                 language: language === "fr" ? "en" : "fr",
             }), async () => {
-                localStorage.setItem("language", this.state.language);
                 await this.props.i18n.changeLanguage(this.state.language);
             }
         );
