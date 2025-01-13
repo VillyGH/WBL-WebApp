@@ -50,7 +50,6 @@ class NavigationBar extends React.Component<Props, State> {
         const userTheme: string | null = localStorage.getItem("theme");
         const userLangage: string | null = localStorage.getItem("language");
         let isDarkMode: boolean = false;
-        console.log("Traduction pour 'projets':", this.props.t("projets"));
 
         if (userTheme) {
             isDarkMode = userTheme == "dark";
@@ -77,7 +76,7 @@ class NavigationBar extends React.Component<Props, State> {
                     </LinkContainer>
                     <div>
                         <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => this.changeLanguage(this.state.language)}>
-                            {this.state.language === "en" ? "FR" : "EN"}
+                            {this.state.language === "fr" ? "EN" : "FR"}
                         </Button>
                         <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
                             <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
@@ -87,7 +86,7 @@ class NavigationBar extends React.Component<Props, State> {
                     <Navbar.Collapse>
                         {this.generalLinks()}
                         <Button className="btn-theme me-3" onClick={async (): Promise<void> => this.changeLanguage(this.state.language)}>
-                            {this.state.language === "en" ? "FR" : "EN"}
+                            {this.state.language === "fr" ? "EN" : "FR"}
                         </Button>
                         <Button className="btn-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
                             <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
@@ -105,9 +104,9 @@ class NavigationBar extends React.Component<Props, State> {
     private changeLanguage = async (language : "fr" | "en"): Promise<void> => {
         this.setState(()=> ({
                 language: language === "fr" ? "en" : "fr",
-            }),
-            () => {
+            }), async () => {
                 localStorage.setItem("language", this.state.language);
+                await this.props.i18n.changeLanguage(this.state.language);
             }
         );
     };

@@ -7,14 +7,13 @@ import LogoDark from "../deps/images/logoDark.png";
 import {Application} from "../core/Application"
 import {ParticleOptsMenuDark} from "../types/ParticlesDark";
 import {ParticleOptsMenu} from "../types/Particles";
+import {withTranslation, WithTranslation} from "react-i18next";
 
-export class Index extends Component {
-
-    componentDidMount() {
-        document.title = 'Accueil - ' + APP_NAME;
-    }
+class Index extends Component<WithTranslation> {
 
     render() {
+        const { t } = this.props;
+        document.title = t("index") + ' - ' + APP_NAME;
         return (
             <Container>
                 <Row className={"justify-content-md-center"}>
@@ -30,11 +29,12 @@ export class Index extends Component {
                     </div>
                     <h1 className="mt-6 mb-4">William Blanchet Lafrenière</h1>
                     <div className="text-center mt-4 mb-4 z-1">
-                        Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets
-                        qu'il a effectué tout au long de son parcours en informatique.
+                        {t("index_title")}
                     </div>
                 </Row>
             </Container>
         );
     }
 }
+
+export default withTranslation()(Index);
