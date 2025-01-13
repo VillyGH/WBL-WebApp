@@ -1,0 +1,63 @@
+{
+  "projets": "Projects",
+  "experience": "Experience",
+  "etudes": "Studies",
+  "references": "References",
+  "contact": "Contact",
+  "apropos": "About",
+
+  "index": "Home",
+  "index_title": "Welcome to William Blanchet Lafrenière's personal website, dedicated to bringing together the projects he has carried out throughout his career in computer science.",
+
+  "projets_title": "Main Projects",
+  "projets_peps_title": "PepsReservationBot",
+  "projets_peps_description": "Personal project for automated field reservations at PEPS at Université Laval. Developed in TypeScript using Puppeteer, it includes a PowerShell script to precisely schedule field reservations for predefined times.",
+  "projets_factionwar_title": "FactionWar",
+  "projets_factionwar_description": "Session project in the Object-Oriented Systems Analysis and Design course (IFT-2007). The Java-programmed game is a simulation of two armies battling on the battlefield. Finalist in the Yves-Roy prize competition for the best application developed in the course.",
+  "projets_revolvair_title": "Revolvair",
+  "projets_revolvair_description": "Developed for the Mobile Development and IoT course. Revolvair analyzes air quality in Quebec using data from monitoring stations. This project won first prize for best mobile app in the Revolvair competition.",
+  "projets_taskmaster_title": "TaskMaster",
+  "projets_taskmaster_description": "TaskMaster is a schedule manager for businesses. As a complete web solution, TaskMaster enables better workforce management. Developed with React, TypeScript, and Firebase by a team of four.",
+  "projets_ciaul_title": "EEG Flappy Bird",
+  "projets_ciaul_description": "Flappy Bird game controllable via an electroencephalogram (EEG), created with the game team from Université Laval's AI Club.",
+  "projets_infinitecraft_title": "InfiniteCraft Bot",
+  "projets_infinitecraft_description": "Simple project created using the Automa browser extension. This program automates gameplay in InfiniteCraft indefinitely.",
+  "projets_gardien_title": "Gardien Legend",
+  "projets_gardien_description": "Final practical project for a video game course. This 2D vertical shooter, created with Samuel René, combines arcade-style gameplay, bonus collection, and a boss battle.",
+  "projets_faceflow_title": "FaceFlow",
+  "projets_faceflow_description": "Team project researching facial recognition with TensorFlow. Programmed in Python, this AI can recognize faces, identify their features, and classify them into categories. The artificial intelligence achieved over 78% accuracy after two days of training.",
+
+  "experience_title": "Work Experience",
+  "experience_tasks": "Tasks performed:",
+  "experience_ramq_title": "Régie de l'assurance maladie du Québec (RAMQ)",
+  "experience_ramq_period": "June to August 2022 and May to August 2024",
+  "experience_ramq_alt": "Office of the Québec Health Insurance Board",
+  "experience_ramq_tasks": [
+    "Performed programming activities on different platforms and implemented multiple testing levels",
+    "Participated in system implementation and production of IT solutions",
+    "Updated existing technological infrastructures",
+    "Collaborated on activities related to training and knowledge transfer",
+    "Produced technical documentation"
+  ],
+  "experience_rq_title": "Revenu Québec",
+  "experience_rq_period": "March to August 2023",
+  "experience_rq_alt": "Revenu Québec Marly Office",
+  "experience_rq_tasks": [
+    "Planned a complete project to develop software for version comparison of software components by creating mockups and user stories based on the needs established by software architects.",
+    "Implemented the project in collaboration with a colleague under the supervision of architects",
+    "Produced functional tests to validate the overall effectiveness of the project",
+    "Set up CI/CD pipelines to automate the development process",
+    "Implemented new features in response to evolving requirements",
+    "Documented development and deployment processes"
+  ],
+  "experience_cnesst_title": "Commission for Standards, Equity, Health, and Safety at Work (CNESST)",
+  "experience_cnesst_period": "June to August 2022",
+  "experience_cnesst_alt": "Office of the CNESST",
+  "experience_cnesst_tasks": [
+    "Updated and developed the electronic document management structure for the real estate and layout service",
+    "Filed documents using the document retention manual",
+    "Proposed relevant modifications in line with the service members' intentions"
+  ],
+
+  "footer_text": "All right reserved"
+}

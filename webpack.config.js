@@ -80,13 +80,14 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src/html", "index.html"),
-            favicon: "./src/html/favicon.ico",
+            template: path.join(__dirname, "public/html", "index.html"),
+            favicon: "./public/html/favicon.ico",
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.join(__dirname, "src/html/googlee063acc64186947c.html"), to: "" }
+                { from: path.join(__dirname, "public/html/googlee063acc64186947c.html"), to: "" },
+                { from: path.join(__dirname, "public/locales"), to: "locales" }
             ]
-        })
+        }),
     ]
 };

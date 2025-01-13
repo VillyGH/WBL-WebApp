@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {Core} from "./Core";
+import "../../../i18n"
 import {loadFull} from "tsparticles";
 import {initParticlesEngine} from "@tsparticles/react";
 

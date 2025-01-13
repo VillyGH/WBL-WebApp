@@ -1,0 +1,63 @@
+{
+  "projets": "Projets",
+  "experience": "Expérience",
+  "etudes": "Études",
+  "references": "Références",
+  "contact": "Contact",
+  "apropos": "À propos",
+
+  "index": "Acceuil",
+  "index_title": "Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets qu'il a effectué tout au long de son parcours en informatique.",
+
+  "projets_title": "Principaux projets",
+  "projets_peps_title": "PepsReservationBot",
+  "projets_peps_description": "Projet personnel de réservation automatisée de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package Puppeteer, il comporte un script PowerShell permettant de planifier précisément le moment pour réserver un terrain à un horaire prédéfini.",
+  "projets_factionwar_title": "FactionWar",
+  "projets_factionwar_description": "Projet de session effectué dans le cours d'analyse et conception des systèmes orientés objets (IFT-2007). Le jeu, programmé en Java, est une simulation automatique de deux armées qui se combattent sur le champ de bataille. Finaliste au concours pour remporter le prix Yves-Roy décerné à la meilleure application développée dans le cadre du cours.",
+  "projets_revolvair_title": "Revolvair",
+  "projets_revolvair_description": "Projet développé dans le cadre du cours de développement mobile et objets connectés. Revolvair consiste à analyser l'air du Québec à partir des données récoltées par des stations de qualité de l'air. Ce projet a remporté le premier prix du concours meilleure application mobile Revolvair.",
+  "projets_taskmaster_title": "TaskMaster",
+  "projets_taskmaster_description": "TaskMaster est un gestionnaire d'horaires pour entreprises. En tant que solution web complète, TaskMaster permet une meilleure gestion des effectifs. Projet développé avec React, Typescript, et Firebase en équipe de quatre personnes.",
+  "projets_ciaul_title": "EEG Flappy Bird",
+  "projets_ciaul_description": "Jeu Flappy Bird contrôlable depuis un électroencéphalogramme (EEG), réalisé avec l'équipe jeu du club d'intelligence artificielle de l'Université Laval.",
+  "projets_infinitecraft_title": "InfiniteCraft Bot",
+  "projets_infinitecraft_description": "Projet simple créé avec l'extension de navigateur Automa. Ce programme permet de jouer à InfiniteCraft automatiquement et indéfiniment.",
+  "projets_gardien_title": "Gardien Legend",
+  "projets_gardien_description": "Projet pratique final pour un cours de jeux vidéo. Ce jeu de tir vertical en 2D, créé en collaboration avec Samuel René, s'inspire du style arcade, avec des phases de collecte de bonus et un combat de boss intense.",
+  "projets_faceflow_title": "FaceFlow",
+  "projets_faceflow_description": "Projet en équipe de recherche sur la reconnaissance faciale avec TensorFlow. Programmé en Python, cette IA permet de reconnaître un visage, déceler ses caractéristiques et les classer. Précision de plus de 78% après deux jours d'entraînement.",
+
+  "experience_title": "Expérience de travail",
+  "experience_tasks": "Tâches effectuées:",
+  "experience_ramq_title": "Régie de l'assurance maladie du Québec (RAMQ)",
+  "experience_ramq_period": "Juin à août 2022 puis de mai à août 2024",
+  "experience_ramq_alt": "Bureau de la régie de l'assurance santé du Québec",
+  "experience_ramq_tasks": [
+    "Réalisation d'activités de programmation sur différentes plateformes et mise en place de plusieurs niveaux d'essais",
+    "Participation à l'implantation de systèmes et production de solutions informatiques",
+    "Mise à jour d'infrastructures technologiques déjà existantes",
+    "Collaboration aux activités reliées à la formation et au transfert de connaissances",
+    "Production de la documentation technique"
+  ],
+  "experience_rq_title": "Revenu Québec",
+  "experience_rq_period": "Mars à Août 2023",
+  "experience_rq_alt": "Bureau de Revenu Québec Marly",
+  "experience_rq_tasks": [
+    "Planification d’un projet complet de développement d’un logiciel de comparaison de versions de composants logiciels par la création de maquettes et de récits utilisateurs à partir des besoins établis par les architectes logiciels.",
+    "Réalisation du projet en collaboration avec un collègue sous la supervision des architectes",
+    "Production de tests fonctionnels visant à valider l'efficacité globale du projet",
+    "Mise en place des pipelines CI/CD pour automatiser le processus de développement",
+    "Mise en œuvre de nouvelles fonctionnalités en réponse aux besoins évolutifs",
+    "Documentation des processus de développement et de déploiement"
+  ],
+  "experience_cnesst_title": "Commission sur les normes, l'équité, la santé et la sécurité au travail (CNESST)",
+  "experience_cnesst_period": "Juin à Août 2022",
+  "experience_cnesst_alt": "Bureau de la CNESST",
+  "experience_cnesst_tasks": [
+    "Mise à jour et développement de la structure de gestion documentaire électronique du service de l'aménagement et des projets immobiliers",
+    "Classement des documents à l'aide du manuel de conservation des documents",
+    "Propositions de modifications pertinentes en conformité avec la volonté des membres du service"
+  ],
+
+  "footer_text": "Tous droits réservés."
+}
