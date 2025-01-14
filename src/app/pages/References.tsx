@@ -16,7 +16,7 @@ class References extends React.Component<WithTranslation> {
             <div>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
                 <div className="justify-content-left">
-                    <h2 className="my-4">{t("references")}</h2>
+                    <h2 className="my-4">{t("references_title")}</h2>
                     <Container className="justify-content-left my-5">
                         <h4 className="my-4">{t("references_configuration_title")}</h4>
                         <p><a href="https://www.typescriptlang.org/tsconfig">{t("references_typescript")}</a></p>
