@@ -75,6 +75,7 @@
   "etudes_camaradiere_program": "Arts and Information Technology Concentration (Arts & ITC)",
   "etudes_camaradiere_period": "2015 - 2020",
 
+  "references_title": "Reference sources",
   "references_configuration_title": "Application Configuration:",
   "references_typescript": "TypeScript (JavaScript but with types)",
   "references_nodejs": "Node JS (version 20.8.0 used in the project)",
