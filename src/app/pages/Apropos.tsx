@@ -23,10 +23,9 @@ class Apropos extends React.Component<WithTranslation> {
                     <Container className="justify-content-left mt-4 mb-4">
                         <div className="me-4 mt-6 d-block mx-auto text-justify">
                             <h2 className="my-5">{t("about_title")}</h2>
-                            <p>{t("about_paragraph_1")}</p>
-                            <p>{t("about_paragraph_2")}</p>
-                            <p>{t("about_paragraph_3")}</p>
-                            <p>{t("about_paragraph_4")}</p>
+                            {(t("about_texts", { returnObjects: true }) as string[]).map((text: string) => (
+                                <p>{text}</p>
+                            ))}
                         </div>
                     </Container>
                 </div>
