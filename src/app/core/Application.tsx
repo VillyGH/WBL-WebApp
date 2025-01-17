@@ -30,6 +30,7 @@ export class Application {
      * Start the application
      */
     public readonly start = async() : Promise<void> => {
+        this.updateDarkMode();
         this.renderCore();
         this.initParticles();
     }
@@ -60,6 +61,18 @@ export class Application {
             this.root.render(<Core/>);
         } else {
             console.error("Root element is null or undefined!");
+        }
+    }
+
+
+    private readonly updateDarkMode = (): void => {
+        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
+        if(themeAttribute == null) {
+            const theme : string | null = localStorage.getItem("theme");
+            if(theme != null) {
+                const htmlElement = document.documentElement;
+                htmlElement.setAttribute("data-bs-theme", theme);
+            }
         }
     }
 }

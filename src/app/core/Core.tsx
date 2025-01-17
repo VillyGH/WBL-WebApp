@@ -25,6 +25,7 @@ import FactionWar from "../pages/Projets/FactionWar";
 import Footer from "../components/Footer";
 import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
+import {LoadingScreen} from "../components/LoadingScreen";
 //endregion
 
 interface CoreState {
@@ -41,7 +42,7 @@ export class Core extends Component<unknown, CoreState> {
 
     public render(): ReactElement | null {
         return (
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingScreen />}>
                 <Router basename={BASE_URL}>
                     <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
                     <ReactNotifications/>
