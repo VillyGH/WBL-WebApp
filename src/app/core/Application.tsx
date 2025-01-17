@@ -10,23 +10,6 @@ export class Application {
     private root: ReactDOM.Root | null = null;
 
     /**
-     * Initialize the React particles engine
-     */
-    public readonly initParticles = (): void => {
-        initParticlesEngine(async (engine) : Promise<void> => {
-            await loadFull(engine);
-        }).then();
-    };
-
-    /**
-     * Determine if the user is in dark mode
-     */
-    public static readonly isDarkMode = (): boolean => {
-        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
-        return themeAttribute != null ? themeAttribute == "dark" : false;
-    }
-    
-    /**
      * Start the application
      */
     public readonly start = async() : Promise<void> => {
@@ -36,16 +19,17 @@ export class Application {
     }
 
     /**
-     * Define the root element of the application
+     * Update the dark mode style for the loading screen
      * @private
      */
-    private readonly defineRoot = (): void => {
-        if (this.rootElem === null || !this.rootElem) {
-            this.rootElem = document.createElement("div");
-            this.rootElem.style.width = "100%";
-            this.rootElem.style.height = "100vh";
-            this.rootElem.id = "root";
-            document.body.appendChild(this.rootElem);
+    private readonly updateDarkMode = (): void => {
+        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
+        if(themeAttribute == null) {
+            const theme : string | null = localStorage.getItem("theme");
+            if(theme != null) {
+                const htmlElement = document.documentElement;
+                htmlElement.setAttribute("data-bs-theme", theme);
+            }
         }
     }
 
@@ -64,15 +48,34 @@ export class Application {
         }
     }
 
-
-    private readonly updateDarkMode = (): void => {
-        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
-        if(themeAttribute == null) {
-            const theme : string | null = localStorage.getItem("theme");
-            if(theme != null) {
-                const htmlElement = document.documentElement;
-                htmlElement.setAttribute("data-bs-theme", theme);
-            }
+    /**
+     * Define the root element of the application
+     * @private
+     */
+    private readonly defineRoot = (): void => {
+        if (this.rootElem === null || !this.rootElem) {
+            this.rootElem = document.createElement("div");
+            this.rootElem.style.width = "100%";
+            this.rootElem.style.height = "100vh";
+            this.rootElem.id = "root";
+            document.body.appendChild(this.rootElem);
         }
+    }
+
+    /**
+     * Initialize the React particles engine
+     */
+    public readonly initParticles = (): void => {
+        initParticlesEngine(async (engine) : Promise<void> => {
+            await loadFull(engine);
+        }).then();
+    };
+
+    /**
+     * Determine if the user is in dark mode
+     */
+    public static readonly isDarkMode = (): boolean => {
+        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
+        return themeAttribute != null ? themeAttribute == "dark" : false;
     }
 }
