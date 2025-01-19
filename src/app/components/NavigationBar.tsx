@@ -67,7 +67,7 @@ class NavigationBar extends React.Component<Props, State> {
 
     public render(): ReactElement | null {
         return (
-            <Navbar collapseOnSelect expand="xl">
+            <Navbar  collapseOnSelect expand="xl" fixed="top">
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -136,7 +136,7 @@ class NavigationBar extends React.Component<Props, State> {
     private generalLinks(): ReactElement {
         const { t } = this.props;
         return (
-            <Nav className="mx-auto" variant="underline" activeKey="">
+            <Nav className="mx-auto" variant="underline">
                 <NavItem link={RoutesPath.PROJETS} label={t("projets")} />
                 <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} />
                 <NavItem link={RoutesPath.ETUDES} label={t("etudes")} />

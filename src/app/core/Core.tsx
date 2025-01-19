@@ -45,7 +45,7 @@ export class Core extends Component<unknown, CoreState> {
             <Suspense fallback={<LoadingScreen />}>
                 <Router basename={BASE_URL}>
                     <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
-                    <ReactNotifications/>
+                    <ReactNotifications />
                     <Routes>
                         <Route path={RoutesPath.INDEX} element={<Index/>}/>
                         <Route path={RoutesPath.PROJETS} element={<Projets/>}/>
