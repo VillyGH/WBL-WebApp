@@ -24,11 +24,9 @@ class Projets extends React.Component<WithTranslation> {
         const { t } = this.props;
         document.title = t("projets") + " - " + APP_NAME;
         return (
-            <div>
+            <Container>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-                <h1 className="mt-4 mb-4">{t("projets_title")}</h1>
-                <section className="mt-4 mb-5">
-                    <Container className="mb-5">
+                        <h2>{t("projets_title")}</h2>
                         <Row>
                             <ProjectCard
                                 image={Peps}
@@ -84,9 +82,7 @@ class Projets extends React.Component<WithTranslation> {
                                 description={t("projets_gardien_description")}
                             />
                         </Row>
-                    </Container>
-                </section>
-            </div>
+            </Container>
         );
     }
 }

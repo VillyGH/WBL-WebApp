@@ -17,17 +17,13 @@ class Apropos extends React.Component<WithTranslation> {
         const { t } = this.props;
 
         return (
-            <div>
+            <Container>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-                <Container className="mt-4 mb-4">
-                    <div className="me-4 mt-5">
-                        <h2 className="my-5">{t("about_title")}</h2>
-                        {(t("about_texts", { returnObjects: true }) as string[]).map((text: string, index: number) => (
-                            <p key={index} className="text-justify">{text}</p>
-                        ))}
-                    </div>
-                </Container>
-            </div>
+                <h2 className="mb-5">{t("about_title")}</h2>
+                {(t("about_texts", { returnObjects: true }) as string[]).map((text: string, index: number) => (
+                    <p key={index} className="text-justify">{text}</p>
+                ))}
+            </Container>
         );
     }
 }

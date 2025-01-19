@@ -73,79 +73,45 @@ class Contact extends React.Component<WithTranslation, Email> {
         const { t } = this.props;
 
         return (
-            <div>
+            <Container>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-                <div className="justify-content-left">
-                    <Container className="justify-content-left mt-4 mb-4">
-                        <div className="me-4 mt-6 d-block mx-auto">
-                            <h2 className="text-left">{t("contact_title")}</h2>
+                <h2>{t("contact_title")}</h2>
+                <Form onChange={this.#handleChange} onSubmit={this.#handleSubmit}>
+                    <Form.Group className="mt-4 mb-3" controlId="formName">
+                        <Form.Label>{t("contact_name_label")}</Form.Label>
+                        <Form.Control type="text" name="name" value={this.state.name}
+                                      placeholder={t("contact_name_placeholder")} readOnly/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formEmail">
+                        <Form.Label>{t("contact_email_label")}</Form.Label>
+                        <Form.Control type="email" name="email" value={this.state.email}
+                                      placeholder={t("contact_email_placeholder")} readOnly />
+                    </Form.Group>
 
-                            <Form onChange={this.#handleChange} onSubmit={this.#handleSubmit}>
-                                <Form.Group className="mt-4 mb-3" controlId="formName">
-                                    <Form.Label>{t("contact_name_label")}</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        name="name"
-                                        value={this.state.name}
-                                        placeholder={t("contact_name_placeholder")}
-                                        readOnly
-                                    />
-                                </Form.Group>
+                    <Form.Group className="mt-4 mb-3" controlId="formSubject">
+                        <Form.Label>{t("contact_subject_label")}</Form.Label>
+                        <Form.Control type="text" name="subject" value={this.state.subject}
+                                              placeholder={t("contact_subject_placeholder")} readOnly />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formMessage">
+                        <Form.Label>{t("contact_message_label")}</Form.Label>
+                        <Form.Control as="textarea" rows={4} name="message" value={this.state.message}
+                                      placeholder={t("contact_message_placeholder")} readOnly />
+                    </Form.Group>
+                    <Button className="mb-4" variant="primary" type="submit">
+                        {t("contact_send_button")}
+                    </Button>
+                </Form>
 
-                                <Form.Group className="mb-3" controlId="formEmail">
-                                    <Form.Label>{t("contact_email_label")}</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        name="email"
-                                        value={this.state.email}
-                                        placeholder={t("contact_email_placeholder")}
-                                        readOnly
-                                    />
-                                </Form.Group>
-
-                                <Form.Group className="mt-4 mb-3" controlId="formSubject">
-                                    <Form.Label>{t("contact_subject_label")}</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        name="subject"
-                                        value={this.state.subject}
-                                        placeholder={t("contact_subject_placeholder")}
-                                        readOnly
-                                    />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formMessage">
-                                    <Form.Label>{t("contact_message_label")}</Form.Label>
-                                    <Form.Control
-                                        as="textarea"
-                                        rows={4}
-                                        name="message"
-                                        value={this.state.message}
-                                        placeholder={t("contact_message_placeholder")}
-                                        readOnly
-                                    />
-                                </Form.Group>
-
-                                <Button className="mb-4" variant="primary" type="submit">
-                                    {t("contact_send_button")}
-                                </Button>
-                            </Form>
-
-                            <div className="mt-4">
-                                <a href="https://www.facebook.com/william.blanchetlafreniere/" className="me-3">
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" color="#dee2e6" />
-                                </a>
-                                <a href="https://github.com/VillyGH" className="me-3">
-                                    <FontAwesomeIcon icon={faGithub} size="2x" color="#dee2e6" />
-                                </a>
-                                <a href="https://www.instagram.com/william_blanchet_lafreniere/" className="me-3">
-                                    <FontAwesomeIcon icon={faInstagram} size="2x" color="#dee2e6" />
-                                </a>
-                            </div>
-                        </div>
-                    </Container>
+                <div className="mt-4">
+                    <a href="https://www.facebook.com/william.blanchetlafreniere/" className="me-3">
+                        <FontAwesomeIcon icon={faFacebook} size="2x" color="#dee2e6" /></a>
+                    <a href="https://github.com/VillyGH" className="me-3">
+                        <FontAwesomeIcon icon={faGithub} size="2x" color="#dee2e6" /></a>
+                    <a href="https://www.instagram.com/william_blanchet_lafreniere/" className="me-3">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" color="#dee2e6" /></a>
                 </div>
-            </div>
+            </Container>
         );
     }
 }

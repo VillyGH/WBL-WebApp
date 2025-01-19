@@ -63,6 +63,11 @@ code {
     flex-direction: column;
 }
 
+.container, .container-sm {
+    margin-top: 6rem!important;
+    margin-bottom: 6rem!important
+}
+
 .text-justify {
     text-align: justify;
 }
@@ -147,6 +152,7 @@ h1 {
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
+    margin: 3rem 0 2rem 0 !important;
 }
 
 h2 {
@@ -158,6 +164,7 @@ h2 {
     letter-spacing: -2px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, .6);
+    margin-bottom: 4rem !important;
 }
 
 footer {

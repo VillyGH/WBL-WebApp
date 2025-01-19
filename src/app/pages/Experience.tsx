@@ -19,12 +19,11 @@ class Experience extends React.Component<WithTranslation> {
         return (
             <div>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-                <h2 className="mt-4 mb-4">{t("experience_title")}</h2>
-
                 <Container fluid="sm">
+                    <h2>{t("experience_title")}</h2>
                     <Row className="my-4">
                         <Col xl={6} xxl={5}>
-                            <Image className="img-responsive" src={BureauRAMQ} alt={t("experience_ramq_alt")} />
+                            <Image className="img-responsive" src={BureauRAMQ} alt={t("experience_ramq_alt")}/>
                         </Col>
                         <Col xl={6} xxl={7}>
                             <div>
@@ -32,7 +31,7 @@ class Experience extends React.Component<WithTranslation> {
                                 <p>{t("experience_ramq_period")}</p>
                                 <p>{t("experience_tasks")}</p>
                                 <ul>
-                                    {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number)  => (
+                                    {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
                                         <li key={index}>{task}</li>
                                     ))}
                                 </ul>
@@ -41,7 +40,7 @@ class Experience extends React.Component<WithTranslation> {
                     </Row>
                     <Row>
                         <Col xl={6} xxl={5}>
-                            <Image className="img-responsive" src={BureauRQ} alt={t("experience_rq_alt")} />
+                            <Image className="img-responsive" src={BureauRQ} alt={t("experience_rq_alt")}/>
                         </Col>
                         <Col xl={6} xxl={7}>
                             <div>
@@ -49,7 +48,7 @@ class Experience extends React.Component<WithTranslation> {
                                 <p>{t("experience_rq_period")}</p>
                                 <p>{t("experience_tasks")}</p>
                                 <ul>
-                                    {(t("experience_rq_tasks", { returnObjects: true }) as string[]).map((task: string, index: number) => (
+                                    {(t("experience_rq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
                                         <li key={index}>{task}</li>
                                     ))}
                                 </ul>
@@ -58,7 +57,8 @@ class Experience extends React.Component<WithTranslation> {
                     </Row>
                     <Row className="my-4">
                         <Col xl={6} xxl={5}>
-                            <Image className="img-responsive" fluid src={BureauCNESST} alt={t("experience_cnesst_alt")} />
+                            <Image className="img-responsive" fluid src={BureauCNESST}
+                                   alt={t("experience_cnesst_alt")}/>
                         </Col>
                         <Col xl={6} xxl={7}>
                             <div>
@@ -66,7 +66,7 @@ class Experience extends React.Component<WithTranslation> {
                                 <p>{t("experience_cnesst_period")}</p>
                                 <p>{t("experience_tasks")}</p>
                                 <ul>
-                                    {(t("experience_cnesst_tasks", { returnObjects: true }) as string[]).map((task: string, index: number) => (
+                                    {(t("experience_cnesst_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
                                         <li key={index}>{task}</li>
                                     ))}
                                 </ul>
