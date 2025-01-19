@@ -60,6 +60,12 @@ class Projets extends React.Component<WithTranslation> {
                                 description={t("projets_taskmaster_description")}
                             />
                             <ProjectCard
+                                image={FaceFlow}
+                                link="https://github.com/VillyGH/FaceFlow"
+                                title={t("projets_faceflow_title")}
+                                description={t("projets_faceflow_description")}
+                            />
+                            <ProjectCard
                                 image={CIAUL}
                                 link="https://github.com/cia-ulaval/EEG_flappy_bird"
                                 title={t("projets_ciaul_title")}
@@ -76,12 +82,6 @@ class Projets extends React.Component<WithTranslation> {
                                 link="https://github.com/VillyGH/TP2-Gardien-Legend"
                                 title={t("projets_gardien_title")}
                                 description={t("projets_gardien_description")}
-                            />
-                            <ProjectCard
-                                image={FaceFlow}
-                                link="https://github.com/VillyGH/FaceFlow"
-                                title={t("projets_faceflow_title")}
-                                description={t("projets_faceflow_description")}
                             />
                         </Row>
                     </Container>
