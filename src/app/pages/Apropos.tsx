@@ -19,16 +19,14 @@ class Apropos extends React.Component<WithTranslation> {
         return (
             <div>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
-                <div className="justify-content-left">
-                    <Container className="justify-content-left mt-4 mb-4">
-                        <div className="me-4 mt-6 d-block mx-auto text-justify">
-                            <h2 className="my-5">{t("about_title")}</h2>
-                            {(t("about_texts", { returnObjects: true }) as string[]).map((text: string) => (
-                                <p>{text}</p>
-                            ))}
-                        </div>
-                    </Container>
-                </div>
+                <Container className="mt-4 mb-4">
+                    <div className="me-4 mt-5">
+                        <h2 className="my-5">{t("about_title")}</h2>
+                        {(t("about_texts", { returnObjects: true }) as string[]).map((text: string, index: number) => (
+                            <p key={index} className="text-justify">{text}</p>
+                        ))}
+                    </div>
+                </Container>
             </div>
         );
     }
