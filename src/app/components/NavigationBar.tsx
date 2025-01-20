@@ -1,5 +1,5 @@
 import React, {ReactElement} from "react";
-import {Button, Container} from "react-bootstrap";
+import {Button, Container, Offcanvas} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {LinkContainer} from "react-router-bootstrap";
@@ -67,7 +67,7 @@ class NavigationBar extends React.Component<Props, State> {
 
     public render(): ReactElement | null {
         return (
-            <Navbar collapseOnSelect expand="xl">
+            <Navbar expand="xl" fixed="top">
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
@@ -75,23 +75,38 @@ class NavigationBar extends React.Component<Props, State> {
                         </Navbar.Brand>
                     </LinkContainer>
                     <div>
-                        <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => this.changeLanguage(this.state.language)}>
+                        <Button className="btn-sm-theme me-3 d-lg-none"
+                                onClick={async (): Promise<void> =>
+                                this.changeLanguage(this.state.language)}>
                             {this.state.language === "fr" ? "EN" : "FR"}
                         </Button>
                         <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
+                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon} />
                         </Button>
-                        <Navbar.Toggle />
+                        <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     </div>
-                    <Navbar.Collapse>
-                        {this.generalLinks()}
-                        <Button className="btn-theme me-3" onClick={async (): Promise<void> => this.changeLanguage(this.state.language)}>
-                            {this.state.language === "fr" ? "EN" : "FR"}
-                        </Button>
-                        <Button className="btn-theme me-3" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
-                        </Button>
-                    </Navbar.Collapse>
+                    <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title id="offcanvasNavbarLabel">
+                                <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60} />
+                            </Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            {this.generalLinks()}
+                            <div className="mt-3">
+                                <Button className="btn-theme me-3"
+                                        onClick={async (): Promise<void> =>
+                                        this.changeLanguage(this.state.language)}>
+                                    {this.state.language === "fr" ? "EN" : "FR"}
+                                </Button>
+                                <Button className="btn-theme"
+                                        onClick={async (): Promise<void> =>
+                                        await this.changeTheme(!this.state.isDarkMode)}>
+                                    <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
+                                </Button>
+                            </div>
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
                 </Container>
             </Navbar>
         );
