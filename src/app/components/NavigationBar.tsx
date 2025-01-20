@@ -67,7 +67,7 @@ class NavigationBar extends React.Component<Props, State> {
 
     public render(): ReactElement | null {
         return (
-            <Navbar  collapseOnSelect expand="xl" fixed="top">
+            <Navbar collapseOnSelect expand="xl">
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
