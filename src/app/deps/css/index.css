@@ -78,7 +78,7 @@ code {
     font-size: 25px;
 }
 
-nav {
+nav, navbar-collapse {
     font-size: 15px;
     background-color: var(--nav-bg-color) !important;
     color: var(--important-text-color);
