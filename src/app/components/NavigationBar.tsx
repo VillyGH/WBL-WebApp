@@ -88,7 +88,7 @@ class NavigationBar extends React.Component<Props, State> {
                         </Button>
                         <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => this.handleVisibilityOffCanvas(true)} />
                     </div>
-                    <Navbar.Offcanvas show={this.state.showModal} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
+                    <Navbar.Offcanvas show={this.state.showModal} onHide={() => this.handleVisibilityOffCanvas(false)} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
                                 <LinkContainer to="/" onClick={() => this.handleVisibilityOffCanvas(false)}>
