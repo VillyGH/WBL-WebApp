@@ -6,6 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 interface ComponentNavItemProps {
     label: string;
     link: string;
+    onClick: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }
 
 export class ComponentNavItem extends React.Component<ComponentNavItemProps, unknown> {
@@ -19,7 +20,7 @@ export class ComponentNavItem extends React.Component<ComponentNavItemProps, unk
     public render(): ReactElement {
         return (
             <LinkContainer to={this.props.link}>
-                <Nav.Link>
+                <Nav.Link onClick={this.props.onClick}>
                     <div className="navItem">
                         {this.props.label}
                     </div>

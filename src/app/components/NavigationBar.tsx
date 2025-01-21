@@ -88,7 +88,9 @@ class NavigationBar extends React.Component<Props, State> {
                     <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
-                                <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60} />
+                                <LinkContainer to="/" onClick={this.closeOffCanvas}>
+                                        <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60}/>
+                                </LinkContainer>
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
@@ -152,15 +154,33 @@ class NavigationBar extends React.Component<Props, State> {
         const { t } = this.props;
         return (
             <Nav className="mx-auto" variant="underline">
-                <NavItem link={RoutesPath.PROJETS} label={t("projets")} />
-                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} />
-                <NavItem link={RoutesPath.ETUDES} label={t("etudes")} />
-                <NavItem link={RoutesPath.REFERENCES} label={t("references")} />
-                <NavItem link={RoutesPath.CONTACT} label={t("contact")} />
-                <NavItem link={RoutesPath.APROPOS} label={t("apropos")} />
+                <NavItem link={RoutesPath.PROJETS} label={t("projets")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.ETUDES} label={t("etudes")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.REFERENCES} label={t("references")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.CONTACT} label={t("contact")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.APROPOS} label={t("apropos")} onClick={this.closeOffCanvas} />
             </Nav>
         );
     }
+
+    /**
+     * This function handles the click event on the navigation links
+     * @returns {JSX.Element} The navigation links
+     * @category Components
+     * @subcategory Navigation
+     * @hideconstructor
+     * @see generalLinks
+     * @private
+     */
+    private closeOffCanvas = (): void => {
+        let offCanvas : HTMLElement | null = document.getElementById("offcanvasNavbar");
+        let offCanvasFade : Element = document.getElementsByClassName("offcanvas-backdrop")[0];
+        if (offCanvas && offCanvasFade) {
+            offCanvas.classList.remove("show");
+            offCanvasFade.classList.remove("show")
+        }
+    };
 }
 
 export default withTranslation()(NavigationBar);
