@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React, {ReactElement, useState} from "react";
 import {Button, Container, Offcanvas} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -19,6 +19,7 @@ interface Props extends WithTranslation {
 interface State {
     isDarkMode: boolean;
     language: "fr" | "en";
+    showModal: boolean;
 }
 
 /**
@@ -31,9 +32,11 @@ interface State {
  * @see NavigationBarState
  */
 class NavigationBar extends React.Component<Props, State> {
+
     public state: State = {
         isDarkMode: false,
-        language: "fr"
+        language: "fr",
+        showModal: false
     };
 
     constructor(props: Props) {
@@ -83,12 +86,12 @@ class NavigationBar extends React.Component<Props, State> {
                         <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
                             <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon} />
                         </Button>
-                        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => this.handleVisibilityOffCanvas(true)} />
                     </div>
-                    <Navbar.Offcanvas id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
+                    <Navbar.Offcanvas show={this.state.showModal} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
-                                <LinkContainer to="/" onClick={this.closeOffCanvas}>
+                                <LinkContainer to="/" onClick={() => this.handleVisibilityOffCanvas(false)}>
                                         <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60}/>
                                 </LinkContainer>
                             </Offcanvas.Title>
@@ -154,32 +157,21 @@ class NavigationBar extends React.Component<Props, State> {
         const { t } = this.props;
         return (
             <Nav className="mx-auto" variant="underline">
-                <NavItem link={RoutesPath.PROJETS} label={t("projets")} onClick={this.closeOffCanvas} />
-                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} onClick={this.closeOffCanvas} />
-                <NavItem link={RoutesPath.ETUDES} label={t("etudes")} onClick={this.closeOffCanvas} />
-                <NavItem link={RoutesPath.REFERENCES} label={t("references")} onClick={this.closeOffCanvas} />
-                <NavItem link={RoutesPath.CONTACT} label={t("contact")} onClick={this.closeOffCanvas} />
-                <NavItem link={RoutesPath.APROPOS} label={t("apropos")} onClick={this.closeOffCanvas} />
+                <NavItem link={RoutesPath.PROJETS} label={t("projets")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.ETUDES} label={t("etudes")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.REFERENCES} label={t("references")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.CONTACT} label={t("contact")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.APROPOS} label={t("apropos")} onClick={() => this.handleVisibilityOffCanvas(false)} />
             </Nav>
         );
     }
 
-    /**
-     * This function handles the click event on the navigation links
-     * @returns {JSX.Element} The navigation links
-     * @category Components
-     * @subcategory Navigation
-     * @hideconstructor
-     * @see generalLinks
-     * @private
-     */
-    private closeOffCanvas = (): void => {
-        let offCanvas : HTMLElement | null = document.getElementById("offcanvasNavbar");
-        let offCanvasFade : Element = document.getElementsByClassName("offcanvas-backdrop")[0];
-        if (offCanvas && offCanvasFade) {
-            offCanvas.classList.remove("show");
-            offCanvasFade.classList.remove("show")
-        }
+    private handleVisibilityOffCanvas = (visible : boolean): void => {
+        console.log("test")
+        this.setState(() => ({
+            showModal: visible
+        }));
     };
 }
 
