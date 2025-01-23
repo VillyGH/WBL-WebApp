@@ -168,7 +168,6 @@ class NavigationBar extends React.Component<Props, State> {
     }
 
     private handleVisibilityOffCanvas = (visible : boolean): void => {
-        console.log("test")
         this.setState(() => ({
             showModal: visible
         }));

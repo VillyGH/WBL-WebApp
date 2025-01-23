@@ -105,6 +105,12 @@
   "contact_message_label": "Message",
   "contact_message_placeholder": "Votre message",
   "contact_send_button": "Envoyer",
+  "contact_invalid_name": "Nom invalide",
+  "contact_invalid_email": "Email invalide",
+  "contact_invalid_subject": "Sujet invalide",
+  "contact_invalid_message": "Message invalide",
+  "contact_success_text": "Le courriel a bien été envoyé avec succès",
+  "contact_error_text": "Une erreur s'est produite, veuillez réessayer plus tard",
 
   "about_title": "À propos du créateur",
   "about_texts": [
