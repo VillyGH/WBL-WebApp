@@ -11,7 +11,7 @@ class Footer extends Component<WithTranslation> {
         const { t } = this.props;
         return (
             <footer className="text-center py-3 px-4 mx-auto mt-auto">
-                <span className="text-center">&copy; {this.getCurrentYear()} William Blanchet Lafrenière. {t("footer_text")} </span>
+                <span className="text-center">  {t("footer_text")} </span>
             </footer>
         );
     }
