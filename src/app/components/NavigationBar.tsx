@@ -160,6 +160,7 @@ class NavigationBar extends React.Component<Props, State> {
                 <NavItem link={RoutesPath.PROJETS} label={t("projets")} onClick={() => this.handleVisibilityOffCanvas(false)} />
                 <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} onClick={() => this.handleVisibilityOffCanvas(false)} />
                 <NavItem link={RoutesPath.ETUDES} label={t("etudes")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.GROUPES} label={t("groupes")} onClick={() => this.handleVisibilityOffCanvas(false)} />
                 <NavItem link={RoutesPath.REFERENCES} label={t("references")} onClick={() => this.handleVisibilityOffCanvas(false)} />
                 <NavItem link={RoutesPath.CONTACT} label={t("contact")} onClick={() => this.handleVisibilityOffCanvas(false)} />
                 <NavItem link={RoutesPath.APROPOS} label={t("apropos")} onClick={() => this.handleVisibilityOffCanvas(false)} />

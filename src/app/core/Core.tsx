@@ -26,6 +26,7 @@ import Footer from "../components/Footer";
 import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
 import {LoadingScreen} from "../components/LoadingScreen";
+import Groupes from "../pages/Groupes";
 //endregion
 
 interface CoreState {
@@ -52,6 +53,7 @@ export class Core extends Component<unknown, CoreState> {
                         <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PepsReservationBot/>}/>
                         <Route path={RoutesPath.FACTIONWAR} element={<FactionWar/>}/>
                         <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>
+                        <Route path={RoutesPath.GROUPES} element={<Groupes/>}/>
                         <Route path={RoutesPath.EXPERIENCE} element={<Experience/>}/>
                         <Route path={RoutesPath.CONTACT} element={<Contact/>}/>
                         <Route path={RoutesPath.REFERENCES} element={<References/>}/>
