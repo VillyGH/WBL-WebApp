@@ -20,13 +20,14 @@ import References from "../pages/References";
 import Contact from "../pages/Contact";
 import Apropos from "../pages/Apropos";
 import Etudes from "../pages/Etudes";
+import Groupes from "../pages/Groupes";
 import PepsReservationBot from "../pages/Projets/PepsReservationBot";
 import FactionWar from "../pages/Projets/FactionWar";
 import Footer from "../components/Footer";
 import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
 import {LoadingScreen} from "../components/LoadingScreen";
-import Groupes from "../pages/Groupes";
+
 //endregion
 
 interface CoreState {

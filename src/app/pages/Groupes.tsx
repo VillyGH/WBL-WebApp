@@ -13,7 +13,7 @@ import {ParticlesOpts} from "../types/Particles";
 import {Container, Image, Row} from "react-bootstrap";
 import {withTranslation, WithTranslation} from "react-i18next";
 
-class group extends React.Component<WithTranslation> {
+class Groupes extends React.Component<WithTranslation> {
 
     public render(): ReactElement | null {
         const {t} = this.props;
@@ -77,4 +77,4 @@ class group extends React.Component<WithTranslation> {
     }
 }
 
-export default withTranslation()(group);
+export default withTranslation()(Groupes);
