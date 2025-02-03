@@ -20,12 +20,14 @@ import References from "../pages/References";
 import Contact from "../pages/Contact";
 import Apropos from "../pages/Apropos";
 import Etudes from "../pages/Etudes";
+import Groupes from "../pages/Groupes";
 import PepsReservationBot from "../pages/Projets/PepsReservationBot";
 import FactionWar from "../pages/Projets/FactionWar";
 import Footer from "../components/Footer";
 import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
 import {LoadingScreen} from "../components/LoadingScreen";
+
 //endregion
 
 interface CoreState {
@@ -52,6 +54,7 @@ export class Core extends Component<unknown, CoreState> {
                         <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PepsReservationBot/>}/>
                         <Route path={RoutesPath.FACTIONWAR} element={<FactionWar/>}/>
                         <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>
+                        <Route path={RoutesPath.GROUPES} element={<Groupes/>}/>
                         <Route path={RoutesPath.EXPERIENCE} element={<Experience/>}/>
                         <Route path={RoutesPath.CONTACT} element={<Contact/>}/>
                         <Route path={RoutesPath.REFERENCES} element={<References/>}/>
