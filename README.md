@@ -57,15 +57,11 @@ npm run dev
 
 William Blanchet Lafrenière
 
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
 ---
 
 # WBL Web App
 
-![img.png](img.png)
+![accueil.png](accueil.png)
 
 ## Description
 
@@ -120,10 +116,6 @@ npm run dev
 ## Author
 
 William Blanchet Lafrenière
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
 
 ---
 
