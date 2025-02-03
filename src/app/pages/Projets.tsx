@@ -29,6 +29,12 @@ class Projets extends React.Component<WithTranslation> {
                         <h2>{t("projets_title")}</h2>
                         <Row>
                             <ProjectCard
+                                image={CIAUL}
+                                link="https://github.com/cia-ulaval/EEG_flappy_bird"
+                                title={t("projets_ciaul_title")}
+                                description={t("projets_ciaul_description")}
+                            />
+                            <ProjectCard
                                 image={Peps}
                                 link={RoutesPath.PEPSRESERVATIONBOT}
                                 title={t("projets_peps_title")}
@@ -63,12 +69,7 @@ class Projets extends React.Component<WithTranslation> {
                                 title={t("projets_faceflow_title")}
                                 description={t("projets_faceflow_description")}
                             />
-                            <ProjectCard
-                                image={CIAUL}
-                                link="https://github.com/cia-ulaval/EEG_flappy_bird"
-                                title={t("projets_ciaul_title")}
-                                description={t("projets_ciaul_description")}
-                            />
+
                             <ProjectCard
                                 image={InfiniteCraft}
                                 link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
