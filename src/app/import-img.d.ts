@@ -1,17 +1,17 @@
 declare module "*.png" {
-    const value: never;
+    const value: string;
     export default value;
 }
 declare module "*.jpg" {
-    const value: never;
+    const value: string;
     export default value;
 }
 declare module "*.jpeg" {
-    const value: never;
+    const value: string;
     export default value;
 }
 
 declare module "*.svg" {
-    const value: never;
+    const value: string;
     export default value;
 }
