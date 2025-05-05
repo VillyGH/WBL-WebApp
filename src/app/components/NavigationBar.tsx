@@ -101,7 +101,7 @@ class NavigationBar extends React.Component<Props, State> {
                             <div className="mt-3">
                                 <Button className="btn-theme me-3"
                                         onClick={async (): Promise<void> =>
-                                        this.changeLanguage(this.state.language)}>
+                                        this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
                                     {this.state.language === "fr" ? "EN" : "FR"}
                                 </Button>
                                 <Button className="btn-theme"
@@ -123,7 +123,7 @@ class NavigationBar extends React.Component<Props, State> {
      */
     private changeLanguage = async (language : "fr" | "en"): Promise<void> => {
         this.setState(()=> ({
-                language: language === "fr" ? "en" : "fr",
+                language: language,
             }), async () => {
                 await this.props.i18n.changeLanguage(this.state.language);
             }
