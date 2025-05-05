@@ -6,8 +6,11 @@ import Dynamiques from "../deps/images/Dynamiques.png";
 import Eperviers from "../deps/images/Eperviers.png";
 import CIAUL from "../deps/images/CIAUL2.png";
 import ClubBadmintonQuebec from "../deps/images/ClubBadmintonQuebec.png";
+import ClubBadmintonQuebecBlanc from "../deps/images/ClubBadmintonQuebecBlanc.png";
 import SeigneursNaguerre from "../deps/images/SeigneursNaguerre.png";
 import Grimoire from "../deps/images/Grimoire.png";
+import ClubLAncienneLorette from "../deps/images/ClubLAncienneLorette.svg";
+import ClubLAncienneLoretteBlanc from "../deps/images/ClubLAncienneLoretteBlanc.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Container, Image, Row} from "react-bootstrap";
@@ -49,7 +52,7 @@ class Groupes extends React.Component<WithTranslation> {
                     </div>
                 </Row>
                 <Row className="mb-4">
-                    <Image className="img-responsive" src={ClubBadmintonQuebec} alt={t("group_badmintonquebec_alt")}/>
+                    <Image className="img-responsive" src={Application.isDarkMode() ? ClubBadmintonQuebecBlanc : ClubBadmintonQuebec} alt={t("group_badmintonquebec_alt")}/>
                     <div className="mt-2">
                         <h3>{t("club_badmintonquebec_title")}</h3>
                         <p>{t("club_badmintonquebec_description")}</p>
@@ -70,6 +73,14 @@ class Groupes extends React.Component<WithTranslation> {
                         <h3>{t("club_grimoire_title")}</h3>
                         <p>{t("club_grimoire_description")}</p>
                         <p>{t("club_grimoire_period")}</p>
+                    </div>
+                </Row>
+                <Row className="mb-4">
+                    <Image className="img-responsive" src={Application.isDarkMode() ? ClubLAncienneLoretteBlanc : ClubLAncienneLorette} alt={t("club_tennis_ll_alt")}/>
+                    <div className="mt-2">
+                        <h3>{t("club_tennis_ll_title")}</h3>
+                        <p>{t("club_tennis_ll_description")}</p>
+                        <p>{t("club_tennis_ll_period")}</p>
                     </div>
                 </Row>
             </Container>
