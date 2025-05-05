@@ -7,7 +7,7 @@ import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.jpg";
-import CIAUL from "../deps/images/CIAUL.png";
+import FlappyBrain from "../deps/images/FlappyBrain.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/FactionWar.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
@@ -29,7 +29,7 @@ class Projets extends React.Component<WithTranslation> {
                         <h2>{t("projets_title")}</h2>
                         <Row>
                             <ProjectCard
-                                image={CIAUL}
+                                image={FlappyBrain}
                                 link="https://github.com/cia-ulaval/EEG_flappy_bird"
                                 title={t("projets_ciaul_title")}
                                 description={t("projets_ciaul_description")}
