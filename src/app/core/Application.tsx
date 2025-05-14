@@ -13,9 +13,9 @@ export class Application {
      * Start the application
      */
     public readonly start = async() : Promise<void> => {
+        await this.initParticles();
         this.updateDarkMode();
         this.renderCore();
-        this.initParticles();
     }
 
     /**
@@ -65,10 +65,10 @@ export class Application {
     /**
      * Initialize the React particles engine
      */
-    public readonly initParticles = (): void => {
-        initParticlesEngine(async (engine) : Promise<void> => {
+    public readonly initParticles = async (): Promise<void> => {
+        await initParticlesEngine(async (engine) : Promise<void> => {
             await loadFull(engine);
-        }).then();
+        });
     };
 
     /**

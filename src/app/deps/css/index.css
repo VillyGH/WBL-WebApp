@@ -16,6 +16,15 @@ body {
     color: var(--text-color) !important;
 }
 
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -44,9 +53,9 @@ code {
     --background: radial-gradient(circle at 52.1% -29.6%, rgb(6, 38, 52) 0%, rgb(3, 19, 26) 100.2%);
     --title-color: white;
     --text-color: white;
-    --important-text-color: --text-color;
-    --footer-bg-color: --background;
-    --nav-bg-color: --background;
+    --important-text-color: var(--text-color);
+    --footer-bg-color: var(--background);
+    --nav-bg-color: var(--background);
     --nav-border-color: #353038;
     --nav-active-border-color: rgba(255, 255, 255, 0.1);
     --nav-label-color: rgba(255, 255, 255, 0.7);
@@ -61,6 +70,7 @@ code {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 0;
 }
 
 .container, .container-sm {

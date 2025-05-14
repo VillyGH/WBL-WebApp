@@ -80,7 +80,7 @@ class NavigationBar extends React.Component<Props, State> {
                     <div>
                         <Button className="btn-sm-theme me-3 d-lg-none"
                                 onClick={async (): Promise<void> =>
-                                this.changeLanguage(this.state.language)}>
+                                this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
                             {this.state.language === "fr" ? "EN" : "FR"}
                         </Button>
                         <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
