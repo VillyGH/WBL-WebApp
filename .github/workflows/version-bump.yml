@@ -56,6 +56,7 @@ jobs:
       - name: Get list of commit messages
         id: messages
         run: |
+          git fetch origin ${{ steps.pr.outputs.base }}
           MESSAGES=$(git log origin/${{ steps.pr.outputs.base }}..HEAD --pretty=format:"- %s")
           echo "messages<<EOF" >> $GITHUB_OUTPUT
           echo "$MESSAGES" >> $GITHUB_OUTPUT
