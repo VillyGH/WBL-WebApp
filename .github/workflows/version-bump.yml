@@ -62,4 +62,17 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Update PR title and description
-        uses: actio
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ steps.pr.outputs.number }};
+            const version = "${{ steps.bump.outputs.new_version }}";
+            const body = `### Changes in v${version}\n\n${{ steps.messages.outputs.messages }}`;
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              title: `Update to v${version}`,
+              body
+            });
