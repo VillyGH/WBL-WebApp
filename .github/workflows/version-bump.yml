@@ -1,64 +1,65 @@
-name: Update PR Title and Description
+name: Auto bump version and update PR
 
 on:
   pull_request:
-    types: [opened, edited, synchronize]
+    types: [opened, synchronize, reopened]
 
 jobs:
-  update-pr:
+  auto-update-version:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
-      - name: Checkout PR code
+      - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Needed to compare with base branch
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
 
-      - name: Get PR info
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Bump patch version in package.json
+        id: bump
+        run: |
+          CURRENT_VERSION=$(jq -r .version package.json)
+          IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
+          NEW_VERSION="$major.$minor.$((patch + 1))"
+          jq --arg v "$NEW_VERSION" '.version = $v' package.json > tmp.json && mv tmp.json package.json
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Commit bumped version
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add package.json
+          git commit -m "chore: bump version to v${{ steps.bump.outputs.new_version }}"
+          git push
+
+      - name: Get PR number and commits
         id: pr
         uses: actions/github-script@v7
         with:
           script: |
             const pr = context.payload.pull_request;
             return {
-              title: pr.title,
               number: pr.number,
-              baseRef: pr.base.ref,
-              headRef: pr.head.ref,
+              base: pr.base.ref,
+              head: pr.head.ref
             };
 
-      - name: Get version from package.json
-        id: package
+      - name: Get list of commit messages
+        id: messages
         run: |
-          VERSION=$(jq -r .version package.json)
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-
-      - name: Verify package.json version was changed
-        run: |
-          git fetch origin ${{ steps.pr.outputs.baseRef }}
-          if git diff --name-only origin/${{ steps.pr.outputs.baseRef }}...HEAD | grep -q "package.json"; then
-            if git diff origin/${{ steps.pr.outputs.baseRef }}...HEAD -- package.json | grep -q '"version"'; then
-              echo "package.json version was changed."
-            else
-              echo "Error: package.json must have a version change."
-              exit 1
-            fi
-          else
-            echo "Error: package.json not modified."
-            exit 1
+          MESSAGES=$(git log origin/${{ steps.pr.outputs.base }}..HEAD --pretty=format:"- %s")
+          echo "messages<<EOF" >> $GITHUB_OUTPUT
+          echo "$MESSAGES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Update PR title and description
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { execSync } = require('child_process');
-            const version = '${{ steps.package.outputs.version }}';
-            const prNumber = ${{ steps.pr.outputs.number }};
-
-            // Get commit messages between base and head
-            const commitMessages = execSync('git log origin/${{ steps.pr.outputs.baseRef }}..HEAD --pretty=format:"- %s"', { encoding: 'utf8' });
-
-            const newTitle = `Update to v${version}`;
-            const newBody = `### Changes:\n\n${commitMessages}`;
-
-            await github.rest.pu
+        uses: actio
