@@ -14,7 +14,14 @@ interface ProjectCardProps {
     targetBlank?: boolean;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({image, link, title, description, icon, targetBlank = true}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+                                                            image,
+                                                            link,
+                                                            title,
+                                                            description,
+                                                            icon,
+                                                            targetBlank = true
+                                                        }) => {
     return (
         <Col sm="12" md="12" lg="6" className="mb-5">
             <Card className="project-card glow-on-hover">

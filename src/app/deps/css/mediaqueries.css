@@ -75,7 +75,7 @@
     }
 }
 
-@media (pointer:coarse) {
+@media (pointer: coarse) {
     .mobile {
         display: block !important;
     }

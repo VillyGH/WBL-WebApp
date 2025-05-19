@@ -44,10 +44,10 @@ export class Core extends Component<unknown, CoreState> {
 
     public render(): ReactElement | null {
         return (
-            <Suspense fallback={<LoadingScreen />}>
+            <Suspense fallback={<LoadingScreen/>}>
                 <Router basename={BASE_URL}>
                     <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
-                    <ReactNotifications />
+                    <ReactNotifications/>
                     <Routes>
                         <Route path={RoutesPath.INDEX} element={<Index/>}/>
                         <Route path={RoutesPath.PROJETS} element={<Projets/>}/>

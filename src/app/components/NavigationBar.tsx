@@ -63,7 +63,7 @@ class NavigationBar extends React.Component<Props, State> {
             }
         }
         await this.changeTheme(isDarkMode);
-        if(userLangage === "fr" || userLangage === "en") {
+        if (userLangage === "fr" || userLangage === "en") {
             await this.changeLanguage(userLangage);
         }
     }
@@ -74,25 +74,30 @@ class NavigationBar extends React.Component<Props, State> {
                 <Container fluid={true}>
                     <LinkContainer to="/">
                         <Navbar.Brand>
-                            <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60} />
+                            <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo"
+                                 width={100} height={60}/>
                         </Navbar.Brand>
                     </LinkContainer>
                     <div>
                         <Button className="btn-sm-theme me-3 d-lg-none"
                                 onClick={async (): Promise<void> =>
-                                this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
+                                    this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
                             {this.state.language === "fr" ? "EN" : "FR"}
                         </Button>
-                        <Button className="btn-sm-theme me-3 d-lg-none" onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon} />
+                        <Button className="btn-sm-theme me-3 d-lg-none"
+                                onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
+                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                         </Button>
-                        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => this.handleVisibilityOffCanvas(true)} />
+                        <Navbar.Toggle aria-controls="offcanvasNavbar"
+                                       onClick={() => this.handleVisibilityOffCanvas(true)}/>
                     </div>
-                    <Navbar.Offcanvas show={this.state.showModal} onHide={() => this.handleVisibilityOffCanvas(false)} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
+                    <Navbar.Offcanvas show={this.state.showModal} onHide={() => this.handleVisibilityOffCanvas(false)}
+                                      id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
                                 <LinkContainer to="/" onClick={() => this.handleVisibilityOffCanvas(false)}>
-                                        <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo" width={100} height={60}/>
+                                    <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo"
+                                         width={100} height={60}/>
                                 </LinkContainer>
                             </Offcanvas.Title>
                         </Offcanvas.Header>
@@ -101,12 +106,12 @@ class NavigationBar extends React.Component<Props, State> {
                             <div className="mt-3">
                                 <Button className="btn-theme me-3"
                                         onClick={async (): Promise<void> =>
-                                        this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
+                                            this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
                                     {this.state.language === "fr" ? "EN" : "FR"}
                                 </Button>
                                 <Button className="btn-theme"
                                         onClick={async (): Promise<void> =>
-                                        await this.changeTheme(!this.state.isDarkMode)}>
+                                            await this.changeTheme(!this.state.isDarkMode)}>
                                     <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
                                 </Button>
                             </div>
@@ -121,8 +126,8 @@ class NavigationBar extends React.Component<Props, State> {
      * Toggles between the english and French language
      * @memberof NavigationBar
      */
-    private changeLanguage = async (language : "fr" | "en"): Promise<void> => {
-        this.setState(()=> ({
+    private changeLanguage = async (language: "fr" | "en"): Promise<void> => {
+        this.setState(() => ({
                 language: language,
             }), async () => {
                 await this.props.i18n.changeLanguage(this.state.language);
@@ -154,21 +159,28 @@ class NavigationBar extends React.Component<Props, State> {
      * @private
      */
     private generalLinks(): ReactElement {
-        const { t } = this.props;
+        const {t} = this.props;
         return (
             <Nav className="mx-auto" variant="underline">
-                <NavItem link={RoutesPath.PROJETS} label={t("projets")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.ETUDES} label={t("etudes")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.GROUPES} label={t("groupes")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.REFERENCES} label={t("references")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.CONTACT} label={t("contact")} onClick={() => this.handleVisibilityOffCanvas(false)} />
-                <NavItem link={RoutesPath.APROPOS} label={t("apropos")} onClick={() => this.handleVisibilityOffCanvas(false)} />
+                <NavItem link={RoutesPath.PROJETS} label={t("projets")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.ETUDES} label={t("etudes")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.GROUPES} label={t("groupes")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.REFERENCES} label={t("references")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.CONTACT} label={t("contact")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
+                <NavItem link={RoutesPath.APROPOS} label={t("apropos")}
+                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
             </Nav>
         );
     }
 
-    private handleVisibilityOffCanvas = (visible : boolean): void => {
+    private handleVisibilityOffCanvas = (visible: boolean): void => {
         this.setState(() => ({
             showModal: visible
         }));

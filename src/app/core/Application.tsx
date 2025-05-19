@@ -10,13 +10,30 @@ export class Application {
     private root: ReactDOM.Root | null = null;
 
     /**
+     * Determine if the user is in dark mode
+     */
+    public static readonly isDarkMode = (): boolean => {
+        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
+        return themeAttribute != null ? themeAttribute == "dark" : false;
+    }
+
+    /**
      * Start the application
      */
-    public readonly start = async() : Promise<void> => {
+    public readonly start = async (): Promise<void> => {
         await this.initParticles();
         this.updateDarkMode();
         this.renderCore();
     }
+
+    /**
+     * Initialize the React particles engine
+     */
+    public readonly initParticles = async (): Promise<void> => {
+        await initParticlesEngine(async (engine): Promise<void> => {
+            await loadFull(engine);
+        });
+    };
 
     /**
      * Update the dark mode style for the loading screen
@@ -24,9 +41,9 @@ export class Application {
      */
     private readonly updateDarkMode = (): void => {
         const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
-        if(themeAttribute == null) {
-            const theme : string | null = localStorage.getItem("theme");
-            if(theme != null) {
+        if (themeAttribute == null) {
+            const theme: string | null = localStorage.getItem("theme");
+            if (theme != null) {
                 const htmlElement = document.documentElement;
                 htmlElement.setAttribute("data-bs-theme", theme);
             }
@@ -60,22 +77,5 @@ export class Application {
             this.rootElem.id = "root";
             document.body.appendChild(this.rootElem);
         }
-    }
-
-    /**
-     * Initialize the React particles engine
-     */
-    public readonly initParticles = async (): Promise<void> => {
-        await initParticlesEngine(async (engine) : Promise<void> => {
-            await loadFull(engine);
-        });
-    };
-
-    /**
-     * Determine if the user is in dark mode
-     */
-    public static readonly isDarkMode = (): boolean => {
-        const themeAttribute: string | null = document.documentElement.getAttribute("data-bs-theme");
-        return themeAttribute != null ? themeAttribute == "dark" : false;
     }
 }

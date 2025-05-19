@@ -6,10 +6,8 @@
   "references": "Références",
   "contact": "Contact",
   "apropos": "À propos",
-
   "index": "Acceuil",
   "index_title": "Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets qu'il a effectués tout au long de son parcours en informatique.",
-
   "projets_title": "Principaux projets",
   "projets_peps_title": "PepsReservationBot",
   "projets_peps_description": "Projet personnel de réservation automatisée de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package Puppeteer, il permet de planifier l'exécution d'un programme permettant de réserver automatiquement un plateau de jeu à une plage horaire prédéfinie.",
@@ -27,7 +25,6 @@
   "projets_gardien_description": "Projet pratique final en équipe de deux pour un cours de jeux vidéo. Ce jeu de tir vertical en 2D, s'inspire du style arcade, avec des phases de collecte de bonus et un combat de boss intense.",
   "projets_faceflow_title": "FaceFlow",
   "projets_faceflow_description": "Projet en équipe de recherche sur la reconnaissance faciale avec TensorFlow. Programmé en Python, cette IA permet de reconnaître un visage, déceler ses caractéristiques et les classer. Précision de plus de 78% après deux jours d'entraînement.",
-
   "experience_title": "Expérience de travail",
   "experience_tasks": "Tâches effectuées:",
   "experience_ramq_title": "Régie de l'assurance maladie du Québec (RAMQ)",
@@ -59,7 +56,6 @@
     "Classement des documents à l'aide du manuel de conservation des documents",
     "Propositions de modifications pertinentes en conformité avec la volonté des membres du service"
   ],
-
   "etudes_title": "Études",
   "etudes_ulaval_alt": "Université Laval",
   "etudes_ulaval_title": "Université Laval",
@@ -76,7 +72,6 @@
   "etudes_camaradiere_degree": "Diplôme d'études secondaires",
   "etudes_camaradiere_program": "Concentration arts et technologies de l'information et communication (Arts et TIC)",
   "etudes_camaradiere_period": "2015 - 2020",
-
   "teams": "Équipes",
   "team_dynamiques_title": "Dynamiques du Cégep de Sainte-Foy - Sports-Études Tennis",
   "team_dynamiques_description": "Équipe sportive représentant le Cégep de Sainte-Foy dans diverses compétitions régionales.",
@@ -84,7 +79,6 @@
   "team_epervier_title": "Les Éperviers - Sports Études Badminton - École Secondaire La Camaradière",
   "team_epervier_description": "Équipe de compétition engagée dans plusieurs tournois régionaux et nationaux régie par la RSEQ.",
   "team_epervier_period": "Période : 2016 - 2019",
-
   "clubs": "Clubs",
   "club_cia_title": "Club d'intelligence artificielle de l'Université Laval",
   "club_cia_description": "Club permettant d'apprendre, de participer à des projets et à des compétitions en lien avec l'intelligence artificielle",
@@ -101,7 +95,6 @@
   "club_tennis_ll_title": "Club de tennis de l'Ancienne Lorette",
   "club_tennis_ll_description": "Club de tennis offrant des cours et des compétitions pour les jeunes et les adultes sur terre battue.",
   "club_tennis_ll_period": "Période : 2017 - 2019",
-
   "references_title": "Sources de références",
   "references_configuration_title": "Configuration de cette application web:",
   "references_typescript": "TypeScript (Javascript mais avec les types)",
@@ -120,7 +113,6 @@
   "references_cloudflare_tutorial": "Tutoriel sur le déploiement de Cloudflare Pages avec React.JS",
   "references_freedns": "FreeDNS (Gestionnaire DNS permettant l'attribution et l'utilisation de domaines gratuits et premiums)",
   "references_dependabot": "Dependabot (Mise à jour automatique des dépendances du projet)",
-
   "contact_title": "Me contacter",
   "contact_name_label": "Nom",
   "contact_name_placeholder": "Votre nom",
@@ -137,7 +129,6 @@
   "contact_invalid_message": "Message invalide",
   "contact_success_text": "Le courriel a bien été envoyé avec succès",
   "contact_error_text": "Une erreur s'est produite, veuillez réessayer plus tard",
-
   "about_title": "À propos du créateur",
   "about_texts": [
     "William Blanchet Lafrenière, un passionné de l'informatique, a fait ses premiers pas dans le monde de la technologie en 2015 lorsqu'il a intégré la concentration Arts et Technologies de l'Information et de la Communication à l'École secondaire La Camaradière. Son voyage dans le domaine de l'informatique a débuté avec la création de simples sites web en HTML, CSS et JavaScript. Cependant, sa soif de connaissances et son insatiable curiosité l'ont rapidement poussé à explorer une multitude de domaines.",
@@ -145,24 +136,20 @@
     "Au cours de cette formation au Cégep de Sainte Foy, il a acquis des compétences avancées en développement web, lui permettant de créer des applications web interactives et conviviales, tout en maîtrisant les dernières technologies du secteur. La cybersécurité et le hacking sont devenus des sujets d'intérêt majeur pour lui, car il s'est rendu compte de l'importance de protéger les systèmes informatiques contre les menaces en ligne. William a également eu l'opportunité de peaufiner ses connaissances en matière de création de jeux vidéo, créant à la fois des jeux complets en 2D et en 3D. Il a aussi développé des applications mobiles qui ont facilité la vie des utilisateurs, tout en perfectionnant ses compétences en matière de développement sur Android. En parallèle, il a également exploré le domaine des appareils connectés, cherchant à créer des solutions innovantes qui amélioreraient la vie quotidienne des gens.",
     "Au fil des années, William est devenu un développeur très complet et polyvalent pour son âge, capable de jongler avec une variété de langages de programmation, de technologies et de concepts complexes. Sa passion et son dévouement pour l'informatique l'ont amené à embrasser une carrière diversifiée où il peut continuer à créer, innover et résoudre des défis informatiques passionnants. Sa quête de connaissances est sans fin, et il est prêt à repousser les limites de la technologie pour façonner un avenir numérique prometteur."
   ],
-
   "factionwar_title": "Projet FactionWar",
   "factionwar_image1_alt": "Paramètres de Faction War",
   "factionwar_image2_alt": "Faction War en jeu",
   "factionwar_download_title": "Téléchargement",
   "factionwar_download_button": "FactionWar",
-
   "peps_title": "Projet PepsReservationBot",
   "peps_video_title": "Démo de PepsReservationBot",
   "peps_download_title": "Téléchargement",
   "peps_download_button": "PepsReservationBot",
   "peps_chromium_download_button": "PepsReservationBotChromium",
-
   "not_found": "Page non trouvée",
   "not_found_oups": "Oups !",
   "not_found_message": "La page n’a pas été trouvée",
   "not_found_lead": "La page que vous recherchez n’existe pas ou a été déplacée.",
   "not_found_button": "Retourner à l’accueil",
-
   "footer_text": "Site Créé par William Blanchet Lafrenière. Ne pas reproduire"
 }

@@ -12,15 +12,15 @@ import {withTranslation, WithTranslation} from "react-i18next";
 class Index extends Component<WithTranslation> {
 
     render() {
-        const { t } = this.props;
+        const {t} = this.props;
         document.title = t("index") + ' - ' + APP_NAME;
         return (
             <Container>
-                <Particles options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu} />
+                <Particles options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu}/>
                 <Row>
                     <div className="d-flex justify-content-center">
                         <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark}
-                             v-bind:alt={"Logo" + APP_NAME} width={300} height={200} />
+                             v-bind:alt={"Logo" + APP_NAME} width={300} height={200}/>
                     </div>
                     <h1 className="">William Blanchet Lafrenière</h1>
                     <div className="text-center mt-4 mb-4 z-1">{t("index_title")}</div>

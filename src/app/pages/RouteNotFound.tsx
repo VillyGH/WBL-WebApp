@@ -1,26 +1,26 @@
-import React, { Component, ReactElement } from "react";
-import { RoutesPath } from "../RoutesPath";
-import { Link } from "react-router-dom";
-import { APP_NAME } from "../constants/Global";
-import { Application } from "../core/Application";
-import { ParticlesOptsDark } from "../types/ParticlesDark";
-import { ParticlesOpts } from "../types/Particles";
+import React, {Component, ReactElement} from "react";
+import {RoutesPath} from "../RoutesPath";
+import {Link} from "react-router-dom";
+import {APP_NAME} from "../constants/Global";
+import {Application} from "../core/Application";
+import {ParticlesOptsDark} from "../types/ParticlesDark";
+import {ParticlesOpts} from "../types/Particles";
 import Particles from "@tsparticles/react";
-import { withTranslation, WithTranslation } from "react-i18next";
+import {withTranslation, WithTranslation} from "react-i18next";
 import Container from "react-bootstrap/Container";
 
 class RouteNotFound extends Component<WithTranslation> {
     public componentDidMount(): void {
-        const { t } = this.props;
+        const {t} = this.props;
         document.title = t("not_found") + " - " + APP_NAME;
     }
 
     public render(): ReactElement {
-        const { t } = this.props;
+        const {t} = this.props;
 
         return (
             <Container className="d-flex flex-column justify-content-center align-items-center vh-90">
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
+                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
                 <div className="text-center">
                     <h1 className="display-1 fw-bold mb-4">404</h1>
                     <p className="fs-3">
