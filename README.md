@@ -4,7 +4,8 @@
 
 ## Description
 
-La WBL Web App est une application web personnelle de William Blanchet Lafrenière. Elle regroupe ses projets informatiques et offre des informations sur son parcours professionnel et ses références.
+La WBL Web App est une application web personnelle de William Blanchet Lafrenière. Elle regroupe ses projets
+informatiques et offre des informations sur son parcours professionnel et ses références.
 
 ## Fonctionnalités
 
@@ -39,7 +40,8 @@ npm install
 npm run dev
 ```
 
-5. Ouvrez votre navigateur et accédez à l'application à l'adresse suivante : [http://localhost:8080](http://localhost:8080)
+5. Ouvrez votre navigateur et accédez à l'application à l'adresse
+   suivante : [http://localhost:8080](http://localhost:8080)
 
 ## Technologies utilisées
 
@@ -65,7 +67,8 @@ Ne pas reproduire et/ou distribuer ce projet sans l'autorisation de l'auteur.
 
 ## Description
 
-The WBL Web App is a personal web application by William Blanchet Lafrenière. It showcases his computer projects and provides information about his professional journey and references.
+The WBL Web App is a personal web application by William Blanchet Lafrenière. It showcases his computer projects and
+provides information about his professional journey and references.
 
 ## Features
 
@@ -93,7 +96,6 @@ cd wbl-webapp
 ```bash
 npm install
 ```
-   
 
 4. Run the application in development mode:
 

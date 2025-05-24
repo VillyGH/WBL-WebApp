@@ -52,7 +52,9 @@ class Groupes extends React.Component<WithTranslation> {
                     </div>
                 </Row>
                 <Row className="mb-4">
-                    <Image className="img-responsive" src={Application.isDarkMode() ? ClubBadmintonQuebecBlanc : ClubBadmintonQuebec} alt={t("group_badmintonquebec_alt")}/>
+                    <Image className="img-responsive"
+                           src={Application.isDarkMode() ? ClubBadmintonQuebecBlanc : ClubBadmintonQuebec}
+                           alt={t("group_badmintonquebec_alt")}/>
                     <div className="mt-2">
                         <h3>{t("club_badmintonquebec_title")}</h3>
                         <p>{t("club_badmintonquebec_description")}</p>
@@ -76,7 +78,9 @@ class Groupes extends React.Component<WithTranslation> {
                     </div>
                 </Row>
                 <Row className="mb-4">
-                    <Image className="img-responsive" src={Application.isDarkMode() ? ClubLAncienneLoretteBlanc : ClubLAncienneLorette} alt={t("club_tennis_ll_alt")}/>
+                    <Image className="img-responsive"
+                           src={Application.isDarkMode() ? ClubLAncienneLoretteBlanc : ClubLAncienneLorette}
+                           alt={t("club_tennis_ll_alt")}/>
                     <div className="mt-2">
                         <h3>{t("club_tennis_ll_title")}</h3>
                         <p>{t("club_tennis_ll_description")}</p>

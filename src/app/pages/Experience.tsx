@@ -1,24 +1,24 @@
-import React, { ReactElement } from "react";
+import React, {ReactElement} from "react";
 import Particles from "@tsparticles/react";
-import { APP_NAME } from "../constants/Global";
-import { Application } from "../core/Application";
+import {APP_NAME} from "../constants/Global";
+import {Application} from "../core/Application";
 import RQ from "../deps/images/RQ.jpg";
 import RAMQ from "../deps/images/RAMQ.jpg";
 import CNESST from "../deps/images/CNESST.png";
-import { ParticlesOptsDark } from "../types/ParticlesDark";
-import { ParticlesOpts } from "../types/Particles";
+import {ParticlesOptsDark} from "../types/ParticlesDark";
+import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";
 import "../deps/css/experience.css";
-import { withTranslation, WithTranslation } from "react-i18next";
+import {withTranslation, WithTranslation} from "react-i18next";
 
 class Experience extends React.Component<WithTranslation> {
 
     public render(): ReactElement | null {
-        const { t } = this.props;
+        const {t} = this.props;
         document.title = t("experience") + " - " + APP_NAME;
         return (
             <div>
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts} />
+                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
                 <Container fluid="sm">
                     <h2>{t("experience_title")}</h2>
                     <Row className="my-4">

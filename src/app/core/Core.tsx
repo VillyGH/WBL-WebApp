@@ -21,6 +21,7 @@ import Contact from "../pages/Contact";
 import Apropos from "../pages/Apropos";
 import Etudes from "../pages/Etudes";
 import Groupes from "../pages/Groupes";
+import FlapEEG from "../pages/Projets/FlapEEG";
 import PepsReservationBot from "../pages/Projets/PepsReservationBot";
 import FactionWar from "../pages/Projets/FactionWar";
 import Footer from "../components/Footer";
@@ -44,13 +45,14 @@ export class Core extends Component<unknown, CoreState> {
 
     public render(): ReactElement | null {
         return (
-            <Suspense fallback={<LoadingScreen />}>
+            <Suspense fallback={<LoadingScreen/>}>
                 <Router basename={BASE_URL}>
                     <NavigationBar toggleDarkMode={this.toggleDarkMode}/>
-                    <ReactNotifications />
+                    <ReactNotifications/>
                     <Routes>
                         <Route path={RoutesPath.INDEX} element={<Index/>}/>
                         <Route path={RoutesPath.PROJETS} element={<Projets/>}/>
+                        <Route path={RoutesPath.FLAPEEG} element={<FlapEEG/>}/>
                         <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PepsReservationBot/>}/>
                         <Route path={RoutesPath.FACTIONWAR} element={<FactionWar/>}/>
                         <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>

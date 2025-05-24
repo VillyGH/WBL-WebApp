@@ -8,7 +8,7 @@ export class LoadingScreen extends Component {
         return (
             <div className="loading-screen">
                 <div id="spinner" className="text-center">
-                    <Spinner animation="border" variant="info" />
+                    <Spinner animation="border" variant="info"/>
                 </div>
             </div>
         );
