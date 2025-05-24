@@ -1,6 +1,7 @@
 export enum RoutesPath {
     INDEX = "/",
     PROJETS = "/projets",
+    FLAPEEG = "/projets/flapeeg",
     PEPSRESERVATIONBOT = "/projets/pepsreservationbot",
     FACTIONWAR = "/projets/factionwar",
     EXPERIENCE = "/experience",

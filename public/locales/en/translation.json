@@ -130,16 +130,14 @@
     "During this training at Cégep de Sainte Foy, he acquired advanced skills in web development, enabling him to create interactive, user-friendly web applications, while mastering the latest technologies in the sector. Cybersecurity and hacking became subjects of major interest to him, as he realized the importance of protecting computer systems from online threats. William also had the opportunity to hone his skills in video game creation, creating both full 2D and 3D games. He also developed mobile applications that made life easier for users, while honing his Android development skills. At the same time, he also explored the field of connected devices, seeking to create innovative solutions that would improve people's daily lives.",
     "Over the years, William has become a very well-rounded and versatile developer for his age, able to juggle a variety of programming languages, technologies and complex concepts. His passion and dedication to computing has led him to embrace a diverse career where he can continue to create, innovate and solve exciting computing challenges. His quest for knowledge is endless, and he's ready to push the boundaries of technology to shape a promising digital future."
   ],
+  "download_title": "Download",
+  "flapeeg_title": "FlapEEG Project",
   "factionwar_title": "FactionWar Project",
   "factionwar_image1_alt": "Faction War Parameters",
   "factionwar_image2_alt": "Faction War in game",
-  "factionwar_download_title": "Download",
-  "factionwar_download_button": "FactionWar",
   "peps_title": "PepsReservationBot Project",
   "peps_video_title": "Démo de PepsReservationBot",
-  "peps_download_title": "Download",
-  "peps_download_button": "PepsReservationBot",
-  "peps_chromium_download_button": "PepsReservationBotChromium",
+  "peps_chromium_download_title": "PepsReservationBotChromium",
   "not_found": "Page Not Found",
   "not_found_oups": "Oops!",
   "not_found_message": "The page could not be found",
@@ -147,9 +145,3 @@
   "not_found_button": "Return to Home",
   "footer_text": "Created by William Blanchet Lafrenière. Do no reproduce"
 }
-
-
-
-
-
-

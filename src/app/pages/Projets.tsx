@@ -30,9 +30,11 @@ class Projets extends React.Component<WithTranslation> {
                 <Row>
                     <ProjectCard
                         image={FlappyBrain}
-                        link="https://github.com/cia-ulaval/EEG_flappy_bird"
+                        link={RoutesPath.FLAPEEG}
                         title={t("projets_ciaul_title")}
                         description={t("projets_ciaul_description")}
+                        icon={faDownload}
+                        targetBlank={false}
                     />
                     <ProjectCard
                         image={Peps}

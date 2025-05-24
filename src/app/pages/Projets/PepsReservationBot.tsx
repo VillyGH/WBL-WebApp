@@ -14,7 +14,7 @@ import {withTranslation, WithTranslation} from "react-i18next";
 class PepsReservationBot extends React.Component<WithTranslation> {
     public componentDidMount(): void {
         const {t} = this.props;
-        document.title = t("peps_title") + " - " + APP_NAME;
+        document.title = t("projets_peps_title") + " - " + APP_NAME;
     }
 
     public render(): ReactElement | null {
@@ -33,11 +33,11 @@ class PepsReservationBot extends React.Component<WithTranslation> {
                             </div>
                         </Row>
                         <Row className="mt-4 mb-4">
-                            <h2 className="mt-4 mb-4">{t("peps_download_title")}</h2>
+                            <h2 className="mt-4 mb-4">{t("download_title")}</h2>
                             <Col className="d-flex justify-content-center align-items-center">
                                 <a href="https://github.com/VillyGH/PepsReservationBot/releases/latest/download/PepsReservationBot.zip"
                                    download="PepsReservationBot.zip" className="btn download-button">
-                                    <span>{t("peps_download_button")}</span>
+                                    <span>{t("projets_peps_title")}</span>
                                     <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
                                 </a>
                             </Col>
