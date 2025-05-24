@@ -1,1 +1,6 @@
 * text=auto
+*.exe binary
+*.dll binary
+*.png binary
+*.ogg binary
+*.wasm binary
