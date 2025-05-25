@@ -29,7 +29,7 @@ class FlapEEG extends React.Component<WithTranslation> {
                         <Row className="justify-content-center">
                             <div className="pygame-embed">
                                 <iframe
-                                    src="../../flapeeg/index.html"
+                                    src="/flapeeg/index.html"
                                     title="Pygame Game"
                                     width="800"
                                     height="600"
