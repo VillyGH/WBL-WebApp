@@ -83,10 +83,6 @@ export default {
             template: path.join(__dirname, "public/html", "index.html"),
             favicon: "./public/html/favicon.ico",
         }),
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, "public/flapeeg", "index.html"),
-            favicon: "./public/flapeeg/favicon.ico",
-        }),
         new CopyWebpackPlugin({
             patterns: [
                 {from: path.join(__dirname, "public/flapeeg/index.html"), to: "flapeeg/"},
