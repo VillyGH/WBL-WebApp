@@ -5,9 +5,10 @@ import Container from "react-bootstrap/Container";
 import {Application} from "../../core/Application";
 import {ParticlesOptsDark} from "../../types/ParticlesDark";
 import {ParticlesOpts} from "../../types/Particles";
-import {Col, Row} from "react-bootstrap";
+import {Col, Row, Ratio} from "react-bootstrap";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import FlapEEGDemo from "../../deps/videos/FlapEEGDemo.mp4";
 import "../../deps/css/projets.css";
 import {withTranslation, WithTranslation} from "react-i18next";
 
@@ -27,28 +28,20 @@ class FlapEEG extends React.Component<WithTranslation> {
                 <section className="mt-4 mb-5">
                     <Container className="mb-5">
                         <Row className="justify-content-center">
-                            <div className="pygame-embed">
-                                <iframe
-                                    src="/flapeeg/index.html"
-                                    title="Pygame Game"
-                                    width="800"
-                                    height="600"
-                                    style={{
-                                        border: 'none',
-                                        maxWidth: '100%',
-                                        aspectRatio: '4/3',
-                                    }}
-                                    allow="autoplay; fullscreen"
-                                />
-                            </div>
+                            <Row className="justify-content-center">
+                                <Ratio aspectRatio="16x9">
+                                    <iframe
+                                        src={FlapEEGDemo}
+                                        title={t("flapeeg_title")}
+                                        allowFullScreen
+                                    ></iframe>
+                                </Ratio>
+                            </Row>
                         </Row>
                         <Row className="mt-4 mb-4">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>
                             <Col className="d-flex justify-content-center align-content-center">
-                                <a
-                                    download="game.exe"
-                                    className="btn download-button"
-                                >
+                                <a className="btn download-button" href="/flapeeg.zip" download>
                                     <span>{t("projets_ciaul_title")}</span>
                                     <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
                                 </a>
