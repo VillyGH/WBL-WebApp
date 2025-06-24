@@ -5,9 +5,10 @@ import Container from "react-bootstrap/Container";
 import {Application} from "../../core/Application";
 import {ParticlesOptsDark} from "../../types/ParticlesDark";
 import {ParticlesOpts} from "../../types/Particles";
-import {Col, Ratio, Row} from "react-bootstrap";
+import {Col, Row, Ratio} from "react-bootstrap";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import FlapEEGDemo from "../../deps/videos/FlapEEGDemo.mp4";
 import "../../deps/css/projets.css";
 import {withTranslation, WithTranslation} from "react-i18next";
 
@@ -50,10 +51,7 @@ class FlapEEG extends React.Component<WithTranslation> {
                         <Row className="mt-4 mb-4">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>
                             <Col className="d-flex justify-content-center align-content-center">
-                                <a
-                                    download="game.exe"
-                                    className="btn download-button"
-                                >
+                                <a className="btn download-button" href="/flapeeg.zip" download>
                                     <span>{t("projets_ciaul_title")}</span>
                                     <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
                                 </a>

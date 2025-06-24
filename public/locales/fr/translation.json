@@ -56,6 +56,17 @@
     "Classement des documents à l'aide du manuel de conservation des documents",
     "Propositions de modifications pertinentes en conformité avec la volonté des membres du service"
   ],
+  "experience_coveo_title": "Coveo",
+  "experience_coveo_period": "Mai à août 2025",
+  "experience_coveo_alt": "Bureau de Coveo",
+  "experience_coveo_tasks": [
+    "Participation à la refonte de pages web en React",
+    "Contribution à la réduction de la dette technique afin d'adopter les dernières technologies",
+    "Implémentation et exécution de tests fonctionnels et unitaires pour assurer la qualité du code",
+    "Participation à diverses réunions Agile pour discuter de l'avancement du projet",
+    "Travail sur l'intégration continue (CI) pour améliorer le processus de déploiement de l'application",
+    "Mise à jour de la documentation technique du projet"
+  ],
   "etudes_title": "Études",
   "etudes_ulaval_alt": "Université Laval",
   "etudes_ulaval_title": "Université Laval",
