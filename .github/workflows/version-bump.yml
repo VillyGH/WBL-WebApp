@@ -29,7 +29,19 @@ jobs:
         run: |
           CURRENT_VERSION=$(jq -r .version package.json)
           IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
-          NEW_VERSION="$major.$minor.$((patch + 1))"
+          if [ "$patch" -eq 10 ]; then
+            patch=0
+            minor=$((minor + 1))
+          fi
+          if [ "$minor" -eq 10 ]; then
+            minor=0
+            major=$((major + 1))
+          fi
+          if [ "$patch" -eq 0 ] && [ "$minor" -ne 0 -o "$major" -ne 0 ]; then
+            NEW_VERSION="$major.$minor.$patch"
+          else
+            NEW_VERSION="$major.$minor.$((patch + 1))"
+          fi
           jq --arg v "$NEW_VERSION" '.version = $v' package.json > tmp.json && mv tmp.json package.json
           echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
