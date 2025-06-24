@@ -33,8 +33,8 @@ class FlapEEG extends React.Component<WithTranslation> {
                                     <iframe
                                     src="/game/index.html"
                                     title={t("flapeeg_title")}
-                                    width="800"
-                                    height="600"
+                                    width="750"
+                                    height="500"
                                     style={{
                                         border: 'none',
                                         maxWidth: '100%',
