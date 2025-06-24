@@ -28,13 +28,23 @@ class FlapEEG extends React.Component<WithTranslation> {
                 <section className="mt-4 mb-5">
                     <Container className="mb-5">
                         <Row className="justify-content-center">
+                            <div className="pygame-embed">
+                                
+                            </div>
                             <Row className="justify-content-center">
                                 <Ratio aspectRatio="16x9">
                                     <iframe
-                                        src={FlapEEGDemo}
-                                        title={t("flapeeg_title")}
-                                        allowFullScreen
-                                    ></iframe>
+                                    src="/game/index.html"
+                                    title={t("flapeeg_title")}
+                                    width="800"
+                                    height="600"
+                                    style={{
+                                        border: 'none',
+                                        maxWidth: '100%',
+                                        aspectRatio: '4/3',
+                                    }}
+                                    allow="autoplay; fullscreen"
+                                    />
                                 </Ratio>
                             </Row>
                         </Row>
