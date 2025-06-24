@@ -29,20 +29,18 @@ class FlapEEG extends React.Component<WithTranslation> {
                     <Container className="mb-5">
                         <Row className="justify-content-center">
                             <Row className="justify-content-center">
-                                <Ratio aspectRatio="4x3">
-                                    <iframe
+                                <iframe
                                     src="/game/index.html"
                                     title={t("flapeeg_title")}
                                     width="700"
-                                    height="400"
+                                    height="500"
                                     style={{
                                         border: 'none',
                                         maxWidth: '100%',
                                         aspectRatio: '4/3',
                                     }}
                                     allow="autoplay; fullscreen"
-                                    />
-                                </Ratio>
+                                />
                             </Row>
                         </Row>
                         <Row className="mt-4 mb-4">
