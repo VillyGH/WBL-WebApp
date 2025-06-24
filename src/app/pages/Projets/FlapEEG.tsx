@@ -25,17 +25,19 @@ class FlapEEG extends React.Component<WithTranslation> {
             <div>
                 <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
                 <h1 className="mt-4 mb-4">{t("flapeeg_title")}</h1>
-                <section className="mt-4 mb-5">
+                <section className="mt-5 mb-5">
                     <Container className="mb-5">
                         <Row className="justify-content-center">
                             <Row className="justify-content-center">
                                 <iframe
                                     src="/game/index.html"
                                     title={t("flapeeg_title")}
+                                    width={1024}
+                                    height={650}
                                     style={{
                                         border: 'none',
                                         maxWidth: '100%',
-                                        aspectRatio: '16/9',
+                                        aspectRatio: '4/3',
                                     }}
                                     allow="autoplay; fullscreen"
                                 />
