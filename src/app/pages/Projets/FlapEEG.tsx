@@ -37,7 +37,7 @@ class FlapEEG extends React.Component<WithTranslation> {
                                     style={{
                                         border: 'none',
                                         maxWidth: '100%',
-                                        aspectRatio: '16/9',
+                                        aspectRatio: '4/3',
                                     }}
                                     allow="autoplay; fullscreen"
                                 />
