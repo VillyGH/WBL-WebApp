@@ -56,6 +56,17 @@
     "Organized documents using the document retention manual.",
     "Proposed relevant modifications in line with the service members' goals."
   ],
+  "experience_coveo_title": "Coveo",
+  "experience_coveo_period": "May to August 2025",
+  "experience_coveo_alt": "Coveo office",
+  "experience_coveo_tasks": [
+    "Participated in the redesign of web pages in React",
+    "Contributed to reducing technical debt to adopt the latest technologies",
+    "Implemented and executed functional and unit tests to ensure code quality",
+    "Participated in various Agile meetings to discuss project progress",
+    "Worked on continuous integration (CI) to improve the application deployment process",
+    "Updated the project's technical documentation"
+  ],
   "etudes_title": "Education",
   "etudes_ulaval_alt": "Université Laval",
   "etudes_ulaval_title": "Université Laval",
