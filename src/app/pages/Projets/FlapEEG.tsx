@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import {Application} from "../../core/Application";
 import {ParticlesOptsDark} from "../../types/ParticlesDark";
 import {ParticlesOpts} from "../../types/Particles";
-import {Col, Row} from "react-bootstrap";
+import {Col, Ratio, Row} from "react-bootstrap";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import "../../deps/css/projets.css";
@@ -28,9 +28,13 @@ class FlapEEG extends React.Component<WithTranslation> {
                     <Container className="mb-5">
                         <Row className="justify-content-center">
                             <div className="pygame-embed">
-                                <iframe
-                                    src="../../flapeeg/index.html"
-                                    title="Pygame Game"
+                                
+                            </div>
+                            <Row className="justify-content-center">
+                                <Ratio aspectRatio="16x9">
+                                    <iframe
+                                    src="/game/index.html"
+                                    title={t("flapeeg_title")}
                                     width="800"
                                     height="600"
                                     style={{
@@ -39,8 +43,9 @@ class FlapEEG extends React.Component<WithTranslation> {
                                         aspectRatio: '4/3',
                                     }}
                                     allow="autoplay; fullscreen"
-                                />
-                            </div>
+                                    />
+                                </Ratio>
+                            </Row>
                         </Row>
                         <Row className="mt-4 mb-4">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>
