@@ -92,8 +92,7 @@ export default {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                {from: path.join(__dirname, "public/flapeeg"), to: "game"},
-                {from: path.join(__dirname, "public/flapeeg/flapeeg.exe"), to: ""},
+                {from: path.join(__dirname, "public/flapeeg/"), to: "game"},
                 {from: path.join(__dirname, "public/html/googlee063acc64186947c.html"), to: ""},
                 {from: path.join(__dirname, "public/locales"), to: "locales"}
             ]
