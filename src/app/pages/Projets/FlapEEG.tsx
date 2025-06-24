@@ -32,7 +32,7 @@ class FlapEEG extends React.Component<WithTranslation> {
                                 
                             </div>
                             <Row className="justify-content-center">
-                                <Ratio aspectRatio="16x9">
+                                <Ratio aspectRatio="4x3">
                                     <iframe
                                     src="/game/index.html"
                                     title={t("flapeeg_title")}
