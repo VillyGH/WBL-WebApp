@@ -5,6 +5,7 @@ import {Application} from "../core/Application";
 import RQ from "../deps/images/RQ.jpg";
 import RAMQ from "../deps/images/RAMQ.jpg";
 import CNESST from "../deps/images/CNESST.png";
+import COVEO from "../deps/images/COVEO.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
 import {Col, Container, Image, Row} from "react-bootstrap";
@@ -32,6 +33,23 @@ class Experience extends React.Component<WithTranslation> {
                                 <p>{t("experience_tasks")}</p>
                                 <ul>
                                     {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
+                                        <li key={index}>{task}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xl={6} xxl={5}>
+                            <Image className="img-responsive" src={COVEO} alt={t("experience_coveo_alt")}/>
+                        </Col>
+                        <Col xl={6} xxl={7}>
+                            <div>
+                                <h3>{t("experience_coveo_title")}</h3>
+                                <p>{t("experience_coveo_period")}</p>
+                                <p>{t("experience_tasks")}</p>
+                                <ul>
+                                    {(t("experience_coveo_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
                                         <li key={index}>{task}</li>
                                     ))}
                                 </ul>
