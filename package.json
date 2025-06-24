@@ -1,6 +1,6 @@
 {
   "name": "wbl-webapp",
-  "version": "0.1.17",
+  "version": "0.3.4",
   "type": "module",
   "private": true,
   "scripts": {
