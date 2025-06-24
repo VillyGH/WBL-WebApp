@@ -28,9 +28,6 @@ class FlapEEG extends React.Component<WithTranslation> {
                 <section className="mt-4 mb-5">
                     <Container className="mb-5">
                         <Row className="justify-content-center">
-                            <div className="pygame-embed">
-                                
-                            </div>
                             <Row className="justify-content-center">
                                 <Ratio aspectRatio="4x3">
                                     <iframe
