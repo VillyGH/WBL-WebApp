@@ -24,14 +24,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Skip if branch is up to date with master
-        run: |
-          git fetch origin master
-          if [ "$(git rev-list origin/master..HEAD --count)" -eq 0 ]; then
-            echo "Branch is up to date with master. Skipping version bump."
-            exit 0
-          fi
-
       - name: Bump patch version in package.json
         id: bump
         run: |
@@ -55,6 +47,11 @@ jobs:
 
       - name: Commit bumped version
         run: |
+          git fetch origin master
+          if [ "$(git rev-list origin/master..HEAD --count)" -eq 0 ]; then
+            echo "Branch is up to date with master. Skipping version bump."
+            exit 0
+          fi
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add package.json
