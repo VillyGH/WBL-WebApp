@@ -24,14 +24,17 @@ jobs:
         with:
           node-version: 18
 
-      - name: Bump patch version in package.json
-        id: bump
+      - name: Skip if branch is up to date with master
         run: |
           git fetch origin master
           if [ "$(git rev-list origin/master..HEAD --count)" -eq 0 ]; then
             echo "Branch is up to date with master. Skipping version bump."
             exit 0
           fi
+
+      - name: Bump patch version in package.json
+        id: bump
+        run: |
           CURRENT_VERSION=$(jq -r .version package.json)
           IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
           if [ "$patch" -eq 10 ]; then
