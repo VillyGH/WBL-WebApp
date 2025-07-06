@@ -27,8 +27,12 @@ class FlapEEG extends React.Component<WithTranslation> {
                 <h1 className="mt-4 mb-4">{t("flapeeg_title")}</h1>
                 <section className="mt-5 mb-5">
                     <Container className="mb-5">
+                        <h2 className="mt-4 mb-4">{t("demo_title")}</h2>
+                        <Row className="ratio ratio-16x9">
+                            <iframe src={FlapEEGDemo} title={t("flapeeg_video_title")} allowFullScreen />
+                        </Row>
                         <Row className="justify-content-center">
-                            <Row className="justify-content-center">
+                            <h2 className="mt-4 mb-4">{t("game_preview_title")}</h2>
                                 <iframe
                                     src="/game/index.html"
                                     title={t("flapeeg_title")}
@@ -41,16 +45,13 @@ class FlapEEG extends React.Component<WithTranslation> {
                                     }}
                                     allow="autoplay; fullscreen"
                                 />
-                            </Row>
                         </Row>
-                        <Row className="mt-4 mb-4">
+                        <Row className="mt-4 mb-4 justify-content-center">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>
-                            <Col className="d-flex justify-content-center align-content-center">
-                                <a className="btn download-button" href="/flapeeg.zip" download>
-                                    <span>{t("projets_ciaul_title")}</span>
-                                    <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
-                                </a>
-                            </Col>
+                            <a className="btn download-button" href="/flapeeg.zip" download>
+                                <span>{t("projets_ciaul_title")}</span>
+                                <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
+                            </a>
                         </Row>
                     </Container>
                 </section>
