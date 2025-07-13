@@ -28,7 +28,8 @@ class PepsReservationBot extends React.Component<WithTranslation> {
                     <Container className="mb-5">
                         <Row className="ratio ratio-16x9">
                             <h2 className="mt-4 mb-4">{t("demo_title")}</h2>
-                            <iframe src="https://www.youtube.com/embed/2xLY_uGdiH4" title={t("peps_video_title")} allowFullScreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/2xLY_uGdiH4" title={t("peps_video_title")}
+                                    allowFullScreen></iframe>
                         </Row>
                         <Row className="mt-4 mb-4">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import {Application} from "../../core/Application";
 import {ParticlesOptsDark} from "../../types/ParticlesDark";
 import {ParticlesOpts} from "../../types/Particles";
-import {Col, Row, Ratio} from "react-bootstrap";
+import {Row} from "react-bootstrap";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import FlapEEGDemo from "../../deps/videos/FlapEEGDemo.mp4";
@@ -29,22 +29,22 @@ class FlapEEG extends React.Component<WithTranslation> {
                     <Container className="mb-5">
                         <h2 className="mt-4 mb-4">{t("demo_title")}</h2>
                         <Row className="ratio ratio-16x9">
-                            <iframe src={FlapEEGDemo} title={t("flapeeg_video_title")} allowFullScreen />
+                            <iframe src={FlapEEGDemo} title={t("flapeeg_video_title")} allowFullScreen/>
                         </Row>
                         <Row className="justify-content-center">
                             <h2 className="mt-4 mb-4">{t("game_preview_title")}</h2>
-                                <iframe
-                                    src="/game/index.html"
-                                    title={t("flapeeg_title")}
-                                    width={1024}
-                                    height={650}
-                                    style={{
-                                        border: 'none',
-                                        maxWidth: '100%',
-                                        aspectRatio: '4/3',
-                                    }}
-                                    allow="autoplay; fullscreen"
-                                />
+                            <iframe
+                                src="/game/index.html"
+                                title={t("flapeeg_title")}
+                                width={1024}
+                                height={650}
+                                style={{
+                                    border: 'none',
+                                    maxWidth: '100%',
+                                    aspectRatio: '4/3',
+                                }}
+                                allow="autoplay; fullscreen"
+                            />
                         </Row>
                         <Row className="mt-4 mb-4 justify-content-center">
                             <h2 className="mt-4 mb-4">{t("download_title")}</h2>
