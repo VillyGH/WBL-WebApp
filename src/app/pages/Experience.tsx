@@ -42,7 +42,8 @@ class Experience extends React.Component<WithTranslation> {
                     </Row>
                     <Row>
                         <Col xl={6} xxl={5}>
-                            <Image className="img-responsive" src={Application.isDarkMode() ? COVEO_BLANC : COVEO} alt={t("experience_coveo_alt")}/>
+                            <Image className="img-responsive" src={Application.isDarkMode() ? COVEO_BLANC : COVEO}
+                                   alt={t("experience_coveo_alt")}/>
                         </Col>
                         <Col xl={6} xxl={7}>
                             <div>
