@@ -25,23 +25,6 @@ class Experience extends React.Component<WithTranslation> {
                     <h2>{t("experience_title")}</h2>
                     <Row className="my-4">
                         <Col xl={6} xxl={5}>
-                            <Image className="img-responsive" src={RAMQ} alt={t("experience_ramq_alt")}/>
-                        </Col>
-                        <Col xl={6} xxl={7}>
-                            <div>
-                                <h3>{t("experience_ramq_title")}</h3>
-                                <p>{t("experience_ramq_period")}</p>
-                                <p>{t("experience_tasks")}</p>
-                                <ul>
-                                    {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
-                                        <li key={index}>{task}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xl={6} xxl={5}>
                             <Image className="img-responsive" src={Application.isDarkMode() ? COVEO_BLANC : COVEO}
                                    alt={t("experience_coveo_alt")}/>
                         </Col>
@@ -58,7 +41,24 @@ class Experience extends React.Component<WithTranslation> {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="my-4">
+                        <Col xl={6} xxl={5}>
+                            <Image className="img-responsive" src={RAMQ} alt={t("experience_ramq_alt")}/>
+                        </Col>
+                        <Col xl={6} xxl={7}>
+                            <div>
+                                <h3>{t("experience_ramq_title")}</h3>
+                                <p>{t("experience_ramq_period")}</p>
+                                <p>{t("experience_tasks")}</p>
+                                <ul>
+                                    {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
+                                        <li key={index}>{task}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="my-4">
                         <Col xl={6} xxl={5}>
                             <Image className="img-responsive" src={RQ} alt={t("experience_rq_alt")}/>
                         </Col>
