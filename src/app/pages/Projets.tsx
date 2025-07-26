@@ -14,7 +14,7 @@ import FaceFlow from "../deps/images/FaceFlow.png";
 import Peps from "../deps/images/Peps.png";
 import {ParticlesOptsDark} from "../types/ParticlesDark";
 import {ParticlesOpts} from "../types/Particles";
-import {faDownload, faTrophy} from "@fortawesome/free-solid-svg-icons";
+import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import "../deps/css/projets.css";
 import {withTranslation, WithTranslation} from "react-i18next";
@@ -33,7 +33,7 @@ class Projets extends React.Component<WithTranslation> {
                         link={RoutesPath.FLAPEEG}
                         title={t("projets_ciaul_title")}
                         description={t("projets_ciaul_description")}
-                        icon={faDownload}
+                        icon={faPlay}
                         targetBlank={false}
                     />
                     <ProjectCard
