@@ -61,7 +61,7 @@ class Projets extends React.Component<WithTranslation> {
                     />
                     <ProjectCard
                         image={TMAcceuil}
-                        link="https://github.com/TaskMaster873/DRFWClient"
+                        link="https://drfwclient.pages.dev"
                         title={t("projets_taskmaster_title")}
                         description={t("projets_taskmaster_description")}
                     />
