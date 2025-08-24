@@ -22,7 +22,7 @@ class Index extends Component<WithTranslation> {
                         <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark}
                              v-bind:alt={"Logo" + APP_NAME} width={300} height={200}/>
                     </div>
-                    <h1 className="">William Blanchet Lafrenière</h1>
+                    <h1>William Blanchet Lafrenière</h1>
                     <div className="text-center mt-4 mb-4 z-1">{t("index_title")}</div>
                 </Row>
             </Container>
