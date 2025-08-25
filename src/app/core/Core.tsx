@@ -29,7 +29,6 @@ import RouteNotFound from "../pages/RouteNotFound";
 import {RoutesPath} from "../RoutesPath";
 import {LoadingScreen} from "../components/LoadingScreen";
 import {AnimatePresence} from "framer-motion";
-import {PageTransition} from "../components/PageTransition";
 
 //endregion
 
@@ -53,20 +52,20 @@ export class Core extends Component<unknown, CoreState> {
                     <ReactNotifications/>
                     <AnimatePresence mode="wait">
                         <Routes>
-                            <Route index element={<PageTransition><Index/></PageTransition>}/>
+                            <Route index element={<Index/>}/>
                             <Route path={RoutesPath.PROJETS}>
-                                <Route path="*" index element={<PageTransition><Projets/></PageTransition>}/>
-                                <Route path={RoutesPath.FLAPEEG} element={<PageTransition><FlapEEG/></PageTransition>}/>
-                                <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PageTransition><PepsReservationBot/></PageTransition>}/>
-                                <Route path={RoutesPath.FACTIONWAR} element={<PageTransition><FactionWar/></PageTransition>}/>
+                                <Route path="*" index element={<Projets/>}/>
+                                <Route path={RoutesPath.FLAPEEG} element={<FlapEEG/>}/>
+                                <Route path={RoutesPath.PEPSRESERVATIONBOT} element={<PepsReservationBot/>}/>
+                                <Route path={RoutesPath.FACTIONWAR} element={<FactionWar/>}/>
                             </Route>
-                            <Route path={RoutesPath.ETUDES} element={<PageTransition><Etudes/></PageTransition>}/>
-                            <Route path={RoutesPath.GROUPES} element={<PageTransition><Groupes/></PageTransition>}/>
-                            <Route path={RoutesPath.EXPERIENCE} element={<PageTransition><Experience/></PageTransition>}/>
-                            <Route path={RoutesPath.CONTACT} element={<PageTransition><Contact/></PageTransition>}/>
-                            <Route path={RoutesPath.REFERENCES} element={<PageTransition><References/></PageTransition>}/>
-                            <Route path={RoutesPath.APROPOS} element={<PageTransition><Apropos/></PageTransition>}/>
-                            <Route path="*" element={<PageTransition><RouteNotFound/></PageTransition>}/>
+                            <Route path={RoutesPath.ETUDES} element={<Etudes/>}/>
+                            <Route path={RoutesPath.GROUPES} element={<Groupes/>}/>
+                            <Route path={RoutesPath.EXPERIENCE} element={<Experience/>}/>
+                            <Route path={RoutesPath.CONTACT} element={<Contact/>}/>
+                            <Route path={RoutesPath.REFERENCES} element={<References/>}/>
+                            <Route path={RoutesPath.APROPOS} element={<Apropos/>}/>
+                            <Route path="*" element={<RouteNotFound/>}/>
                         </Routes>
                     </AnimatePresence>
                     <Footer/>
