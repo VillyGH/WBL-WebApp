@@ -1,11 +1,7 @@
 import React, {ReactElement} from "react";
-import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global";
-import {Application} from "../core/Application";
-import {ParticlesOptsDark} from "../types/ParticlesDark";
-import {ParticlesOpts} from "../types/Particles";
 import {withTranslation, WithTranslation} from "react-i18next";
-import Container from "react-bootstrap/Container";
+import {Page} from "../components/Page";
 
 class References extends React.Component<WithTranslation> {
     public render(): ReactElement | null {
@@ -13,9 +9,7 @@ class References extends React.Component<WithTranslation> {
         document.title = t("references") + " - " + APP_NAME;
 
         return (
-            <Container>
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
-                <h2>{t("references_title")}</h2>
+            <Page title={t("references_title")}>
                 <h4 className="my-4">{t("references_configuration_title")}</h4>
                 <p><a href="https://www.typescriptlang.org/tsconfig">{t("references_typescript")}</a></p>
                 <p><a href="https://nodejs.org/en">{t("references_nodejs")}</a></p>
@@ -40,7 +34,7 @@ class References extends React.Component<WithTranslation> {
                     href="https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates">
                     {t("references_dependabot")}
                 </a></p>
-            </Container>
+            </Page>
         );
     }
 }

@@ -59,7 +59,7 @@ export class Application {
 
         if (this.rootElem !== null && this.rootElem) {
             this.root = ReactDOM.createRoot(this.rootElem);
-            this.root.render(<Core/>);
+            this.root.render(<Core />);
         } else {
             console.error("Root element is null or undefined!");
         }

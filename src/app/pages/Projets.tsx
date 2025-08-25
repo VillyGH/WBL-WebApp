@@ -1,8 +1,6 @@
 import React, {ReactElement} from "react";
-import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global"
-import {Container, Row} from "react-bootstrap";
-import {Application} from "../core/Application";
+import {Row} from "react-bootstrap";
 import {ProjectCard} from "../components/ProjectCard";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
@@ -12,21 +10,18 @@ import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/FactionWar.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
 import Peps from "../deps/images/Peps.png";
-import {ParticlesOptsDark} from "../types/ParticlesDark";
-import {ParticlesOpts} from "../types/Particles";
 import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import "../deps/css/projets.css";
 import {withTranslation, WithTranslation} from "react-i18next";
+import { Page } from "../components/Page";
 
 class Projets extends React.Component<WithTranslation> {
     public render(): ReactElement | null {
         const {t} = this.props;
         document.title = t("projets") + " - " + APP_NAME;
         return (
-            <Container>
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
-                <h2>{t("projets_title")}</h2>
+            <Page title={t("projets_title")}>
                 <Row>
                     <ProjectCard
                         image={FlappyBrain}
@@ -85,7 +80,7 @@ class Projets extends React.Component<WithTranslation> {
                         description={t("projets_gardien_description")}
                     />
                 </Row>
-            </Container>
+            </Page>
         );
     }
 }

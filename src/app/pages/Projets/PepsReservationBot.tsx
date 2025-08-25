@@ -1,15 +1,11 @@
 import React, {ReactElement} from "react";
-import Particles from "@tsparticles/react";
 import {APP_NAME} from "../../constants/Global";
-import Container from "react-bootstrap/Container";
-import {Application} from "../../core/Application";
-import {ParticlesOptsDark} from "../../types/ParticlesDark";
-import {ParticlesOpts} from "../../types/Particles";
 import {Col, Row} from "react-bootstrap";
 import "../../deps/css/projets.css";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {withTranslation, WithTranslation} from "react-i18next";
+import {Page} from "../../components/Page";
 
 class PepsReservationBot extends React.Component<WithTranslation> {
     public componentDidMount(): void {
@@ -21,37 +17,30 @@ class PepsReservationBot extends React.Component<WithTranslation> {
         const {t} = this.props;
 
         return (
-            <div>
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
-                <h1 className="mt-4 mb-4">{t("peps_title")}</h1>
-                <section className="mt-4 mb-5">
-                    <Container className="mb-5">
-                        <Row className="ratio ratio-16x9">
-                            <h2 className="mt-4 mb-4">{t("demo_title")}</h2>
-                            <iframe src="https://www.youtube.com/embed/2xLY_uGdiH4" title={t("peps_video_title")}
-                                    allowFullScreen></iframe>
-                        </Row>
-                        <Row className="mt-4 mb-4">
-                            <h2 className="mt-4 mb-4">{t("download_title")}</h2>
-                            <Col className="d-flex justify-content-center align-items-center">
-                                <a href="https://github.com/VillyGH/PepsReservationBot/releases/latest/download/PepsReservationBot.zip"
-                                   download="PepsReservationBot.zip" className="btn download-button">
-                                    <span>{t("projets_peps_title")}</span>
-                                    <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
-                                </a>
-                            </Col>
-                            <Col className="d-flex justify-content-center align-items-center">
-                                <a
-                                    href="https://github.com/VillyGH/PepsReservationBot/releases/latest/download/PepsReservationBotChromium.zip"
-                                    download="PepsReservationBot.zip" className="btn download-button">
-                                    <span>{t("peps_chromium_download_button")}</span>
-                                    <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
-                                </a>
-                            </Col>
-                        </Row>
-                    </Container>
-                </section>
-            </div>
+            <Page title={t("peps_title")}>
+                <Row className="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/2xLY_uGdiH4" title={t("peps_video_title")}
+                            allowFullScreen></iframe>
+                </Row>
+                <Row className="my-4">
+                    <h2 className="my-4">{t("download_title")}</h2>
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <a href="https://github.com/VillyGH/PepsReservationBot/releases/latest/download/PepsReservationBot.zip"
+                           download="PepsReservationBot.zip" className="btn download-button">
+                            <span>{t("projets_peps_title")}</span>
+                            <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
+                        </a>
+                    </Col>
+                    <Col className="d-flex justify-content-center align-items-center">
+                        <a
+                            href="https://github.com/VillyGH/PepsReservationBot/releases/latest/download/PepsReservationBotChromium.zip"
+                            download="PepsReservationBot.zip" className="btn download-button">
+                            <span>{t("peps_chromium_download_button")}</span>
+                            <FontAwesomeIcon icon={faDownload} size="lg" className="download-icon"/>
+                        </a>
+                    </Col>
+                </Row>
+            </Page>
         );
     }
 }

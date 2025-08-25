@@ -27,6 +27,7 @@
     "core-js": "^3.42.0",
     "eslint": "^8.32.0",
     "file-loader": "^6.2.0",
+    "framer-motion": "^12.23.12",
     "html-webpack-plugin": "^5.6.3",
     "i18next": "^25.1.2",
     "i18next-browser-languagedetector": "^8.1.0",

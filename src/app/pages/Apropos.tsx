@@ -1,11 +1,7 @@
 import React, {ReactElement} from "react";
-import Particles from "@tsparticles/react";
 import {APP_NAME} from "../constants/Global";
-import Container from "react-bootstrap/Container";
-import {Application} from "../core/Application";
-import {ParticlesOptsDark} from "../types/ParticlesDark";
-import {ParticlesOpts} from "../types/Particles";
 import {withTranslation, WithTranslation} from "react-i18next";
+import {Page} from "../components/Page";
 
 class Apropos extends React.Component<WithTranslation> {
     public componentDidMount(): void {
@@ -17,13 +13,12 @@ class Apropos extends React.Component<WithTranslation> {
         const {t} = this.props;
 
         return (
-            <Container>
-                <Particles options={Application.isDarkMode() ? ParticlesOptsDark : ParticlesOpts}/>
+            <Page>
                 <h2 className="mb-5">{t("about_title")}</h2>
                 {(t("about_texts", {returnObjects: true}) as string[]).map((text: string, index: number) => (
                     <p key={index} className="text-justify">{text}</p>
                 ))}
-            </Container>
+            </Page>
         );
     }
 }
