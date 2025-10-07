@@ -94,7 +94,8 @@ export default {
             patterns: [
                 {from: path.join(__dirname, "public/flapeeg/"), to: "game"},
                 {from: path.join(__dirname, "public/html/googlee063acc64186947c.html"), to: ""},
-                {from: path.join(__dirname, "public/locales"), to: "locales"}
+                {from: path.join(__dirname, "public/locales"), to: "locales"},
+                {from: path.join(__dirname, "public/locales/en"), to: "locales/en-GB"}
             ]
         }),
     ]

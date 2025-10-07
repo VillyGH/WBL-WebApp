@@ -2,6 +2,8 @@ import React, {ReactElement} from "react";
 import {APP_NAME} from "../constants/Global"
 import {Row} from "react-bootstrap";
 import {ProjectCard} from "../components/ProjectCard";
+import LolPickBanUI from "../deps/images/LolPickBanUI.png";
+import Battleship from "../deps/images/Battleship.png";
 import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.jpg";
@@ -24,11 +26,25 @@ class Projets extends React.Component<WithTranslation> {
             <Page title={t("projets_title")}>
                 <Row>
                     <ProjectCard
+                        image={LolPickBanUI}
+                        link={"https://github.com/cia-ulaval/lol-pick-ban-ui"}
+                        title={t("projets_lolpickbanui_title")}
+                        description={t("projets_lolpickbanui_description")}
+                        targetBlank={false}
+                    />
+                    <ProjectCard
                         image={FlappyBrain}
                         link={RoutesPath.FLAPEEG}
                         title={t("projets_ciaul_title")}
                         description={t("projets_ciaul_description")}
                         icon={faPlay}
+                        targetBlank={false}
+                    />
+                    <ProjectCard
+                        image={Battleship}
+                        link={"https://github.com/VillyGH/BattleshipGameplay"}
+                        title={t("projets_battleship_title")}
+                        description={t("projets_battleship_description")}
                         targetBlank={false}
                     />
                     <ProjectCard
