@@ -9,6 +9,8 @@
   "index": "Acceuil",
   "index_title": "Bienvenue sur le site web personnel de William Blanchet Lafrenière. Ce site est dédié à regrouper les projets qu'il a effectués tout au long de son parcours en informatique.",
   "projets_title": "Principaux projets",
+  "projets_default_title": "Projet en cours",
+  "projets_default_description": "Ce projet est en cours de développement. Revenez plus tard pour plus de détails.",
   "projets_peps_title": "PepsReservationBot",
   "projets_peps_description": "Projet personnel de réservation automatisée de terrain du PEPS de l'Université Laval. Développé en Typescript à l'aide du package Puppeteer, il permet de planifier l'exécution d'un programme permettant de réserver automatiquement un plateau de jeu à une plage horaire prédéfinie.",
   "projets_factionwar_title": "FactionWar",

@@ -2,30 +2,31 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import "../deps/css/projets.css"
 import {Col, Image} from "react-bootstrap";
+import WIP from "../deps/images/WIP.png";
 import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 interface ProjectCardProps {
-    image: string;
-    link: string,
-    title: string;
-    description: string;
+    image?: string;
+    link?: string;
+    title?: string;
+    description?: string;
     icon?: IconDefinition;
     targetBlank?: boolean;
 }
 
-export class ProjectCard extends React.Component<ProjectCardProps> {
-    static defaultProps = {
-        targetBlank: true
-    };
+const ProjectCard: React.FC<ProjectCardProps> = ({ image, link, title, description, icon, targetBlank = false }) => {
+    const { t } = useTranslation();
+    title = title ?? t("projets_default_title");
+    description = description ?? t("projets_default_description");
+    image = image ?? WIP;
 
-    render() {
-        const { image, link, title, description, icon, targetBlank } = this.props;
-        return (
-            <Col sm="12" md="12" lg="6" className="mb-5">
-                <Card className="project-card glow-on-hover">
-                    <Link to={link} target={targetBlank ? "_blank" : "_self"} rel="noopener noreferrer">
+    return (
+        <Col sm="12" md="12" lg="6" className="mb-5">
+            <Card className="project-card glow-on-hover">
+                    <Link to={link ?? ""} target={targetBlank ? "_blank" : "_self"} rel="noopener noreferrer">
                         <Card.Body className="p-0">
                             {icon &&
                                 <div className="icon-container">
@@ -40,12 +41,13 @@ export class ProjectCard extends React.Component<ProjectCardProps> {
                             </div>
                         </Card.Body>
                     </Link>
-                </Card>
-                <div className="mt-4 mobile">
-                    <h4 className="mb-2">{title}</h4>
-                    <p>{description}</p>
-                </div>
-            </Col>
-        );
-    }
-}
+            </Card>
+            <div className="mt-4 mobile">
+                <h4 className="mb-2">{title}</h4>
+                <p>{description}</p>
+            </div>
+        </Col>
+    );
+};
+
+export default ProjectCard;
