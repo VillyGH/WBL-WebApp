@@ -32,13 +32,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, link, title, descripti
                                 <div className="icon-container">
                                     <FontAwesomeIcon icon={icon}/>
                                 </div>}
-                            <div className="image-container">
                                 <Image src={image} alt={title} className="project-img"/>
                                 <div className="image-overlay">
                                     <h4>{title}</h4>
                                     <p>{description}</p>
                                 </div>
-                            </div>
                         </Card.Body>
                     </Link>
             </Card>
