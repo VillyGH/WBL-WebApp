@@ -17,7 +17,7 @@ interface ProjectCardProps {
     targetBlank?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ image, link, title, description, icon, targetBlank = false }) => {
+export default function ProjectCard ({ image, link, title, description, icon, targetBlank = false } : ProjectCardProps) {
     const { t } = useTranslation();
     title = title ?? t("projets_default_title");
     description = description ?? t("projets_default_description");
@@ -47,5 +47,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, link, title, descripti
         </Col>
     );
 };
-
-export default ProjectCard;

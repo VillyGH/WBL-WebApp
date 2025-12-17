@@ -1,8 +1,3 @@
-import {Application} from "./app/core/Application";
+import {startApp} from "./app/core/Application";
 
-
-let app = new Application();
-app.start();
-
-// @ts-ignore
-window.app = app;
+await startApp();

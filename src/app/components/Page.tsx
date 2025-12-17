@@ -1,12 +1,19 @@
 import {motion} from "framer-motion";
 import React, {ReactNode} from "react";
 import Particles from "@tsparticles/react";
-import {Application} from "../core/Application";
 import {ParticleOptsMenuDark} from "../types/ParticlesDark";
 import {ParticleOptsMenu} from "../types/Particles";
 import {Container} from "react-bootstrap";
+import {appIsDarkMode} from "../core/Application";
 
-export const Page = ({title, children}: {title?: string, children: ReactNode}) => {
+interface PageProps {
+    title?: string;
+    children: ReactNode;
+}
+
+export function Page(props: PageProps) {
+    const {title, children} = props;
+
     const opacity = {
         initial: {
             opacity: 0,
@@ -52,7 +59,7 @@ export const Page = ({title, children}: {title?: string, children: ReactNode}) =
 
     return (
         <Container>
-            <Particles options={Application.isDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu}/>
+            <Particles options={appIsDarkMode() ? ParticleOptsMenuDark : ParticleOptsMenu}/>
             <motion.div {...anim(slide)}/>
             <motion.div {...anim(opacity)}>
                 <h2 className="my-5">{title}</h2>

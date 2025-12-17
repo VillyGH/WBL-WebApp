@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {Button, Container, Offcanvas} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,182 +9,127 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import {ComponentNavItem as NavItem} from "./ComponentNavItem";
-import {Application} from "../core/Application";
-import {WithTranslation, withTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next";
 
-interface Props extends WithTranslation {
+interface NavigationBarProps {
+    isDarkMode: boolean;
     toggleDarkMode: (value: boolean) => void;
 }
 
-interface State {
-    isDarkMode: boolean;
-    language: "fr" | "en";
-    showModal: boolean;
-}
+export default function NavigationBar({isDarkMode, toggleDarkMode}: NavigationBarProps) {
+    const {t, i18n} = useTranslation();
+    const [language, setLanguage] = useState<"fr" | "en">("fr");
+    const [showModal, setShowModal] = useState(false);
 
-/**
- * This is the navigation bar component, it is displayed on every page. It shows the links to the different pages.
- * @returns {ReactElement | null}
- * @constructor
- * @category Components
- * @subcategory Navigation
- * @hideconstructor
- * @see NavigationBarState
- */
-class NavigationBar extends React.Component<Props, State> {
 
-    public state: State = {
-        isDarkMode: false,
-        language: "fr",
-        showModal: false
-    };
+    useEffect(() => {
+        const init = async (): Promise<void> => {
+            const userTheme = localStorage.getItem("theme");
+            const dark =
+                userTheme != null
+                    ? userTheme === "dark"
+                    : window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+            applyTheme(dark);
 
-    constructor(props: Props) {
-        super(props);
-    }
-
-    /**
-     * React lifecycle method that runs after the component has been mounted.
-     * It initializes the component's state based on the user's theme preference stored in localStorage
-     * or the system-wide prefers-color-scheme setting.
-     * @memberof NavigationBar
-     */
-    public async componentDidMount(): Promise<void> {
-        const userTheme: string | null = localStorage.getItem("theme");
-        const userLangage: string | null = navigator.language;
-        let isDarkMode: boolean = false;
-
-        if (userTheme) {
-            isDarkMode = userTheme == "dark";
-        } else {
-            const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-            if (darkModeQuery !== undefined) {
-                isDarkMode = darkModeQuery.matches;
+            const userLang = navigator.language ? (navigator.language.slice(0, 2) as "fr" | "en") : "fr";
+            if (userLang === "fr" || userLang === "en") {
+                await changeLanguage(userLang);
             }
-        }
-        await this.changeTheme(isDarkMode);
-        if (userLangage === "fr" || userLangage === "en") {
-            await this.changeLanguage(userLangage);
-        }
-    }
+        };
+        init().catch((e) => console.error(t("translation_error"), e));
+    }, []);
 
-    public render(): ReactElement | null {
-        return (
-            <Navbar expand="xl" fixed="top">
-                <Container fluid={true}>
-                    <LinkContainer to="/">
-                        <Navbar.Brand>
-                            <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo"
-                                 width={100} height={60}/>
-                        </Navbar.Brand>
-                    </LinkContainer>
-                    <div>
-                        <Button className="btn-sm-theme me-3 d-lg-none"
-                                onClick={async (): Promise<void> =>
-                                    this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
-                            {this.state.language === "fr" ? "EN" : "FR"}
-                        </Button>
-                        <Button className="btn-sm-theme me-3 d-lg-none"
-                                onClick={async (): Promise<void> => await this.changeTheme(!this.state.isDarkMode)}>
-                            <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
-                        </Button>
-                        <Navbar.Toggle aria-controls="offcanvasNavbar"
-                                       onClick={() => this.handleVisibilityOffCanvas(true)}/>
-                    </div>
-                    <Navbar.Offcanvas show={this.state.showModal} onHide={() => this.handleVisibilityOffCanvas(false)}
-                                      id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" placement="end">
-                        <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">
-                                <LinkContainer to="/" onClick={() => this.handleVisibilityOffCanvas(false)}>
-                                    <img className="me-3" src={Application.isDarkMode() ? Logo : LogoDark} alt="Logo"
-                                         width={100} height={60}/>
-                                </LinkContainer>
-                            </Offcanvas.Title>
-                        </Offcanvas.Header>
-                        <Offcanvas.Body>
-                            {this.generalLinks()}
-                            <div className="mt-3">
-                                <Button className="btn-theme me-3"
-                                        onClick={async (): Promise<void> =>
-                                            this.changeLanguage(this.state.language === "fr" ? "en" : "fr")}>
-                                    {this.state.language === "fr" ? "EN" : "FR"}
-                                </Button>
-                                <Button className="btn-theme"
-                                        onClick={async (): Promise<void> =>
-                                            await this.changeTheme(!this.state.isDarkMode)}>
-                                    <FontAwesomeIcon icon={this.state.isDarkMode ? faSun : faMoon}/>
-                                </Button>
+    useEffect(() => {
+        setShowModal(false);
+    }, [location]);
+
+    const changeLanguage = useCallback(
+        async (lang: "fr" | "en"): Promise<void> => {
+            await i18n.changeLanguage(lang);
+            setLanguage(lang);
+        },
+        [i18n]
+    );
+
+    const applyTheme = useCallback(
+        (dark: boolean) => {
+            toggleDarkMode(dark);
+            document.documentElement.setAttribute("data-bs-theme", dark ? "dark" : "light");
+            localStorage.setItem("theme", dark ? "dark" : "light");
+        },
+        [toggleDarkMode]
+    );
+
+    const toggleLanguage = async () => changeLanguage(language === "fr" ? "en" : "fr");
+    const toggleTheme = () => applyTheme(!isDarkMode);
+
+    const commonLinks = () => (
+        <Nav className="mx-auto" variant="underline">
+            <NavItem link={RoutesPath.PROJETS} label={t("projets")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.ETUDES} label={t("etudes")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.GROUPES} label={t("groupes")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.REFERENCES} label={t("references")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.CONTACT} label={t("contact")}
+                     onClick={() => setShowModal(false)}/>
+            <NavItem link={RoutesPath.APROPOS} label={t("apropos")}
+                     onClick={() => setShowModal(false)}/>
+        </Nav>
+    );
+
+    const optionButtons = (
+        <div className="d-flex gap-3">
+            <Button onClick={toggleLanguage}>{language === "fr" ? "EN" : "FR"}</Button>
+            <Button onClick={toggleTheme}>
+                <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon}/>
+            </Button>
+        </div>
+    )
+
+    return (
+        <Navbar expand="xxl" fixed="top">
+            <Container fluid className="d-flex align-items-center position-relative">
+                <LinkContainer to="/">
+                    <Navbar.Brand>
+                        <img className="me-2" src={isDarkMode ? Logo : LogoDark} alt="Logo" width={115} height={75}/>
+                    </Navbar.Brand>
+                </LinkContainer>
+
+                <div className="d-none position-absolute start-50 translate-middle-x d-xxl-flex">{commonLinks()}</div>
+
+
+                <div className="d-xxl-none d-flex gap-3">
+                    {optionButtons}
+                    <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={() => setShowModal(true)}/>
+                </div>
+
+                <Navbar.Offcanvas show={showModal} onHide={() => setShowModal(false)} id="offcanvasNavbar"
+                                  placement="end">
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title>
+                            <LinkContainer to="/" onClick={() => setShowModal(false)}>
+                                <img className="me-3" src={isDarkMode ? Logo : LogoDark} alt="Logo" width={80}
+                                     height={60}/>
+                            </LinkContainer>
+                        </Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        <div
+                            className="d-xxl-none d-flex flex-column align-items-center w-100 gap-4">{commonLinks()}</div>
+                        <div
+                            className="ms-xxl-auto flex-xxl-row d-flex gap-4 gap-xxl-3 justify-content-center align-items-center flex-column mt-xxl-0 mt-4 mx-xxl-3">
+                            <div className="d-xxl-flex d-none gap-3">
+                                {optionButtons}
                             </div>
-                        </Offcanvas.Body>
-                    </Navbar.Offcanvas>
-                </Container>
-            </Navbar>
-        );
-    }
-
-    /**
-     * Toggles between the english and French language
-     * @memberof NavigationBar
-     */
-    private changeLanguage = async (language: "fr" | "en"): Promise<void> => {
-        this.setState(() => ({
-                language: language,
-            }), async () => {
-                await this.props.i18n.changeLanguage(this.state.language);
-            }
-        );
-    };
-
-    /**
-     * Toggles between dark and light modes in the application, and stores the user's preference in localStorage.
-     * @returns {Promise<void>} A Promise that resolves when the mode is toggled.
-     * @memberof NavigationBar
-     * @private
-     */
-    private changeTheme = async (currentMode: boolean): Promise<void> => {
-        this.setState({isDarkMode: currentMode}, () => {
-            document.documentElement.setAttribute("data-bs-theme", this.state.isDarkMode ? "dark" : "light");
-            localStorage.setItem("theme", this.state.isDarkMode ? "dark" : "light");
-            this.props.toggleDarkMode(this.state.isDarkMode);
-        });
-    }
-
-    /**
-     * This function returns the links used to navigate the website
-     * @returns {JSX.Element} The navigation links
-     * @category Components
-     * @subcategory Navigation
-     * @hideconstructor
-     * @see generalLinks
-     * @private
-     */
-    private generalLinks(): ReactElement {
-        const {t} = this.props;
-        return (
-            <Nav className="mx-auto" variant="underline">
-                <NavItem link={RoutesPath.PROJETS} label={t("projets")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.EXPERIENCE} label={t("experience")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.ETUDES} label={t("etudes")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.GROUPES} label={t("groupes")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.REFERENCES} label={t("references")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.CONTACT} label={t("contact")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-                <NavItem link={RoutesPath.APROPOS} label={t("apropos")}
-                         onClick={() => this.handleVisibilityOffCanvas(false)}/>
-            </Nav>
-        );
-    }
-
-    private handleVisibilityOffCanvas = (visible: boolean): void => {
-        this.setState(() => ({
-            showModal: visible
-        }));
-    };
-}
-
-export default withTranslation()(NavigationBar);
+                        </div>
+                    </Offcanvas.Body>
+                </Navbar.Offcanvas>
+            </Container>
+        </Navbar>
+    );
+};

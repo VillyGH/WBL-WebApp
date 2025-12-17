@@ -1,6 +1,5 @@
 import React, {ReactElement} from "react";
 import {APP_NAME} from "../constants/Global";
-import {Application} from "../core/Application";
 import RQ from "../deps/images/RQ.jpg";
 import RAMQ from "../deps/images/RAMQ.jpg";
 import CNESST from "../deps/images/CNESST.png";
@@ -10,6 +9,7 @@ import {Col, Image, Row} from "react-bootstrap";
 import "../deps/css/experience.css";
 import {withTranslation, WithTranslation} from "react-i18next";
 import {Page} from "../components/Page";
+import {appIsDarkMode} from "../core/Application";
 
 class Experience extends React.Component<WithTranslation> {
 
@@ -20,7 +20,7 @@ class Experience extends React.Component<WithTranslation> {
             <Page title={t("experience")}>
                 <Row className="my-4">
                     <Col xl={6} xxl={5}>
-                        <Image className="img-responsive" src={Application.isDarkMode() ? COVEO_BLANC : COVEO}
+                        <Image className="img-responsive" src={appIsDarkMode() ? COVEO_BLANC : COVEO}
                                alt={t("experience_coveo_alt")}/>
                     </Col>
                     <Col xl={6} xxl={7}>
