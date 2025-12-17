@@ -13,7 +13,8 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "no-comments"
   ],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
@@ -45,9 +46,14 @@
         "caughtErrors": "all",
         "destructuredArrayIgnorePattern": "^_"
       }],
-    "@typescript-eslint/prefer-includes": "warn",
-    "@typescript-eslint/dot-notation": "warn",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-comments": "on"
+    "no-comments/disallowComments": [
+      "error",
+      {
+        "allow": ["TODO", "FIXME", "NOTE", "DEBUG"]
+      }
+    ],
+    "@typescript-eslint/prefer-includes": "error",
+    "@typescript-eslint/dot-notation": "error",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
