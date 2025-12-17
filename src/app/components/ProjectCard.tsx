@@ -17,8 +17,8 @@ interface ProjectCardProps {
     targetBlank?: boolean;
 }
 
-export default function ProjectCard ({ image, link, title, description, icon, targetBlank = false } : ProjectCardProps) {
-    const { t } = useTranslation();
+export default function ProjectCard({image, link, title, description, icon, targetBlank = false}: ProjectCardProps) {
+    const {t} = useTranslation();
     title = title ?? t("projets_default_title");
     description = description ?? t("projets_default_description");
     image = image ?? WIP;
@@ -26,19 +26,19 @@ export default function ProjectCard ({ image, link, title, description, icon, ta
     return (
         <Col sm="12" md="12" lg="6" className="mb-5">
             <Card className="project-card glow-on-hover">
-                    <Link to={link ?? ""} target={targetBlank ? "_blank" : "_self"} rel="noopener noreferrer">
-                        <Card.Body className="p-0">
-                            {icon &&
-                                <div className="icon-container">
-                                    <FontAwesomeIcon icon={icon}/>
-                                </div>}
-                                <Image src={image} alt={title} className="project-img"/>
-                                <div className="image-overlay">
-                                    <h4>{title}</h4>
-                                    <p>{description}</p>
-                                </div>
-                        </Card.Body>
-                    </Link>
+                <Link to={link ?? ""} target={targetBlank ? "_blank" : "_self"} rel="noopener noreferrer">
+                    <Card.Body className="p-0">
+                        {icon &&
+                            <div className="icon-container">
+                                <FontAwesomeIcon icon={icon}/>
+                            </div>}
+                        <Image src={image} alt={title} className="project-img"/>
+                        <div className="image-overlay">
+                            <h4>{title}</h4>
+                            <p>{description}</p>
+                        </div>
+                    </Card.Body>
+                </Link>
             </Card>
             <div className="mt-4 mobile">
                 <h4 className="mb-2">{title}</h4>

@@ -1,4 +1,4 @@
-import {Suspense, useState} from "react";
+import {Suspense, useState, useEffect} from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {ReactNotifications} from "react-notifications-component";
 import {BASE_URL} from "../constants/Global";
@@ -29,6 +29,10 @@ import {AnimatePresence} from "framer-motion";
 export default function Core() {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(appIsDarkMode());
 
+    useEffect(() => {
+        document.documentElement.style.scrollBehavior = 'smooth';
+    }, []);
+
     return (
         <Suspense fallback={<LoadingScreen/>}>
             <Router future={{v7_relativeSplatPath: true}} basename={BASE_URL}>
@@ -57,4 +61,3 @@ export default function Core() {
         </Suspense>
     );
 }
-
