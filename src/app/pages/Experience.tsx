@@ -41,6 +41,7 @@ class Experience extends React.Component<WithTranslation> {
                     <Col xl={6} xxl={7}>
                         <h3>{t("experience_ramq_title")}</h3>
                         <p>{t("experience_ramq_period")}</p>
+                        <p>{t("experience_ramq_mention")}</p>
                         <p>{t("experience_tasks")}</p>
                         <ul>
                             {(t("experience_ramq_tasks", {returnObjects: true}) as string[]).map((task: string, index: number) => (
