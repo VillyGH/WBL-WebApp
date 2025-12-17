@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack --mode production --progress",
-    "lint": "next lint"
+    "lint": "eslint src/**/*.{ts,tsx}"
   },
   "dependencies": {
     "@babel/core": "^7.27.1",
