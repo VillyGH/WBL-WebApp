@@ -28,7 +28,7 @@ const updateDarkModeFromStorage = (): void => {
 };
 
 const defineRootElement = (): HTMLElement => {
-    let rootElem = document.getElementById("root") as HTMLElement | null;
+    let rootElem = document.getElementById("root");
     if (!rootElem) {
         rootElem = document.createElement("div");
         rootElem.style.width = "100%";
@@ -44,7 +44,7 @@ const renderCore = (): void => {
     const root = ReactDOM.createRoot(rootElem);
     root.render(
         <React.StrictMode>
-                <Core/>
+            <Core/>
         </React.StrictMode>
     );
 };

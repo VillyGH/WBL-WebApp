@@ -7,7 +7,6 @@ import "../deps/css/bootstrap.min.css";
 import "../deps/css/mediaqueries.css";
 import "../deps/css/animations.css";
 import "react-notifications-component/dist/theme.css";
-import 'animate.css';
 import NavigationBar from "../components/NavigationBar";
 import Index from "../pages/Index";
 import Projets from "../pages/Projets";
