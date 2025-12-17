@@ -11,6 +11,8 @@ import FlappyBrain from "../deps/images/FlappyBrain.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/FactionWar.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
+import UFood from "../deps/images/UFood.png";
+import UTasks from "../deps/images/UTasks.png";
 import Peps from "../deps/images/Peps.png";
 import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
@@ -29,6 +31,20 @@ const Projets: React.FC = (): ReactElement | null => {
         <Page title={t("projets_title")}>
             <Row>
                 <ProjectCard
+                    image={UFood}
+                    link="https://ufood-equipe2.pages.dev"
+                    title={t("projets_ufood_title")}
+                    description={t("projets_ufood_description")}
+                    targetBlank
+                />
+                <ProjectCard
+                    image={UTasks}
+                    link="https://utasks-equipe3.pages.dev"
+                    title={t("projets_utasks_title")}
+                    description={t("projets_utasks_description")}
+                    targetBlank
+                />
+                <ProjectCard
                     image={LolPickBanUI}
                     link={"https://github.com/cia-ulaval/lol-pick-ban-ui"}
                     title={t("projets_lolpickbanui_title")}
@@ -37,8 +53,8 @@ const Projets: React.FC = (): ReactElement | null => {
                 <ProjectCard
                     image={FlappyBrain}
                     link={RoutesPath.FLAPEEG}
-                    title={t("projets_ciaul_title")}
-                    description={t("projets_ciaul_description")}
+                    title={t("projets_flapeeg_title")}
+                    description={t("projets_flapeeg_description")}
                     icon={faPlay}
                 />
                 <ProjectCard
@@ -98,8 +114,6 @@ const Projets: React.FC = (): ReactElement | null => {
                     description={t("projets_gardien_description")}
                     targetBlank
                 />
-                <ProjectCard />
-                <ProjectCard />
             </Row>
         </Page>
     );
