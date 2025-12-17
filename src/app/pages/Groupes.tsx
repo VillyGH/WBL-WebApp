@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import {APP_NAME} from "../constants/Global";
-import {Application} from "../core/Application";
+import {appIsDarkMode} from "../core/Application";
 import Dynamiques from "../deps/images/Dynamiques.png";
 import Eperviers from "../deps/images/Eperviers.png";
 import CIAUL from "../deps/images/CIAUL2.png";
@@ -43,7 +43,7 @@ class Groupes extends React.Component<WithTranslation> {
                 </Row>
                 <Row className="mb-4">
                     <Image className="img-responsive"
-                           src={Application.isDarkMode() ? ClubBadmintonQuebecBlanc : ClubBadmintonQuebec}
+                           src={appIsDarkMode() ? ClubBadmintonQuebecBlanc : ClubBadmintonQuebec}
                            alt={t("group_badmintonquebec_alt")}/>
                     <h3 className="my-4">{t("club_badmintonquebec_title")}</h3>
                     <p>{t("club_badmintonquebec_description")}</p>
@@ -63,7 +63,7 @@ class Groupes extends React.Component<WithTranslation> {
                 </Row>
                 <Row className="mb-4">
                     <Image className="img-responsive"
-                           src={Application.isDarkMode() ? ClubLAncienneLoretteBlanc : ClubLAncienneLorette}
+                           src={appIsDarkMode() ? ClubLAncienneLoretteBlanc : ClubLAncienneLorette}
                            alt={t("club_tennis_ll_alt")}/>
                     <h3 className="my-4">{t("club_tennis_ll_title")}</h3>
                     <p>{t("club_tennis_ll_description")}</p>
