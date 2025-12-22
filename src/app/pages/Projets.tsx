@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react";
+import React, {ReactElement} from "react";
 import {APP_NAME} from "../constants/Global"
 import {Row} from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard";
@@ -18,14 +18,11 @@ import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import "../deps/css/projets.css";
 import {useTranslation} from "react-i18next";
-import { Page } from "../components/Page";
+import {Page} from "../components/Page";
 
 const Projets: React.FC = (): ReactElement | null => {
-    const { t } = useTranslation();
-
-    useEffect(() => {
-        document.title = t("projets") + " - " + APP_NAME;
-    }, [t]);
+    const {t} = useTranslation();
+    document.title = t("projets") + " - " + APP_NAME;
 
     return (
         <Page title={t("projets_title")}>

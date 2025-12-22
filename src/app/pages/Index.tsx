@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {APP_NAME} from "../constants/Global";
 import Logo from "../deps/images/logo.png";
 import LogoDark from "../deps/images/logoDark.png";
@@ -8,10 +8,7 @@ import {appIsDarkMode} from "../core/Application";
 
 const Index: React.FC = () => {
     const {t} = useTranslation();
-
-    useEffect(() => {
-        document.title = t("index") + ' - ' + APP_NAME;
-    }, [t]);
+    document.title = t("index") + ' - ' + APP_NAME;
 
     return (
         <Page>
