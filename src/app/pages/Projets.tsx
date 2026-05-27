@@ -34,6 +34,7 @@ const Projets: React.FC = (): ReactElement | null => {
                     link={"https://pepsreservationbot.willbl.ca"}
                     title={t("projets_peps_title")}
                     description={t("projets_peps_description")}
+                    targetBlank
                 />
                 <ProjectCard
                     image={UGram}
