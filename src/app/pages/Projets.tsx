@@ -8,11 +8,13 @@ import TMAcceuil from "../deps/images/TaskMasterAccueil.png";
 import InfiniteCraft from "../deps/images/InfiniteCraft.png";
 import Revolvair from "../deps/images/Revolvair.jpg";
 import FlappyBrain from "../deps/images/FlappyBrain.png";
+import MovieApp from "../deps/images/MovieApp.png";
 import GardienLegend from "../deps/images/GardienLegend.png";
 import FactionWar from "../deps/images/FactionWar.png";
 import FaceFlow from "../deps/images/FaceFlow.png";
 import UFood from "../deps/images/UFood.png";
 import UTasks from "../deps/images/UTasks.png";
+import UGram from "../deps/images/UGram.png";
 import Peps from "../deps/images/Peps.png";
 import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
@@ -27,6 +29,13 @@ const Projets: React.FC = (): ReactElement | null => {
     return (
         <Page title={t("projets_title")}>
             <Row>
+                <ProjectCard
+                    image={UGram}
+                    link="https://ugram-equipe6.pages.dev"
+                    title={t("projets_ugram_title")}
+                    description={t("projets_ugram_description")}
+                    targetBlank
+                />
                 <ProjectCard
                     image={UFood}
                     link="https://ufood-equipe2.pages.dev"
@@ -109,6 +118,13 @@ const Projets: React.FC = (): ReactElement | null => {
                     link="https://github.com/VillyGH/TP2-Gardien-Legend"
                     title={t("projets_gardien_title")}
                     description={t("projets_gardien_description")}
+                    targetBlank
+                />
+                <ProjectCard
+                    image={MovieApp}
+                    link="https://github.com/VillyGH/MovieApp"
+                    title={t("projets_movieapp_title")}
+                    description={t("projets_movieapp_description")}
                     targetBlank
                 />
             </Row>
