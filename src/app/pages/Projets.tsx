@@ -15,7 +15,7 @@ import FaceFlow from "../deps/images/FaceFlow.png";
 import UFood from "../deps/images/UFood.png";
 import UTasks from "../deps/images/UTasks.png";
 import UGram from "../deps/images/UGram.png";
-import Peps from "../deps/images/Peps.png";
+import PepsReservationBot from "../deps/images/PepsReservationBot.png";
 import {faDownload, faPlay, faTrophy} from "@fortawesome/free-solid-svg-icons";
 import {RoutesPath} from "../RoutesPath";
 import "../deps/css/projets.css";
@@ -29,6 +29,12 @@ const Projets: React.FC = (): ReactElement | null => {
     return (
         <Page title={t("projets_title")}>
             <Row>
+                <ProjectCard
+                    image={PepsReservationBot}
+                    link={"https://pepsreservationbot.willbl.ca"}
+                    title={t("projets_peps_title")}
+                    description={t("projets_peps_description")}
+                />
                 <ProjectCard
                     image={UGram}
                     link="https://ugram-equipe6.pages.dev"
@@ -69,13 +75,7 @@ const Projets: React.FC = (): ReactElement | null => {
                     title={t("projets_battleship_title")}
                     description={t("projets_battleship_description")}
                 />
-                <ProjectCard
-                    image={Peps}
-                    link={RoutesPath.PEPSRESERVATIONBOT}
-                    title={t("projets_peps_title")}
-                    description={t("projets_peps_description")}
-                    icon={faDownload}
-                />
+
                 <ProjectCard
                     image={FactionWar}
                     link={RoutesPath.FACTIONWAR}
@@ -105,7 +105,6 @@ const Projets: React.FC = (): ReactElement | null => {
                     description={t("projets_faceflow_description")}
                     targetBlank
                 />
-
                 <ProjectCard
                     image={InfiniteCraft}
                     link="https://www.automa.site/workflow/D4y36oIbejMmDfscMJH4e"
