@@ -35,7 +35,7 @@ export default function Core() {
 
     return (
         <Suspense fallback={<LoadingScreen/>}>
-            <Router future={{v7_relativeSplatPath: true}} basename={BASE_URL}>
+            <Router basename={BASE_URL}>
                 <NavigationBar isDarkMode={isDarkMode} toggleDarkMode={setIsDarkMode} />
                 <ReactNotifications/>
                 <AnimatePresence mode="wait">
